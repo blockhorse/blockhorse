@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon  ./src/server.js",
-    "client": "npm run start --prefix ../ballito",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
-  },
+    "start": "nodemon  ./src/server.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
