@@ -17,6 +17,7 @@ router.get('/', function (req, res)  {
 
 router.post('/', function (req, res)  {
   //  res.status(200).send("mensaje");
+  console.log("BODY",req.body)
     response.success(req, res,"todo bien",201);
 
 })
