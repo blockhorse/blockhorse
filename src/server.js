@@ -9,6 +9,9 @@ app.use(bodyParser.json())
 router(app);
 
 
+let processor= require('./script/processor/')
+
+
 
 if (process.env.NODE_ENV === "production"){
     app.use(express.static('build'));
@@ -19,3 +22,4 @@ app.listen(port, (err) => {
     if(err) return console.log(err);
     console.log(`Example app listening on port ${port}`);
 })
+ 
