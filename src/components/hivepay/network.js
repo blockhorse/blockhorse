@@ -15,11 +15,12 @@ router.get('/', function (req, res)  {
 
 
 router.post('/', function (req, res)  {
-  console.log("BODY notification pay",req.body)
-  //  res.status(200).send("mensaje");
- if(req.body.hivepay_ipn==='notification'){
+  console.log("BODY notification pay",req.body
+    body=JSON.stringify(req.body)
+    //  res.status(200).send("mensaje");
+ if(body.hivepay_ipn==='notification'){
      controller.add_pay(req.body)
-    console.log("BODY notification pay",req.body)
+    console.log("BODY notification pay",)
     response.success(req, res,"todo bien",201);
 
   } else{
