@@ -23,11 +23,12 @@ router.post('/', function (req, res)  {
  if(body.hivepay_ipn=='notification'){
      controller.add_pay(body)
     console.log("BODY notification pay",)
-    response.success(req, res,"todo bien",201);
+    response.success(req, res,"todo bien",200);
 
   } else{
-      console.log("NO BODY notification pay",req.body)
-    response.success(req, res,"todo bien",201);
+      console.log("NO BODY notification pay",body)
+      controller.add_pay(body)
+    response.success(req, res,"todo bien",400);
 
   }
  
