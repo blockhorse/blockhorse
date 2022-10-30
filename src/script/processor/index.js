@@ -4,7 +4,7 @@ const {
 } = require ('./compras/presale.js');
 
 
-setInterval(displayHello, 10000);
+setInterval(displayHello, 100000);
 
 async function displayHello() {
  console.log("NO JODAS")

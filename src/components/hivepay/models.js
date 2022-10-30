@@ -52,6 +52,10 @@ const payhiveSchema= new Schema(
         type: String,
        
     },
+     amount_received: {
+        type: String,
+       
+    },
     fee: {
         type: String,
         

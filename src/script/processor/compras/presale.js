@@ -9,17 +9,22 @@ return res= await store.get(data)
 
 async function check_pay(param){
 	console.log("param check pay", param);
+	console.log("param check pay trx", param.txid);
+	console.log("param check pay trx", param[0].txid);
+
 data={
   "version": 2,
   "ipn_verification": true,
-  "txid": "c9db8c6cd3995405a557effe42800e30fedc02f5",
-  "merchant": "blainjones",
-  "buyer": "someaccount",
-  "token": "HIVE",
-  "token_amount": "0.603",
-  "fee": "0.002",
-  "amount_received": "0.601"
+  "txid": param[0].txid,
+  "merchant": param[0].merchant,
+  "buyer": param[0].buyer,
+  "token": param[0].token,
+  "token_amount":param[0].token_amount,
+  "fee": param[0].fee,
+  "amount_received": param[0].amount_received
 }
+ 
+ console.log(data)
 
 
 const response = await fetch("https://api.hivepay.io/", {
@@ -28,17 +33,7 @@ headers: {
   'Accept': 'application/json',
   'Content-Type': 'application/json'
 },
-body: `{
-  "version": 2,
-  "ipn_verification": true,
-  "txid": "c9db8c6cd3995405a557effe42800e30fedc02f5",
-  "merchant": "blainjones",
-  "buyer": "someaccount",
-  "token": "HIVE",
-  "token_amount": "0.603",
-  "fee": "0.002",
-  "amount_received": "0.601"
-}`,
+body: data,
 });
 
 response.json().then(data => {
