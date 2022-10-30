@@ -6,7 +6,7 @@ const router= express.Router()
 
 
 router.get('/', function (req, res)  {
-    console.log("BODY",req.body)
+    //console.log("BODY",req.body)
     controller.get_hivepay_notification(req.body)
     response.success(req, res,"todo bien",201);
 
@@ -18,7 +18,7 @@ router.post('/', function (req, res)  {
   //  res.status(200).send("mensaje");
  if(req.body.hivepay_ipn==='notification'){
      controller.add_pay(req.body)
-    // console.log("BODY notification pay",req.body)
+    console.log("BODY notification pay",req.body)
     response.success(req, res,"todo bien",201);
 
   } else{
