@@ -6,6 +6,7 @@ return new Promise((resolve, reject)=> {
 
 
 console.log("body notificacion desde hive",body)
+
 let data={
     txid:body.payment_details.txid,
     payment_successful:body.payment_details.payment_successful,
@@ -33,7 +34,7 @@ let data={
 
 console.log("data", data);
 
-console.log("menssage body", body);
+//console.log("menssage body", body);
 
 resolve(store.add(data))
 
