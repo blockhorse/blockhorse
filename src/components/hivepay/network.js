@@ -21,7 +21,7 @@ router.post('/', function (req, res)  {
 
     //  res.status(200).send("mensaje");
  if(body.hivepay_ipn==='notification'){
-     controller.add_pay(req.body)
+     controller.add_pay(body)
     console.log("BODY notification pay",)
     response.success(req, res,"todo bien",201);
 
