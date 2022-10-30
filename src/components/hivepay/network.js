@@ -6,7 +6,7 @@ const router= express.Router()
 
 
 router.get('/', function (req, res)  {
-    //console.log("BODY",req.body)
+    console.log("BODY",req.body)
     controller.get_hivepay_notification(req.body)
     response.success(req, res,"todo bien",201);
 
