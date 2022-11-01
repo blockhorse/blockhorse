@@ -1,10 +1,13 @@
 require("dotenv").config();
 const express= require('express');
+fs= require('fs')
+https = require('https')
 const port = process.env.PORT || 4000
 const bodyParser= require('body-parser')
 const router= require('./network/routes')
 let app=express()
 app.use(bodyParser.json())
+
 //app.use(router);
 router(app);
 
@@ -23,3 +26,7 @@ app.listen(port, (err) => {
     console.log(`Example app listening on port ${port}`);
 })
  
+
+
+
+
