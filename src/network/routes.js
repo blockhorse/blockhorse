@@ -5,7 +5,7 @@ const payhive= require('../components/hivepay/network.js')
 
 const routes = function (server){
 	server.use('/user', user);
-	server.use('https://wwww.sistemasoftware.com/payhive', payhive);
+	server.use('/payhive', payhive);
 }
 
 module.exports = routes;
