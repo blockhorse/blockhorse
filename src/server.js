@@ -3,6 +3,7 @@ const express= require('express');
 fs= require('fs')
 https = require('https')
 const port = process.env.PORT || 4000
+const ssl_port=process.env.PORTSSL || 443
 const bodyParser= require('body-parser')
 const router= require('./network/routes')
 let app=express()
@@ -33,18 +34,18 @@ app.listen(port, (err) => {
 })
 
 
-// https.createServer(
-//         // Provide the private and public key to the server by reading each
-//         // file's content with the readFileSync() method.
-//     {
-//       key: fs.readFileSync(key), 
-//       cert: fs.readFileSync(cert),
-//     },
-//     app
-//   ).listen(port, (err) => {    
-//     if(err) return console.log(err);
-//     console.log(`Example app listening on port ${port}`);
-// });
+https.createServer(
+        // Provide the private and public key to the server by reading each
+        // file's content with the readFileSync() method.
+    {
+      key: fs.readFileSync(key), 
+      cert: fs.readFileSync(cert),
+    },
+    app
+  ).listen(sslport, (err) => {    
+    if(err) return console.log(err);
+    console.log(`Example app listening on port ${sslport}`);
+});
  
 
 
