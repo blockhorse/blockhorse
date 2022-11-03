@@ -1,6 +1,8 @@
 const express = require('express');
-const user = require('../components/user/network.js')
-const payhive= require('../components/hivepay/network.js')
+
+const user = require('./../components/user/network')
+
+const payhive= require('./../components/hivepay/network.js')
 
 
 const routes = function (server){
