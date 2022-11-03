@@ -25,7 +25,7 @@ cert=require('path').resolve(__dirname, '../certificate/cert.pem');
 
 if (process.env.NODE_ENV === "production"){
     app.use(express.static('build'));
-    app.get('*',(req, res)=>{req.sendfile(path.resolve(__dirname, '../build/', 'index.html'))  })
+    app.get('*',(req, res)=>{req.sendfile(path.resolve(__dirname, './../build/', 'index.html'))  })
 }
 
 app.listen(port, (err) => {
