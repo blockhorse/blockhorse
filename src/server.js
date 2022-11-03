@@ -42,9 +42,9 @@ https.createServer(
       cert: fs.readFileSync(cert),
     },
     app
-  ).listen(sslport, (err) => {    
+  ).listen(ssl_port, (err) => {    
     if(err) return console.log(err);
-    console.log(`Example app listening on port ${sslport}`);
+    console.log(`Example app listening on port ${ssl_port}`);
 });
  
 
