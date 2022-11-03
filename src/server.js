@@ -27,24 +27,24 @@ if (process.env.NODE_ENV === "production"){
     app.get('*',(req, res)=>{req.sendfile(path.resolve(__dirname, '../build/', 'index.html'))  })
 }
 
-// app.listen(port, (err) => {
-//     if(err) return console.log(err);
-//     console.log(`Example app listening on port ${port}`);
-// })
-
-
-https.createServer(
-        // Provide the private and public key to the server by reading each
-        // file's content with the readFileSync() method.
-    {
-      key: fs.readFileSync(key), 
-      cert: fs.readFileSync(cert),
-    },
-    app
-  ).listen(port, (err) => {    
+app.listen(port, (err) => {
     if(err) return console.log(err);
     console.log(`Example app listening on port ${port}`);
-});
+})
+
+
+// https.createServer(
+//         // Provide the private and public key to the server by reading each
+//         // file's content with the readFileSync() method.
+//     {
+//       key: fs.readFileSync(key), 
+//       cert: fs.readFileSync(cert),
+//     },
+//     app
+//   ).listen(port, (err) => {    
+//     if(err) return console.log(err);
+//     console.log(`Example app listening on port ${port}`);
+// });
  
 
 
