@@ -4,17 +4,17 @@ const store = require('./store.js');
 async function add_hivepay_notification(body){
 return new Promise((resolve, reject)=> {
 
-
 console.log("body notificacion desde hive",body)
 
+
 let data={
-    txid:body.payment_details.txid,
-    payment_successful:body.payment_details.payment_successful,
+    txid: body.payment_details.txid,
+    payment_successful: body.payment_details.payment_successful,
     merchant: body.payment_details.merchant,
     buyer: body.payment_details.buyer,
     token: body.payment_details.token,
     token_amount: body.payment_details.token_amount,
-    amount_received:body.payment_details.amount_received,
+    amount_received: body.payment_details.amount_received,
     fee: body.payment_details.fee,
     item_name: body.item_name,
     item_tax: body.item_tax,
