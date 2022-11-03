@@ -34,18 +34,18 @@ app.listen(port, (err) => {
 })
 
 
-https.createServer(
-        // Provide the private and public key to the server by reading each
-        // file's content with the readFileSync() method.
-    {
-      key: fs.readFileSync(key), 
-      cert: fs.readFileSync(cert),
-    },
-    app
-  ).listen(ssl_port, (err) => {    
-    if(err) return console.log(err);
-    console.log(`Example app listening on port ${ssl_port}`);
-});
+// https.createServer(
+//         // Provide the private and public key to the server by reading each
+//         // file's content with the readFileSync() method.
+//     {
+//       key: fs.readFileSync(key), 
+//       cert: fs.readFileSync(cert),
+//     },
+//     app
+//   ).listen(ssl_port, (err) => {    
+//     if(err) return console.log(err);
+//     console.log(`Example app listening on port ${ssl_port}`);
+// });
  
 
 
