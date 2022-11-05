@@ -31,10 +31,26 @@ async function get_Notification(notification) {
 }
 
 
+async function check_hive_pay(param) {
+console.log("CHEQUEANDO PAGO ",param);
+	 const  Verificacion = await Model.findOne({txid: param.txid}).catch((e)=>{
+	   	console.log(e)
+	    });
+
+    console.log("Verificacion",Verificacion)
+	 Verificacion.checked=param.checked;
+	 Verificacion.save();
+	
+
+}
+
+
 
 module.exports = {
 add: add_Notification,
-get: get_Notification,
+get: get_Notification, 
+_check_pay: check_hive_pay,
+
 }
 
 
