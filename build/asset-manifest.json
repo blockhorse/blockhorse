@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.72037254.css",
-    "main.js": "/static/js/main.09ca2b9c.js",
+    "main.css": "/static/css/main.4c8d45ab.css",
+    "main.js": "/static/js/main.b903aa69.js",
     "static/media/hk-logo.png": "/static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "/static/media/infernal-logo.818500a666f3a5d2fcb9.png",
     "static/media/bigbone-logo.png": "/static/media/bigbone-logo.a614dda9d471b2d1881b.png",
@@ -10,11 +10,11 @@
     "static/media/horseshoe-icon.svg": "/static/media/horseshoe-icon.b396668cde8aedda47a4a5addb8d2983.svg",
     "static/media/horse-head-icon.svg": "/static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "index.html": "/index.html",
-    "main.72037254.css.map": "/static/css/main.72037254.css.map",
-    "main.09ca2b9c.js.map": "/static/js/main.09ca2b9c.js.map"
+    "main.4c8d45ab.css.map": "/static/css/main.4c8d45ab.css.map",
+    "main.b903aa69.js.map": "/static/js/main.b903aa69.js.map"
   },
   "entrypoints": [
-    "static/css/main.72037254.css",
-    "static/js/main.09ca2b9c.js"
+    "static/css/main.4c8d45ab.css",
+    "static/js/main.b903aa69.js"
   ]
 }
