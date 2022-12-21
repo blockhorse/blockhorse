@@ -46,7 +46,7 @@ resolve(store.add(data))
 async function get_hivepay_notification(body){
  return new Promise((resolve,reject) =>{
 
-  resolve(store.get())
+  resolve(store.get(body))
 
 
 

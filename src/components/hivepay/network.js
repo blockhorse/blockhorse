@@ -5,10 +5,11 @@ const router= express.Router()
 
 
 
-router.get('/', function (req, res)  {
+router.get('/',  async function (req, res)  {
     //console.log("BODY",req.body)
-    controller.get_hivepay_notification(req.body)
-    response.success(req, res,"todo bien",201);
+     controller.get_hivepay_notification(req.body).then((resto)=>{
+        console.log("resto", resto);
+         response.success(req, res,"todo bien",201);})
 
 })
 
