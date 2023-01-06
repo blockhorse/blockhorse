@@ -22,7 +22,7 @@ async function add_inscripcion(notification) {
 }
 
 async function get_races(race) {
-	console.log("ME ejecuto desde store",race)
+	console.log("ME ejecuto desde store  key chance Get race",race)
 	 return Race = await Model.find(race).catch((e)=>{
 	    	console.log("errror")
 	    	console.log(e)

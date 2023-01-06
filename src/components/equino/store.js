@@ -11,23 +11,24 @@ db.connect(URI_MD, {
 console.log("conexion_db");
 
 
-// async function add_Notification(notification) {
-//    const Notificaton = new Model(notification)
-//    console.log("Notificaton", Notificaton);
-//        await Notificaton.save().catch((e)=>{
-// 	    	//console.log(e)
-// 	    	console.log("KEY DUPLICADADA")
-// 	    });
-
-// }
-
-async function get_races(race) {
-	console.log("ME ejecuto desde store race get race",race)
-	 return Race = await Model.find(race).catch((e)=>{
+async function get_equino(equino) {
+	console.log("ME ejecuto desde store get equino",equino)
+	 return Equino = await Model.find(equino).catch((e)=>{
 	    	console.log("errror")
 	    	console.log(e)
 	    });
-	console.log("Race",Race)
+	console.log("EQU",Equino)
+
+}
+
+
+async function set_equino_status(equino) {
+	console.log("SETEANDO ",equino)
+	 return Equino = await Model.findOneAndUpdate(equino[0],equino[1]).catch((e)=>{
+	    	console.log("errror")
+	    	console.log(e)
+	    });
+	console.log("EQU",Equino)
 
 }
 
@@ -37,7 +38,8 @@ async function get_races(race) {
 
 module.exports = {
 
-get_races, 
+get_equino, 
+set_equino_status,
 
 
 }

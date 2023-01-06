@@ -1,5 +1,5 @@
 const store = require('./store.js');
-
+const store_equino = require('./../equino/store.js');
 
 async function set_inscripcion(body){
 return new Promise((resolve, reject)=> {
@@ -17,6 +17,12 @@ const pattern = /\b\d+\b in/;
 
 // Utiliza el método match de String para buscar el patrón en el string
 const match = memo.match(pattern);
+
+const menssage=body.message
+console.log("menssage de esta mierda", menssage);
+const texto='La transacción ha sido transmitida con éxito. Por favor, compruebe su saldo para confirmar que ha sido procesada con éxito.'
+
+
 let number=0
 // Si se encuentra el patrón, extrae el número utilizando el método slice
 if (match) {
@@ -27,7 +33,7 @@ if (match) {
 
 
 
-
+if(menssage==texto){
 
 let data={
      trx_Registro:body.result.id,
@@ -39,15 +45,16 @@ let data={
 
     }
 
+let datos=[{equineId: Number(number)},{estado: "Procesando Inscripcion"}]
 
 
 console.log("data", data);
-
+store_equino.set_equino_status(datos);
 //console.log("menssage body", body);
 
 resolve(store.add_inscripcion(data))
 
-})
+}})
 
 }
 

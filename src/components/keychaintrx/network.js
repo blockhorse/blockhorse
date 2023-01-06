@@ -9,12 +9,12 @@ const router= express.Router()
 
 router.post('/', function (req, res)  {
   
-         console.log("BODY",req.body)
+         console.log("BODY Kerychain",req.body)
 
 const {memo} = req.body.data;
 const result = req.body.result;
 
-if ((memo.startsWith("entering a") && (result !=null))) {
+if ((memo.startsWith("EQ- entering") && (result !=null))) {
   console.log("The string starts with the specified phrase.");
 
 

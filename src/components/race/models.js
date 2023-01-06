@@ -58,6 +58,9 @@ const raceSchema= new Schema(
     name: {
         type: String,
     },
+    registrados: {
+        type: Array,
+    },
 
      PorcentajePool: {
         type: Number,
@@ -79,9 +82,7 @@ const raceSchema= new Schema(
         type: Number,
         
     },
-    registrados: {
-        type: Number,
-    },
+   
     premiostotal_1: {
         type: Number,
     },
