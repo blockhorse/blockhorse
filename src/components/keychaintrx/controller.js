@@ -9,7 +9,7 @@ console.log("body notificacion desde hive",body)
 
 const memo = body.data.memo;
 
-const index = memo.indexOf("race") + "race".length;
+const index = memo.indexOf("race") + "race ".length;
 const race = memo.substring(index);
 
 // Utiliza una expresión regular para buscar un patrón que coincida con un número seguido de "in"
@@ -45,7 +45,7 @@ let data={
 
     }
 
-let datos=[{equineId: Number(number)},{estado: "Procesando Inscripcion"}]
+let datos=[{equineId: Number(number)},{estado: "Procesando Inscripcion" , status:"P"}]
 
 
 console.log("data", data);

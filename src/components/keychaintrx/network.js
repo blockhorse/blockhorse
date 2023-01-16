@@ -8,8 +8,10 @@ const router= express.Router()
 
 
 router.post('/', function (req, res)  {
-  
-         console.log("BODY Kerychain",req.body)
+res.header('Content-Type', 'application/json');
+res.header('Cache-Control', 'no-cache');
+res.header('Access-Control-Allow-Origin', '*');
+         console.log("BODY Kerychain Res",req.body)
 
 const {memo} = req.body.data;
 const result = req.body.result;
@@ -25,7 +27,7 @@ if ((memo.startsWith("EQ- entering") && (result !=null))) {
     })
    
 
-}
+}else{console.log("NO proceso post keychaintrx")}
 
 
 

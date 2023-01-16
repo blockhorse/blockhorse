@@ -1,0 +1,34 @@
+const express= require('express');
+const response = require('../../network/response')
+const controller =require("./controller")
+const router= express.Router()
+
+ 
+
+
+
+router.get('/', function (req, res)  {
+        
+controller.get_time().then((resultado)=>{
+        console.log("resultado controller", resultado);
+  res.header('Content-Type', 'application/json');
+res.header('Cache-Control', 'no-cache');
+res.header('Access-Control-Allow-Origin', '*');
+ response.success(req, res,resultado, 200);
+    })
+   
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+module.exports = router;

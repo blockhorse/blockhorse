@@ -26,6 +26,7 @@ const equino = new Schema({
   carreras:Array,
   llegadas:Object,
   estado:String,
+  status:String,
   Nacimiento:Date,
   Dias_Vida:String,
   Carreras_Utiles:String,
