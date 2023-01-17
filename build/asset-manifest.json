@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.a431b8e5.css",
-    "main.js": "./static/js/main.22dd6c56.js",
+    "main.js": "./static/js/main.a694449d.js",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
     "static/media/bigbone-logo.png": "./static/media/bigbone-logo.a614dda9d471b2d1881b.png",
@@ -15,10 +15,10 @@
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "index.html": "./index.html",
     "main.a431b8e5.css.map": "./static/css/main.a431b8e5.css.map",
-    "main.22dd6c56.js.map": "./static/js/main.22dd6c56.js.map"
+    "main.a694449d.js.map": "./static/js/main.a694449d.js.map"
   },
   "entrypoints": [
     "static/css/main.a431b8e5.css",
-    "static/js/main.22dd6c56.js"
+    "static/js/main.a694449d.js"
   ]
 }
