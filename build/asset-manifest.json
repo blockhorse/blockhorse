@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.9f1eccb1.css",
-    "main.js": "./static/js/main.71b63eba.js",
+    "main.js": "./static/js/main.912716c5.js",
     "static/media/logo-dorado.png": "./static/media/logo-dorado.6918be1595adcb85e9b8.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
@@ -16,10 +16,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.9f1eccb1.css.map": "./static/css/main.9f1eccb1.css.map",
-    "main.71b63eba.js.map": "./static/js/main.71b63eba.js.map"
+    "main.912716c5.js.map": "./static/js/main.912716c5.js.map"
   },
   "entrypoints": [
     "static/css/main.9f1eccb1.css",
-    "static/js/main.71b63eba.js"
+    "static/js/main.912716c5.js"
   ]
 }
