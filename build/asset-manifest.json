@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a91e8167.css",
+    "main.js": "./static/js/main.84af6791.js",
+    "static/media/logotruck.png": "./static/media/logotruck.51964aa3154a8b6d7d2a.png",
+    "static/media/logo-dorado.png": "./static/media/logo-dorado.6918be1595adcb85e9b8.png",
+    "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
+    "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
+    "static/media/banner2.png": "./static/media/banner2.b0896e32f53b9134d5a4.png",
+    "static/media/banner3.png": "./static/media/banner3.7a769bd56e97fbe90530.png",
+    "static/media/bigbone-logo.png": "./static/media/bigbone-logo.a614dda9d471b2d1881b.png",
+    "static/media/banner1.png": "./static/media/banner1.02cf8a009e9803a87371.png",
+    "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
+    "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
+    "static/media/home-broker-dealer-icon.svg": "./static/media/home-broker-dealer-icon.5a537647e56ce90f9c8c6d4505b74f60.svg",
+    "static/media/horse-riding-icon.svg": "./static/media/horse-riding-icon.a913998ddca664e3840ce1c66ecb2ba6.svg",
+    "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/calmness-svgrepo-com.svg": "./static/media/calmness-svgrepo-com.24949f9cb097ca413c4313a18ba535df.svg",
+    "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
+    "static/media/horseshoe-icon.svg": "./static/media/horseshoe-icon.b396668cde8aedda47a4a5addb8d2983.svg",
+    "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
+    "index.html": "./index.html",
+    "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
+    "main.a91e8167.css.map": "./static/css/main.a91e8167.css.map",
+    "main.84af6791.js.map": "./static/js/main.84af6791.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a91e8167.css",
+    "static/js/main.84af6791.js"
+  ]
+}

@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 router(app);
 
 
-let processor= require('./script/processor/')
+//let processor= require('./script/processor/')
 
 key=require('path').resolve(__dirname, '../certificate/key-one.pem');
 cert=require('path').resolve(__dirname, '../certificate/cert.pem');
