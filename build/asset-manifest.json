@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.77c2d657.css",
+    "main.css": "./static/css/main.74b669f0.css",
     "main.js": "./static/js/main.6ca0eef4.js",
     "static/media/logo-dorado.png": "./static/media/logo-dorado.6918be1595adcb85e9b8.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
@@ -23,11 +23,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
-    "main.77c2d657.css.map": "./static/css/main.77c2d657.css.map",
+    "main.74b669f0.css.map": "./static/css/main.74b669f0.css.map",
     "main.6ca0eef4.js.map": "./static/js/main.6ca0eef4.js.map"
   },
   "entrypoints": [
-    "static/css/main.77c2d657.css",
+    "static/css/main.74b669f0.css",
     "static/js/main.6ca0eef4.js"
   ]
 }
