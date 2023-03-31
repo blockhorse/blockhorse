@@ -11,6 +11,13 @@ db.connect(URI_MD, {
 console.log("conexion_db");
 
 
+
+// Obtener el número de conexiones abiertas
+const numConnections = db.connections.length;
+
+console.log(`Número de conexiones abiertas: ${numConnections}`);
+
+
 async function add_inscripcion(notification) {
    const Notificaton = new Model(notification)
    console.log("Notificaton", Notificaton);

@@ -23,7 +23,7 @@ async function displayHello() {
  if(venta_a_procesar.length>=1){
     console.log("Ventas H-pay por entregar", venta_a_procesar.length);
 
-    console.log("Venta hivepay a procesar", venta_a_procesar);
+   // console.log("Venta hivepay a procesar", venta_a_procesar);
 }
 
 const venta_block_a_procesar = await despacho.get_pb()
