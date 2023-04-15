@@ -36,7 +36,7 @@ if (match) {
 if(menssage==texto){
 
 let data={
-     trx_Registro:body.result.id,
+     trx_Registro:body.result.tx_id,
      carreraId:race,
      usuario: body.data.username,  
      equineId: number, 
