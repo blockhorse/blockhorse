@@ -6,7 +6,7 @@ exports.success = function (req, res, msg,sts,hdr){
 }
 
 exports.error = function (req, res, msg,sts,hdr){
- msg= msg + es;
+ msg= msg ;
 	res.status(status || 500 ).send({
 		error :msg,
 		body:'',
