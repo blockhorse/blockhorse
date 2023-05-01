@@ -15,6 +15,7 @@ const router= express.Router()
 
 
 router.get('/', async function (req, res) {
+  
   controller.get_hivepay_notification(req).then((respuesta) => {
     console.log("respuesta", respuesta);
     response.success(req, res, respuesta, respuesta.data, 200);

@@ -46,10 +46,21 @@ async function get_cofres_user(user) {
   try {
     const chest = await store.getChestsForUser(user);
     console.log("chestEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRR", chest);
-    const llaves_disponibles = chest.llaves_compradas - chest.llaves_gastadas;
-    const cofres_disponibles = chest.cofres_compradas - chest.cofres_gastadas;
+    
+    if (!chest) {
+      return {
+        llaves_disponibles: 0,
+        cofres_disponibles: 0,
+        cofres_a_reclamar: 0,
+        status: 0
+      };
+    }
+    
+    const llaves_disponibles = (chest.llaves_compradas ?? 0) - (chest.llaves_gastadas ?? 0);
+    const cofres_disponibles = (chest.cofres_compradas ?? 0) - (chest.cofres_gastadas ?? 0);
     const cofres_a_reclamar = Math.min(llaves_disponibles, cofres_disponibles);
-    const status=chest.status
+    const status = chest.status ?? 0;
+    
     return {
       llaves_disponibles,
       cofres_disponibles,
@@ -61,6 +72,7 @@ async function get_cofres_user(user) {
     return null;
   }
 }
+
 
 
 
