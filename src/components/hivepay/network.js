@@ -5,13 +5,23 @@ const router= express.Router()
 
 
 
-router.get('/',  async function (req, res)  {
-    //console.log("BODY",req.body)
-     controller.get_hivepay_notification(req.body).then((resto)=>{
-        console.log("resto", resto);
-         response.success(req, res,"todo bien",201);})
+// router.get('/',  async function (req, res)  {
+//     console.log("BODY",req)
+//      controller.get_hivepay_notification(req).then((resto)=>{
+//         console.log("resto", resto);
+//          response.success(req, res,"todo bien",201);})
 
-})
+// })
+
+
+router.get('/', async function (req, res) {
+  controller.get_hivepay_notification(req).then((respuesta) => {
+    console.log("respuesta", respuesta);
+    response.success(req, res, respuesta, respuesta.data, 200);
+  }).catch((error) => {
+    response.error(req, res, 'Error al obtener notificación', error, 500);
+  });
+});
 
 
 

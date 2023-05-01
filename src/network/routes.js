@@ -12,6 +12,7 @@ const race= require('./../components/race/network.js')
 const timer= require('./../components/time/network.js')
 const equino= require('./../components/equino/network.js')
 const keychaintrx= require('./../components/keychaintrx/network.js')
+const keychaintrx_chest= require('./../components/keychaintrx_chest/network.js')
 
 const routes = function (server){
 	//server.use('/', home);
@@ -23,6 +24,7 @@ const routes = function (server){
      server.use('/race', race);
        server.use('/time', timer);
       server.use('/keychaintrx', keychaintrx);
+      server.use('/keychaintrx_chest', keychaintrx_chest);
      server.use('/equino', equino);
     
 	

@@ -109,6 +109,10 @@ const payhiveSchema= new Schema(
    	  type: String,
         
     },
+      entregado:  {
+      type: Boolean,
+      default:false  
+    },
        checked:  {
    	  type: String,
    	  default:false
@@ -127,7 +131,47 @@ const payhiveSchema= new Schema(
 
 const payhiveModel = mongoose.model("hivepay",payhiveSchema)
 
-module.exports = payhiveModel;
+
+const chest_buy = new Schema({
+  usuario: {
+    type: String,
+    index: true,
+    unique: true 
+  },
+  llaves_compradas: {
+    type: Number,
+    default: 0
+  },
+  cofres_compradas: {
+    type: Number,
+    default: 0
+  },
+  cofres_procesando: {
+    type: Number,
+    default: 0
+  },                   
+  llaves_gastadas: {
+    type: Number,
+    default: 0
+  },
+  cofres_gastadas: {
+    type: Number,
+    default: 0
+  },
+   status: {
+    type: String,
+    default:"create"
+  }
+}, {
+  autoIndex: false,
+  autoCreate: false
+});
+
+
+
+const chest_buyModel = mongoose.model("chest_buy",chest_buy)
+
+module.exports={ payhiveModel,chest_buyModel}
 
 
 

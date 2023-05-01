@@ -1,17 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.43fa9590.css",
-    "main.js": "./static/js/main.4cdef7a0.js",
+    "main.css": "./static/css/main.09468ec7.css",
+    "main.js": "./static/js/main.f54c6a2a.js",
     "static/media/logoBlock.png": "./static/media/logoBlock.3afc0ca7cf207b997f1b.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
     "static/media/banner1.png": "./static/media/banner1.cb30f5157b79f9282067.png",
     "static/media/banner2.png": "./static/media/banner2.c8c76f9308226fb41ddf.png",
-    "static/media/zanahory1.png": "./static/media/zanahory1.e814a1edbb9cac7bbcb5.png",
     "static/media/banner3.png": "./static/media/banner3.6083dfd2682fbb0f58ea.png",
     "static/media/manzanas.png": "./static/media/manzanas.af8f9cc7b513f776f9fa.png",
-    "static/media/henoq.png": "./static/media/henoq.6a736f3ac5a24f861e38.png",
-    "static/media/alfa.png": "./static/media/alfa.5cccb402b98f294d5474.png",
     "static/media/bigbone-logo.png": "./static/media/bigbone-logo.a614dda9d471b2d1881b.png",
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
@@ -23,6 +20,7 @@
     "static/media/ballo15.png": "./static/media/ballo15.bd363859368858b1e41b.png",
     "static/media/ballo11.png": "./static/media/ballo11.88fac3ae4f9ffa7914bf.png",
     "static/media/ballo12.jpg": "./static/media/ballo12.5f93fdff61eaefafc38d.jpg",
+    "static/media/keyb.png": "./static/media/keyb.f2a19d016d0cf96ec276.png",
     "static/media/home-broker-dealer-icon.svg": "./static/media/home-broker-dealer-icon.5a537647e56ce90f9c8c6d4505b74f60.svg",
     "static/media/horse-riding-icon.svg": "./static/media/horse-riding-icon.a913998ddca664e3840ce1c66ecb2ba6.svg",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -34,11 +32,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "index.html": "./index.html",
-    "main.43fa9590.css.map": "./static/css/main.43fa9590.css.map",
-    "main.4cdef7a0.js.map": "./static/js/main.4cdef7a0.js.map"
+    "main.09468ec7.css.map": "./static/css/main.09468ec7.css.map",
+    "main.f54c6a2a.js.map": "./static/js/main.f54c6a2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.43fa9590.css",
-    "static/js/main.4cdef7a0.js"
+    "static/css/main.09468ec7.css",
+    "static/js/main.f54c6a2a.js"
   ]
 }

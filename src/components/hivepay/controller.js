@@ -42,19 +42,44 @@ resolve(store.add(data))
 
 }
 
-
-async function get_hivepay_notification(body){
- return new Promise((resolve,reject) =>{
-
-  resolve(store.get(body))
-
-
-
-console.log("menssage body desde get hive pay", body);
-
-
- })
+async function get_cofres_user(user) {
+  try {
+    const chest = await store.getChestsForUser(user);
+    console.log("chestEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRR", chest);
+    const llaves_disponibles = chest.llaves_compradas - chest.llaves_gastadas;
+    const cofres_disponibles = chest.cofres_compradas - chest.cofres_gastadas;
+    const cofres_a_reclamar = Math.min(llaves_disponibles, cofres_disponibles);
+    const status=chest.status
+    return {
+      llaves_disponibles,
+      cofres_disponibles,
+      cofres_a_reclamar,
+      status
+    };
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }
+
+
+
+
+
+
+async function get_hivepay_notification(req) {
+    console.log("BOOOOOOD",req.body)
+  const user_cofres = req.query.user_cofres;
+  if (user_cofres) {
+    return get_cofres_user(user_cofres);
+  } else {
+    return new Promise((resolve, reject) => {
+      resolve(store.get(req.body));
+      console.log("mensaje body desde get hive pay", body);
+    });
+  }
+}
+
 
 
 module.exports = {
