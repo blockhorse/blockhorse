@@ -5,15 +5,6 @@ const router= express.Router()
 
 
 
-// router.get('/',  async function (req, res)  {
-//     console.log("BODY",req)
-//      controller.get_hivepay_notification(req).then((resto)=>{
-//         console.log("resto", resto);
-//          response.success(req, res,"todo bien",201);})
-
-// })
-
-
 router.get('/', async function (req, res) {
   
   controller.get_hivepay_notification(req).then((respuesta) => {
@@ -30,22 +21,22 @@ router.post('/', function (req, res)  {
   //console.log("BODY notification pay",req.body)
     body=JSON.stringify(req.body)
     body=JSON.parse(body)
-    //console.log("body BOBOBOBOB", body);
+    console.log("body BOBOBOBOB", body);
     // console.log("body BOBOBOBOB IPNIPN", body.hivepay_ipn);
 
     //  res.status(200).send("mensaje");
- if(body.hivepay_ipn=='notification'){
-     controller.add_pay(body)
-    console.log("BODY notification pay",)
-    response.success(req, res,"todo bien",200);
+ // if(body.hivepay_ipn=='notification'){
+ //     controller.add_pay(body)
+ //    console.log("BODY notification pay",)
+ //    response.success(req, res,"todo bien",200);
 
-  }else{
-      console.log("NO BODY notification pay, QUE ES?",body)
-     // controller.add_pay(body)
+ //  }else{
+ //      console.log("NO BODY notification pay, QUE ES?",body)
+ //     // controller.add_pay(body)
 
-    response.success(req, res,"todo bien",400);
+ //    response.success(req, res,"todo bien",400);
 
-  }
+ //  }
  
 
 })
