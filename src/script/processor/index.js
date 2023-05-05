@@ -7,7 +7,7 @@ const {
 const despacho = require ('./despacho/ventas.js');
 
 
-setInterval(displayHello, 10000);
+setInterval(displayHello, 30000);
 
 async function displayHello() {
  console.log("PROCESO DE COMPROBAR Y EMTREGAR COMPRAS HIVEPAY, CABALLOS Y COFRES")

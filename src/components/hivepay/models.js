@@ -149,7 +149,11 @@ const chest_buy = new Schema({
   cofres_procesando: {
     type: Number,
     default: 0
-  },                   
+  },  
+  cofres_obtenidos: {
+    type: Number,
+    default: 0
+  },                  
   llaves_gastadas: {
     type: Number,
     default: 0
