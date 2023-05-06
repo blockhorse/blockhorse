@@ -60,11 +60,15 @@ async function get_cofres_user(user) {
     const cofres_disponibles = (chest.cofres_compradas ?? 0) - (chest.cofres_gastadas ?? 0);
     const cofres_a_reclamar = Math.min(llaves_disponibles, cofres_disponibles);
     const status = chest.status ?? 0;
+    const cofres_procesando = chest.cofres_procesando ?? null;
+    const cofres_obtenidos = chest.cofres_obtenidos ?? [];
     
     return {
       llaves_disponibles,
       cofres_disponibles,
       cofres_a_reclamar,
+      cofres_procesando,
+      cofres_obtenidos,
       status
     };
   } catch (error) {

@@ -5,6 +5,7 @@ async function processCofre(reqbody) {
 
   const { user_claim, cofres } = reqbody.user_cofres;
 
+ let cofres_claim=parseInt(cofres)
   const userChests = await getCofresForUser(user_claim);
 
   if (userChests.status === "pending") {
@@ -12,17 +13,21 @@ async function processCofre(reqbody) {
   }
 
   const llavesDisponibles = userChests.llaves_compradas - userChests.llaves_gastadas;
-  if (llavesDisponibles < cofres) {
+  if (llavesDisponibles < cofres_claim) {
     throw new Error("No tienes suficientes llaves para comprar los cofres solicitados");
   }
 
   const cofresDisponibles = userChests.cofres_compradas - userChests.cofres_gastadas;
-  if (cofresDisponibles < cofres) {
+  if (cofresDisponibles < cofres_claim) {
     throw new Error("No tienes suficientes cofres para procesar la solicitud");
   }
+  
+  let objeto= generarObjeto(cofres_claim);
+  console.log("objetoTOTOTOTOTOTOTOTOTO", objeto);
 
   userChests.cofres_procesando += cofres;
   userChests.status = "pending";
+  userChests.cofres_obtenidos= objeto;
   const updatedUserChests = await userChests.save();
   
   return updatedUserChests;
@@ -104,25 +109,6 @@ function randomEpico() {
 
 
 
-function generarObjeto(num) {
-  const objeto = {};
-  
-  if (num === 1) {
-    objeto[num] = randomBasico();
-    return objeto;
-  }
-  
-  for (let i = 0; i < 3; i++) {
-    const rand = Math.random();
-    if (rand < 0.5) {
-      objeto[i === 0 ? num : 1] = randomBasico();
-    } else {
-      objeto[num] = randomRaro();
-    }
-  }
-
-  return objeto;
-}
 
 
 
@@ -135,13 +121,16 @@ function generarObjeto(num) {
     objeto[num] = randomBasico();
   } else if (num === 3) {
     consultas = [randomBasico, randomRaro, randomRaro];
+    let contador = 1;
     for (let i = 0; i < 3; i++) {
       const rand = Math.random();
       const randomFunc = rand < 0.5 ? consultas[0] : consultas[1];
-      objeto[randomFunc() ? 1 : 3] = randomFunc();
+      objeto[contador] = randomFunc();
+      contador++;
     }
   } else if (num === 5) {
-    consultas = [randomBasico, randomRaro, randomBasicoEpico];
+    consultas = [randomBasico, randomRaro, randomEpico];
+    let contador = 1;
     for (let i = 0; i < 5; i++) {
       const rand = Math.random();
       let randomFunc;
@@ -152,11 +141,18 @@ function generarObjeto(num) {
       } else {
         randomFunc = consultas[2];
       }
-      objeto[randomFunc() === 1 ? 1 : randomFunc() === 9 ? 5 : 3] = randomFunc();
+      if (randomFunc() === 1) {
+        objeto[contador] = randomFunc();
+      } else if (randomFunc() === 9) {
+        objeto[contador] = 5;
+      } else {
+        objeto[contador] = randomFunc();
+      }
+      contador++;
     }
   }
 
-  return [objeto];
+  return objeto;
 }
 
 

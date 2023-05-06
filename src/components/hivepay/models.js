@@ -151,8 +151,8 @@ const chest_buy = new Schema({
     default: 0
   },  
   cofres_obtenidos: {
-    type: Number,
-    default: 0
+    type: Object,
+    default: {}
   },                  
   llaves_gastadas: {
     type: Number,

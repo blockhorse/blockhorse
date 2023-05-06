@@ -4,6 +4,10 @@ const controller = require('./controller');
 const response = require('../../network/response');
 
 router.post('/', async (req, res) => {
+ res.header('Content-Type', 'application/json');
+res.header('Cache-Control', 'no-cache');
+res.header('Access-Control-Allow-Origin', '*');
+
   try {
     // Llamar al controlador para procesar el cofre
     const result = await controller.processCofre(req.body);
