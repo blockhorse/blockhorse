@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.9787a237.css",
-    "main.js": "./static/js/main.d8dddf2e.js",
+    "main.js": "./static/js/main.a0257967.js",
     "static/media/logoBlock.png": "./static/media/logoBlock.3afc0ca7cf207b997f1b.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
@@ -13,13 +13,13 @@
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
     "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
-    "static/media/ballo17.png": "./static/media/ballo17.7438683b684206df0321.png",
-    "static/media/ballo13.png": "./static/media/ballo13.35fd7593e6af03e0efd8.png",
-    "static/media/ballo14.png": "./static/media/ballo14.1908ca221db7e42f7723.png",
-    "static/media/ballo16.png": "./static/media/ballo16.8b329d816d493cb06575.png",
-    "static/media/ballo15.png": "./static/media/ballo15.bd363859368858b1e41b.png",
-    "static/media/ballo11.png": "./static/media/ballo11.88fac3ae4f9ffa7914bf.png",
-    "static/media/ballo12.jpg": "./static/media/ballo12.5f93fdff61eaefafc38d.jpg",
+    "static/media/ballo13.png": "./static/media/ballo13.1a7d441a6ab69850e4c2.png",
+    "static/media/ballo14.png": "./static/media/ballo14.4a6f2903ad97becb6139.png",
+    "static/media/ballo16.png": "./static/media/ballo16.c04388361e033af2b390.png",
+    "static/media/ballo15.png": "./static/media/ballo15.a918d968ba182b12744e.png",
+    "static/media/ballo17.png": "./static/media/ballo17.b1a4947bc6443887a344.png",
+    "static/media/ballo11.png": "./static/media/ballo11.4110fd872149fbfe37ff.png",
+    "static/media/ballo12.png": "./static/media/ballo12.a9f93b196cf3e56851ae.png",
     "static/media/keyb.png": "./static/media/keyb.f2a19d016d0cf96ec276.png",
     "static/media/home-broker-dealer-icon.svg": "./static/media/home-broker-dealer-icon.5a537647e56ce90f9c8c6d4505b74f60.svg",
     "static/media/horse-riding-icon.svg": "./static/media/horse-riding-icon.a913998ddca664e3840ce1c66ecb2ba6.svg",
@@ -33,10 +33,10 @@
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "index.html": "./index.html",
     "main.9787a237.css.map": "./static/css/main.9787a237.css.map",
-    "main.d8dddf2e.js.map": "./static/js/main.d8dddf2e.js.map"
+    "main.a0257967.js.map": "./static/js/main.a0257967.js.map"
   },
   "entrypoints": [
     "static/css/main.9787a237.css",
-    "static/js/main.d8dddf2e.js"
+    "static/js/main.a0257967.js"
   ]
 }
