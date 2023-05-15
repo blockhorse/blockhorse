@@ -50,7 +50,7 @@ function randomBasico() {
   } else if (rand < 0.95) {
     return 5; // 10% de probabilidad
   } else {
-    const newRand = Math.floor(Math.random() * 16) + 10; // Genera un número aleatorio entre 10 y 25
+    const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 25
     return newRand; // 5% de probabilidad
   }
 }
@@ -75,7 +75,7 @@ function randomRaro() {
   } else if (rand < 0.95) {
     return 8; // 5% de probabilidad
   } else {
-   const newRand = Math.floor(Math.random() * 16) + 10; // Genera un número aleatorio entre 10 y 25
+   const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 25
     return newRand; // 5% de probabilidad
   }
 }
@@ -102,7 +102,7 @@ function randomEpico() {
   } else if (rand < 0.95) {
     return 8; // 5% de probabilidad
   } else {
-    const newRand = Math.floor(Math.random() * 17) + 10; // Genera un número aleatorio entre 10 y 25
+    const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 17
     return newRand; // 5% de probabilidad
   }
 }
