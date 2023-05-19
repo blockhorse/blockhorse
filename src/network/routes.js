@@ -15,14 +15,15 @@ const keychaintrx= require('./../components/keychaintrx/network.js')
 const keychaintrx_chest= require('./../components/keychaintrx_chest/network.js')
 const chest_claim= require('./../components/chest_claim/network.js')
 const actuaciones= require('./../components/actuaciones/network.js')
+const creardatosadiccionales= require('./../components/creardatosadiccionales/network.js')
 
 const routes = function (server){
 	//server.use('/', home);
     server.use('/dashboard', dashboard );
      server.use('/auction', auctions );
-	server.use('/user', user);
-	 server.use('/payhive', payhive);
-	 server.use('/auctions',subasta);
+	  server.use('/user', user);
+	  server.use('/payhive', payhive);
+	  server.use('/auctions',subasta);
      server.use('/race', race);
        server.use('/time', timer);
       server.use('/keychaintrx', keychaintrx);
