@@ -14,6 +14,7 @@ const equino= require('./../components/equino/network.js')
 const keychaintrx= require('./../components/keychaintrx/network.js')
 const keychaintrx_chest= require('./../components/keychaintrx_chest/network.js')
 const chest_claim= require('./../components/chest_claim/network.js')
+const actuaciones= require('./../components/actuaciones/network.js')
 
 const routes = function (server){
 	//server.use('/', home);
@@ -28,6 +29,7 @@ const routes = function (server){
       server.use('/keychaintrx_chest', keychaintrx_chest);
       server.use('/chest_claim', chest_claim);
      server.use('/equino', equino);
+     server.use('/actuaciones', actuaciones);
     
 	
 	

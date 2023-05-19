@@ -5,30 +5,29 @@ const router= express.Router()
 
  
 
+router.get('/', function (req, res) {
+  if (req.query.latest || req.query.page) {
+    // Llamada a la función get_races para obtener las últimas carreras o paginar
+    controller.get_races(req.query).then((resultado) => {
+      console.log("resultado controller", resultado);
 
+      res.header('Content-Type', 'application/json');
+      res.header('Cache-Control', 'no-cache');
+      res.header('Access-Control-Allow-Origin', '*');
+      response.success(req, res, resultado, 201);
+    });
+  } else {
+    // Llamada a la función get_race para obtener todas las carreras
+    controller.get_race(req.query).then((resultado) => {
+      console.log("resultado controller", resultado);
 
-router.get('/', function (req, res)  {
-        
-controller.get_race(req.query).then((resultado)=>{
-        console.log("resultado controller", resultado);
-        // res.headers.set('Content-Type', 'application/json')
-//          response.setHeader({
-//   'Content-Type': 'application/json',
-//   'Cache-Control': 'no-cache',
-//   'Access-Control-Allow-Origin': '*',
-// });
-         res.header('Content-Type', 'application/json');
-res.header('Cache-Control', 'no-cache');
-res.header('Access-Control-Allow-Origin', '*');
-        response.success(req, res,resultado, 201);
-    })
-   
-// response.setHeader('Content-Type', 'application/json');
- 
-// Content-Type: application/json
-
-
-})
+      res.header('Content-Type', 'application/json');
+      res.header('Cache-Control', 'no-cache');
+      res.header('Access-Control-Allow-Origin', '*');
+      response.success(req, res, resultado, 201);
+    });
+  }
+});
 
 
 
