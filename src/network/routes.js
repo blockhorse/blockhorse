@@ -2,6 +2,8 @@ const express = require('express');
 
 const home= require('./../components/home/network.js')
 const dashboard= require('./../components/dashboard/network.js')
+const racemenu= require('./../components/racemenu/network.js')
+
 const auctions= require('./../components/auctions/network.js')
 
 const user = require('./../components/user/network')
@@ -20,6 +22,7 @@ const creardatosadiccionales= require('./../components/creardatosadiccionales/ne
 const routes = function (server){
 	//server.use('/', home);
     server.use('/dashboard', dashboard );
+    server.use('/races', racemenu );
      server.use('/auction', auctions );
 	  server.use('/user', user);
 	  server.use('/payhive', payhive);
