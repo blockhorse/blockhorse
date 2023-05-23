@@ -54,6 +54,19 @@ console.log("CONFIRMANDO  PAGO ",param);
 }
 
 
+async function agragado_entregado_chest_pasadoaTrue(param) {
+console.log("CONFIRMANDO  PAGO ",param);
+	 const  Verificacion = await payhiveModel.findOne({txid: param.txid}).catch((e)=>{
+	   	console.log(e)
+	    });
+
+    console.log("Verificacion",Verificacion)
+	 Verificacion.entregado=param.entregado;
+	 Verificacion.save();
+	
+
+}
+
 
 // async function add_chest_pay(usuario,amount){
 
@@ -83,7 +96,8 @@ add: add_Registro,
 get: get_Notification, 
 _check_pay: check_hive_pay,
 add_chest: add_chest_pay,
- getChestsForUser
+ getChestsForUser,
+ entregado: agragado_entregado_chest_pasadoaTrue
 
 }
 

@@ -112,7 +112,7 @@ async function check_compra_chest(param) {
         console.log("CONFIRMACION DE PAGO")
         console.log("DATOS", data);
 
-        let aprovado = { txid: data.verify_txid, checked: "pagado_en_hive_pay" ,entregado:true}
+        let aprovado = { txid: data.verify_txid, checked: "pagado_en_hive_pay"}
         await store._check_pay(aprovado)
       }
     }

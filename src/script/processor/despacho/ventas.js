@@ -30,8 +30,8 @@ if(param[0].item_name=="Rare chest"){ cantidad=3}
 if(param[0].item_name=="Epic chest"){ cantidad=5} 
 
 await store.add_chest(param[0].buyer, cantidad);
-//let aprovado = { txid: param[0].txid, entregado: true };
-//await store._check_pay(aprovado);
+let aprovado = { txid: param[0].txid, entregado: true };
+await store.entregado(aprovado);
 
 } else {
   console.log("La variable no termina en 'chest'");
