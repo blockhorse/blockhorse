@@ -15,7 +15,7 @@ async function displayHello() {
  const pays_to_proccess= await get_pays()
  if(pays_to_proccess.length>=1){
   console.log("Pagos por procesar:", pays_to_proccess.length);
-// await check_pay(pays_to_proccess)
+ await check_pay(pays_to_proccess)
  }
 
 
