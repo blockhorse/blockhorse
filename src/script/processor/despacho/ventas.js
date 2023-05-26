@@ -23,31 +23,19 @@ console.log("Funcion para entregar la venta",param)
 
 let cantidad=null
 let variable=param[0].item_name;
-if (variable.endsWith("chest")) {
+if (variable.endsWith("Chest")) {
   console.log("La variable termina en 'chest'");
-if(param[0].item_name=="Common chest"){ cantidad=1}
-if(param[0].item_name=="Rare chest"){ cantidad=3}
-if(param[0].item_name=="Epic chest"){ cantidad=5} 
+if(param[0].item_name=="Common Chest"){ cantidad=1}
+if(param[0].item_name=="Rare Chest"){ cantidad=3}
+if(param[0].item_name=="Epic Chest"){ cantidad=5} 
 
 await store.add_chest(param[0].buyer, cantidad);
 let aprovado = { txid: param[0].txid, entregado: true };
-await store.entregado(aprovado);
+await store._check_pay(aprovado);
 
 } else {
   console.log("La variable no termina en 'chest'");
-}
-
-
-
-
-
-
-
-
-     
-
-
-}
+}  }
 
 
 
