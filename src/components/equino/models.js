@@ -4,40 +4,120 @@ const Schema = mongoose.Schema;
 
 
 
-
-
 const equino = new Schema({
-  equineId:  {
-        type: Number,
-        index:true
-    },
-  tipo:String,
-  generacion:String,
-  account:String,
-  name:String,
-  sexo:String,
-  salud: String,
-  velocidad:String,
-  velocidad_add:String,
-  resistencia:String,
-  resistencia_add:String,
-  agilidad:String,
-  animo:String,
-  carreras:Array,
-  llegadas:Object,
-  estado:String,
-  status:String,
-  Nacimiento:Date,
-  Dias_Vida:String,
-  Carreras_Utiles:String,
-  Schedule:Number,
-  Dia_descanzo:Date,
-
-}, {
-    
+  equineId: {
+    type: Number,
+    index: true,
+    require: true
+  },
+  tipo: {
+    type: String,
+    default: ''
+  },
+  generacion: {
+    type: String,
+    default: ''
+  },
+  account: {
+    type: String,
+    default: ''
+  },
+  name: {
+    type: String,
+    default: ''
+  },
+  sexo: {
+    type: String,
+    default: ''
+  },
+  salud: {
+    type: String,
+    default: ''
+  },
+  velocidad: {
+    type: String,
+    default: ''
+  },
+  velocidad_add: {
+    type: String,
+    default: ''
+  },
+  resistencia: {
+    type: String,
+    default: ''
+  },
+  resistencia_add: {
+    type: String,
+    default: ''
+  },
+  agilidad: {
+    type: String,
+    default: ''
+  },
+  animo: {
+    type: String,
+    default: ''
+  },
+  carreras: {
+    type: Array,
+    default: []
+  },
+  llegadas: {
+    type: Object,
+    default: {}
+  },
+  estado: {
+    type: String,
+    default: ''
+  },
+  status: {
+    type: String,
+    default: ''
+  },
+  Nacimiento: {
+    type: Date,
+    default: null
+  },
+  Dias_Vida: {
+    type: String,
+    default: ''
+  },
+  Carreras_Utiles: {
+    type: String,
+    default: ''
+  },
+  Schedule: {
+    type: Number,
+    default: 0
+  },
+  Dia_descanzo: {
+    type: Date,
+    default: null
+  },
+   alimentos: {
+    type: Array,
+    default: {}
+  },
+  alimentos_ptos: {
+    type: Number,
+    default: 0
+  },
+  alimentos_status: {
+    type: String,
+    default: 'free'
+  },
+  alimentos_fecha: {
+    type: Date,
+    }
+  }, 
+  {
+  timestamps: true,
+  versionKey: false,
     autoIndex:false,
     autoCreate: false,
 });
+
+
 
 
 
