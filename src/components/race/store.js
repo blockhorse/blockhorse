@@ -26,13 +26,17 @@ console.log(`Número de conexiones abiertas: ${numConnections}`);
 // }
 
 async function get_races(race) {
-	console.log("ME ejecuto desde store race get race",race)
-	 return Race = await Model.find(race).catch((e)=>{
-	    	console.log("errror")
-	    	console.log(e)
-	    });
-	console.log("Race",Race)
-
+  console.log("ME ejecuto desde store race get race", race);
+  
+  return Race = await Model.find(race)
+    .sort({ _id: -1 })  // Ordena los registros por el campo "_id" en orden descendente
+    .limit(100)        // Limita el resultado a los últimos 100 registros
+    .catch((e) => {
+      console.log("error");
+      console.log(e);
+    });
+  
+  console.log("Race", Race);
 }
 
 
