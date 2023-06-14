@@ -96,7 +96,7 @@ const equino = new Schema({
   },
    alimentos: {
     type: Array,
-    default: {}
+    default: []
   },
   alimentos_ptos: {
     type: Number,
