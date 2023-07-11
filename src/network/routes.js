@@ -18,6 +18,7 @@ const keychaintrx_chest= require('./../components/keychaintrx_chest/network.js')
 const chest_claim= require('./../components/chest_claim/network.js')
 const actuaciones= require('./../components/actuaciones/network.js')
 const creardatosadiccionales= require('./../components/creardatosadiccionales/network.js')
+const aplicar_nft= require('./../components/aplicar_nft/network.js')
 
 const routes = function (server){
 	//server.use('/', home);
@@ -28,12 +29,13 @@ const routes = function (server){
 	  server.use('/payhive', payhive);
 	  server.use('/auctions',subasta);
      server.use('/race', race);
-       server.use('/time', timer);
-      server.use('/keychaintrx', keychaintrx);
-      server.use('/keychaintrx_chest', keychaintrx_chest);
-      server.use('/chest_claim', chest_claim);
+     server.use('/time', timer);
+     server.use('/keychaintrx', keychaintrx);
+     server.use('/keychaintrx_chest', keychaintrx_chest);
+     server.use('/chest_claim', chest_claim);
      server.use('/equino', equino);
      server.use('/actuaciones', actuaciones);
+     server.use('/aplicar_nfts', aplicar_nft);
     
 	
 	

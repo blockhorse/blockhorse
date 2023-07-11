@@ -108,6 +108,22 @@ const equino = new Schema({
   },
   alimentos_fecha: {
     type: Date,
+    },
+
+  implementos: {
+    type: Object,
+    default: {}
+  },
+  implementos_ptos: {
+    type: Number,
+    default: 0
+  },
+  implementos_status: {
+    type: String,
+    default: 'free'
+  },
+  implementos_fecha: {
+    type: Date,
     }
   }, 
   {

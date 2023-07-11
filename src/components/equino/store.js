@@ -36,6 +36,10 @@ async function set_equino_status(equino) {
 
 
 
+
+
+
+
 module.exports = {
 
 get_equino, 
