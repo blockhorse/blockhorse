@@ -11,15 +11,51 @@ db.connect(URI_MD, {
 console.log("conexion_db");
 
 
-async function get_equino(equino) {
-	console.log("ME ejecuto desde store get equino",equino)
-	 return Equino = await Model.find(equino).catch((e)=>{
-	    	console.log("errror")
-	    	console.log(e)
-	    });
-	console.log("EQU",Equino)
+// async function get_equino(equino) {
+// 	console.log("ME ejecuto desde store get equino",equino)
+// 	 return Equino = await Model.find(equino).catch((e)=>{
+// 	    	console.log("errror")
+// 	    	console.log(e)
+// 	    });
+// 	console.log("EQU",Equino)
 
+// }
+
+
+// async function get_equino(equino) {
+//   console.log("ME ejecuto desde store get equino", equino);
+//   const equinos = await Model.find(equino).catch(e => {
+//     console.log("error");
+//     console.log(e);
+//   });
+//   console.log("EQU", equinos);
+//   return equinos;
+// }
+
+
+
+
+async function get_equino(equino) {
+  let equineIds;
+
+  if (equino.equineId.includes(',')) {
+    equineIds = equino.equineId.split(',').map(Number);
+  } else {
+    equineIds = [Number(equino.equineId)];
+  }
+
+  console.log("ME ejecuto desde store get equino", equineIds);
+  const equinos = await Model.find({ equineId: { $in: equineIds } }).catch(e => {
+    console.log("error");
+    console.log(e);
+  });
+  console.log("EQU", equinos);
+  return equinos;
 }
+
+
+
+
 
 
 async function set_equino_status(equino) {
