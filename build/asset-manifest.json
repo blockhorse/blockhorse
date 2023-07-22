@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "./static/css/main.d4dffec6.css",
-    "main.js": "./static/js/main.dc1f59f2.js",
+    "main.js": "./static/js/main.c82c0422.js",
     "static/media/logoBlock.png": "./static/media/logoBlock.3afc0ca7cf207b997f1b.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
     "static/media/banner2.png": "./static/media/banner2.0d1a426c6063fe3ee9f7.png",
     "static/media/banner3.png": "./static/media/banner3.6083dfd2682fbb0f58ea.png",
-    "static/media/banner1.png": "./static/media/banner1.a720edefb457bffc7dd9.png",
+    "static/media/banner1.png": "./static/media/banner1.cafd5bb0b92b00613b3a.png",
     "static/media/bigbone-logo.png": "./static/media/bigbone-logo.7f6a149cfbd1a1ca57ff.png",
     "static/media/banner2i.png": "./static/media/banner2i.a3afea69427ae463991c.png",
     "static/media/banner1i.png": "./static/media/banner1i.cda8beaea7510996a7a5.png",
@@ -35,10 +35,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.d4dffec6.css.map": "./static/css/main.d4dffec6.css.map",
-    "main.dc1f59f2.js.map": "./static/js/main.dc1f59f2.js.map"
+    "main.c82c0422.js.map": "./static/js/main.c82c0422.js.map"
   },
   "entrypoints": [
     "static/css/main.d4dffec6.css",
-    "static/js/main.dc1f59f2.js"
+    "static/js/main.c82c0422.js"
   ]
 }
