@@ -19,6 +19,9 @@ const chest_claim= require('./../components/chest_claim/network.js')
 const actuaciones= require('./../components/actuaciones/network.js')
 const creardatosadiccionales= require('./../components/creardatosadiccionales/network.js')
 const aplicar_nft= require('./../components/aplicar_nft/network.js')
+const wallet= require('./../components/wallet/network.js')
+const claim_drop= require('./../components/claim_drop/network.js')
+
 
 const routes = function (server){
 	//server.use('/', home);
@@ -36,6 +39,8 @@ const routes = function (server){
      server.use('/equino', equino);
      server.use('/actuaciones', actuaciones);
      server.use('/aplicar_nfts', aplicar_nft);
+     server.use('/wallet',wallet);
+     server.use('/claim_drop',claim_drop);
     
 	
 	

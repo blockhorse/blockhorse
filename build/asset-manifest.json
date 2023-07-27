@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.d4dffec6.css",
-    "main.js": "./static/js/main.c82c0422.js",
+    "main.css": "./static/css/main.0113883f.css",
+    "main.js": "./static/js/main.498e747c.js",
+    "static/media/coinBHRT2.png": "./static/media/coinBHRT2.b4b0d6a7736551abf4ed.png",
     "static/media/logoBlock.png": "./static/media/logoBlock.3afc0ca7cf207b997f1b.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
@@ -34,11 +35,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
-    "main.d4dffec6.css.map": "./static/css/main.d4dffec6.css.map",
-    "main.c82c0422.js.map": "./static/js/main.c82c0422.js.map"
+    "main.0113883f.css.map": "./static/css/main.0113883f.css.map",
+    "main.498e747c.js.map": "./static/js/main.498e747c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4dffec6.css",
-    "static/js/main.c82c0422.js"
+    "static/css/main.0113883f.css",
+    "static/js/main.498e747c.js"
   ]
 }
