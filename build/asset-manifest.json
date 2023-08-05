@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.0a65adc4.css",
-    "main.js": "./static/js/main.4431cf3a.js",
+    "main.js": "./static/js/main.b7bc9536.js",
     "static/media/coinBHRT2.png": "./static/media/coinBHRT2.b4b0d6a7736551abf4ed.png",
     "static/media/logoBlock.png": "./static/media/logoBlock.3afc0ca7cf207b997f1b.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
@@ -36,10 +36,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.0a65adc4.css.map": "./static/css/main.0a65adc4.css.map",
-    "main.4431cf3a.js.map": "./static/js/main.4431cf3a.js.map"
+    "main.b7bc9536.js.map": "./static/js/main.b7bc9536.js.map"
   },
   "entrypoints": [
     "static/css/main.0a65adc4.css",
-    "static/js/main.4431cf3a.js"
+    "static/js/main.b7bc9536.js"
   ]
 }

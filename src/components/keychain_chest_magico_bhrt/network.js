@@ -16,7 +16,7 @@ console.log("BODY Kerychain Magic Res",req.body)
 const {memo} = req.body.data;
 const result = req.body.result;
 
-if ((memo.startsWith("EQ-Chest") && (result !=null))) {
+if ((memo.startsWith("Magic-Chest") && (result !=null))) {
   console.log("The string starts with the specified phrase.");
 
 

@@ -26,14 +26,24 @@ console.log(e);
 
 
 async function register_claim(usuario) {
-console.log("ME ejecuto desde store Register Claim", usuario);
-const claim = await Model.create(usuario).catch(e => {
-console.log("error");
-console.log(e);
-  });
-  console.log("Register_Claim", claim);
-  return claim;
+  console.log("ME ejecuto desde store Register Claim", usuario);
+  
+  try {
+    const claim = await Model.create(usuario);
+    console.log("Register_Claim", claim);
+    return claim;
+  } catch (error) {
+    if (error.code === 11000) {
+      // Código 11000 corresponde a un error de duplicado (clave única)
+      console.log("Error de duplicado:", error);
+      // Manejar el error según sea necesario
+    } else {
+      // Manejar otros errores
+      console.log("Error:", error);
+    }
+  }
 }
+
 
 
 
