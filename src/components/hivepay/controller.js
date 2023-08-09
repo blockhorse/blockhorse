@@ -79,6 +79,41 @@ async function get_cofres_user(user) {
 
 
 
+async function get_cofres_user_m(user) {
+  try {
+    const chest = await store.getChestsForUser(user);
+    console.log("chestEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRR", chest);
+    
+    if (!chest) {
+      return {
+        llaves_m_disponibles: 0,
+        cofres_m_disponibles: 0,
+        cofres_m_a_reclamar: 0,
+        status: 0
+      };
+    }
+    
+    const llaves_m_disponibles = (chest.llaves_m_compradas ?? 0) - (chest.llaves_m_gastadas ?? 0);
+    const cofres_m_disponibles = (chest.cofres_m_compradas ?? 0) - (chest.cofres_m_gastadas ?? 0);
+    const cofres_m_a_reclamar = Math.min(llaves_m_disponibles, cofres_m_disponibles);
+    const status = chest.status ?? 0;
+    const cofres_m_procesando = chest.cofres_procesando ?? null;
+    const cofres_m_obtenidos = chest.cofres_obtenidos ?? [];
+    
+    return {
+      llaves_m_disponibles,
+      cofres_m_disponibles,
+      cofres_m_a_reclamar,
+      cofres_m_procesando,
+      cofres_m_obtenidos,
+      status
+    };
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
 
 
 
@@ -86,8 +121,15 @@ async function get_cofres_user(user) {
 async function get_hivepay_notification(req) {
     console.log("BOOOOOOD",req.body)
   const user_cofres = req.query.user_cofres;
+    const user_cofres_m = req.query.user_cofres_m;
   if (user_cofres) {
+    console.log("COOOOOOOOOOOOFRESILLO")
     return get_cofres_user(user_cofres);
+  }else if(user_cofres_m){
+     console.log("COOOOOOOOOOOOFRESILLO2",user_cofres_m)
+    return get_cofres_user_m(user_cofres_m);
+
+
   } else {
     return new Promise((resolve, reject) => {
       resolve(store.get(req.body));

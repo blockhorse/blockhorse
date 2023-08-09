@@ -35,11 +35,11 @@ async function updateCofres(user, cofres) {
       { usuario: user },
       {
         $inc: {
-          cofres_procesando: cofres,
-          llaves_gastadas: cofres,
-          cofres_gastadas: cofres,
+          cofres_m_procesando: cofres,
+          llaves_m_gastadas: cofres,
+          cofres_m_gastadas: cofres,
         },
-        $set: { status: 'pending' },
+        $set: { status_m: 'pending' },
       }
     ).exec();
 
@@ -59,5 +59,7 @@ async function getCofresForUser(user) {
 }
 
 module.exports = { updateCofres, getCofresForUser };
+
+
 
 

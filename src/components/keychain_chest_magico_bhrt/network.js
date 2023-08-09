@@ -5,7 +5,11 @@ const router= express.Router()
 
 //Este codigo Solo recibe las transacciones, pero no las procesa de por si.
  
-
+router.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // Replace with your frontend domain
+  res.header('Access-Control-Allow-Methods', 'GET'); // Adjust the allowed HTTP methods as needed
+  next();
+});
 
 router.post('/', function (req, res)  {
 res.header('Content-Type', 'application/json');

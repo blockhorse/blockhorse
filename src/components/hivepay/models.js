@@ -162,7 +162,38 @@ const chest_buy = new Schema({
     type: Number,
     default: 0
   },
+     
+ llaves_m_compradas: {
+    type: Number,
+    default: 0
+  },
+  cofres_m_compradas: {
+    type: Number,
+    default: 0
+  },
+  cofres_m_procesando: {
+    type: Number,
+    default: 0
+  },  
+  cofres_m_obtenidos: {
+    type: Object,
+    default: {}
+  },                  
+  llaves_m_gastadas: {
+    type: Number,
+    default: 0
+  },
+  cofres_m_gastadas: {
+    type: Number,
+    default: 0
+  },
+
+
    status: {
+    type: String,
+    default:"create"
+  },
+   status_m: {
     type: String,
     default:"create"
   }
