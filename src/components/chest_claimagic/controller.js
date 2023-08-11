@@ -129,7 +129,7 @@ function randomRaro() {
     return 19; // 0.9% de probabilidad
   } else {
     const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 25
-    return newRand; // 5% de probabilidad
+    return newRand; // 0.1% de probabilidad
   }
 }
 
