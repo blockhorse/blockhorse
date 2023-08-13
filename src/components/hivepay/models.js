@@ -196,6 +196,10 @@ const chest_buy = new Schema({
    status_m: {
     type: String,
     default:"create"
+  },
+    fecha: {
+    type: Date,
+    default: Date.now  // Puedes establecer un valor predeterminado para la fecha
   }
 }, {
   autoIndex: false,
