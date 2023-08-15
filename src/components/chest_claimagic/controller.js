@@ -79,7 +79,7 @@ function randomBasico() {
   }else if (rand < 0.9990) {
     return 19; // 0.30% de probabilidad
   } else {
-    const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 25
+    const newRand = randomCrianza() // Genera un número aleatorio entre 10 y 25
     return newRand; // 0.1% de probabilidad
   }
 }
@@ -128,7 +128,7 @@ function randomRaro() {
   }else if (rand < 0.9990) {
     return 19; // 0.9% de probabilidad
   } else {
-    const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 25
+    const newRand = randomCrianza() // Genera un número aleatorio entre 10 y 25
     return newRand; // 0.1% de probabilidad
   }
 }
@@ -149,7 +149,7 @@ function randomEpico() {
   } else if (rand < 0.37) {
     return 5; // 10% de probabilidad
   }else if (rand < 0.48) {
-    return 6; // 10% de probabilidad
+    return 6; // 11% de probabilidad
   }else if (rand < 0.58) {
     return 7; // 10% de probabilidad
   }else if (rand < 0.68) {
@@ -177,13 +177,35 @@ function randomEpico() {
   }else if (rand < 0.9990) {
     return 19; // 0.9% de probabilidad
   } else {
-    const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 25
-    return newRand; // 5% de probabilidad
+    const newRand = randomCrianza()
+    return newRand; // 0,01% de probabilidad
   }
 }
 
 
 
+
+
+
+function randomCrianza() {
+  const rand = Math.random(); // Genera un número aleatorio entre 0 y 1
+
+    if (rand < 0.50) {
+    return 20; // 50% de probabilidad comun
+  } else if (rand < 0.65) {
+    return 21; // 15% de probabilidad poco
+  } else if (rand < 0.75) {
+    return 22; // 10% de probabilidad raro
+  } else if (rand < 0.83) {
+    return 23; // 8% de probabilidad spectral
+  } else if (rand < 0.90) {
+    return 24; // 7% de probabilidad epico
+  }else if (rand < 0.96) {
+    return 25; // 6% de probabilidad mitico
+  } else {
+    return 26; // 4% de probabilidad legendario
+  }
+}
 
 
 
