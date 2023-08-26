@@ -122,6 +122,14 @@ const equino = new Schema({
     type: String,
     default: 'free'
   },
+   entrenamiento_gratis: {
+    type: Number,
+    default: 0
+  },
+   opcion_entrenamiento: {
+    type: Number,
+    default: 0
+  },
   implementos_fecha: {
     type: Date,
     }
