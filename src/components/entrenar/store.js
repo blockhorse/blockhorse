@@ -1,0 +1,195 @@
+require("dotenv").config();
+const Model= require('./models.js')
+const ModelEquino= require('./../equino/models.js')
+const MONGOUSE = process.env.MONGOUSE
+URI_MD = `mongodb://${MONGOUSE}@cluster3479-shard-00-00.r5klk.mongodb.net:27017,cluster3479-shard-00-01.r5klk.mongodb.net:27017,cluster3479-shard-00-02.r5klk.mongodb.net:27017/EQUINE?ssl=true&replicaSet=atlas-ts4xhm-shard-0&authSource=admin&retryWrites=true&w=majority&readPreference=primary`
+const db = require('mongoose');
+db.Promise = global.Promise;
+db.connect(URI_MD, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+console.log("conexion_db");
+
+
+
+// Obtener el número de conexiones abiertas
+const numConnections = db.connections.length;
+
+console.log(`Número de conexiones abiertas: ${numConnections}`);
+
+
+async function entrenarGratis(notification) {
+   const Notificaton = new Model(notification)
+   console.log("Notificaton", Notificaton);
+       await Notificaton.save().catch((e)=>{
+            console.log(e)
+           
+        });
+
+}
+
+
+
+
+
+async function entrenarGratis_speed(data) {
+  const { equineId, speed,trx } = data;
+  
+  try {
+    // Busca el documento correspondiente usando equineId
+    let existingEntrenamiento = await Model.findOne({ equineId });
+
+    if (!existingEntrenamiento) {
+      // Si no existe, crea un nuevo documento con equineId y el primer valor de velocidad
+      existingEntrenamiento = new Model({
+        equineId,
+        speed: [speed], // Agrega el primer valor de velocidad al array
+      });
+    } else {
+      // Si existe, agrega el nuevo valor al array speed
+      existingEntrenamiento.speed.push(speed);
+      existingEntrenamiento.entrenamiento_gratis = 2;
+    }
+
+    // Guarda el documento
+    await existingEntrenamiento.save();
+    
+    console.log("Entrenamiento actualizado:", existingEntrenamiento);
+  } catch (error) {
+    console.error("Error al entrenar gratis:", error);
+  }
+}
+
+
+
+async function Registrar_speed(data) {
+  const { equineId, speed } = data;
+  
+  try {
+    // Busca el documento correspondiente usando equineId
+    let existingEntrenamiento = await ModelEquino.findOne({ equineId });
+
+    if (!existingEntrenamiento) {
+     console.log("No Existe ese equino")
+    } else {
+
+      const currentVelocidadAdd = Number(existingEntrenamiento.velocidad_add) || 0;
+      
+      const updatedValue = (currentVelocidadAdd + Number(speed)).toFixed(5).toString();
+
+  
+      existingEntrenamiento.velocidad_add = updatedValue;
+       existingEntrenamiento.entrenamiento_gratis = 2;
+    }
+
+
+
+ 
+
+    // Guarda el documento
+    await existingEntrenamiento.save();
+    
+    console.log("Entrenamiento actualizado:", existingEntrenamiento);
+  } catch (error) {
+    console.error("Error al entrenar gratis:", error);
+  }
+}
+
+
+async function entrenarGratis_endurance(data) {
+  const { equineId, endurance } = data;
+  
+  try {
+    // Busca el documento correspondiente usando equineId
+    let existingEntrenamiento = await Model.findOne({ equineId });
+
+    if (!existingEntrenamiento) {
+      // Si no existe, crea un nuevo documento con equineId y el primer valor de velocidad
+      existingEntrenamiento = new Model({
+        equineId,
+        endurance: [endurance], // Agrega el primer valor de velocidad al array
+      });
+    } else {
+      // Si existe, agrega el nuevo valor al array speed
+      existingEntrenamiento.endurance.push(endurance);
+         existingEntrenamiento.entrenamiento_gratis = 2;
+    }
+
+    // Guarda el documento
+    await existingEntrenamiento.save();
+    
+    console.log("Entrenamiento actualizado:", existingEntrenamiento);
+  } catch (error) {
+    console.error("Error al entrenar gratis:", error);
+  }
+}
+
+
+async function Registrar_endurance(data) {
+  const { equineId, endurance } = data;
+  
+  try {
+    // Busca el documento correspondiente usando equineId
+    let existingEntrenamiento = await ModelEquino.findOne({ equineId });
+
+    if (!existingEntrenamiento) {
+     console.log("No Existe ese equino")
+    } else {
+      // Si existe, agrega el nuevo valor al array speed
+      const currentResistenciaAdd = Number(existingEntrenamiento.resistencia_add) || 0;
+      
+     // const updatedValue = (currentResistenciaAdd + Number(endurance)).toString();
+      const updatedValue = (currentResistenciaAdd + Number(endurance)).toFixed(5).toString();
+
+      existingEntrenamiento.resistencia_add = updatedValue;
+         existingEntrenamiento.entrenamiento_gratis = 2;
+    }
+
+
+
+ 
+
+    // Guarda el documento
+    await existingEntrenamiento.save();
+    
+    console.log("Entrenamiento actualizado:", existingEntrenamiento);
+  } catch (error) {
+    console.error("Error al entrenar gratis:", error);
+  }
+}
+
+
+
+
+
+
+async function get_equino(equino) {
+  let equineIds;
+
+  if (equino.equineId.includes(',')) {
+    equineIds = equino.equineId.split(',').map(Number);
+  } else {
+    equineIds = [Number(equino.equineId)];
+  }
+
+  console.log("ME ejecuto desde store get equino", equineIds);
+  const equinos = await ModelEquino.find({ equineId: { $in: equineIds } }).catch(e => {
+    console.log("error");
+    console.log(e);
+  });
+  console.log("EQU", equinos);
+  return equinos;
+}
+
+
+
+module.exports = {
+entrenarGratis_speed, 
+entrenarGratis_endurance,
+Registrar_speed,
+Registrar_endurance,
+get_equino
+}
+
+

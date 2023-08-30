@@ -24,6 +24,7 @@ const aplicar_nft= require('./../components/aplicar_nft/network.js')
 const wallet= require('./../components/wallet/network.js')
 const claim_drop= require('./../components/claim_drop/network.js')
 const poblacion= require('./../components/poblacion-equina/networks.js')
+const entrenar= require('./../components/entrenar/network.js')
 
 
 const routes = function (server){
@@ -46,7 +47,8 @@ const routes = function (server){
      server.use('/aplicar_nfts', aplicar_nft);
      server.use('/wallet',wallet);
      server.use('/claim_drop',claim_drop);
-    server.use('/poblacion',poblacion);
+     server.use('/poblacion',poblacion);
+     server.use('/entrenar',entrenar);
     
 	
 	

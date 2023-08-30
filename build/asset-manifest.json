@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "./static/css/main.39214b2b.css",
-    "main.js": "./static/js/main.ac331ab1.js",
+    "main.js": "./static/js/main.27fd2dc0.js",
     "static/media/coinBHRT2.png": "./static/media/coinBHRT2.b4b0d6a7736551abf4ed.png",
+    "static/media/celebrate.gif": "./static/media/celebrate.febe59e009480460a8b7.gif",
     "static/media/logoBlock.png": "./static/media/logoBlock.3afc0ca7cf207b997f1b.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
@@ -36,10 +37,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.39214b2b.css.map": "./static/css/main.39214b2b.css.map",
-    "main.ac331ab1.js.map": "./static/js/main.ac331ab1.js.map"
+    "main.27fd2dc0.js.map": "./static/js/main.27fd2dc0.js.map"
   },
   "entrypoints": [
     "static/css/main.39214b2b.css",
-    "static/js/main.ac331ab1.js"
+    "static/js/main.27fd2dc0.js"
   ]
 }
