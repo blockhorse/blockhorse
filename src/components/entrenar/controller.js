@@ -67,12 +67,14 @@ let equino=null;
 let Gratis=0;
 let respuesta=null;
 
-const memo = body.data.memo;
+const memo = body && body.data && body.data.memo ? body.data.memo : "no memo";
 console.log("memo", memo);
 const numero = Number(body.data.amount) * 10;
-const menssage=body.message
+const menssage=body && body.message ? body.message : "sin mensaje"; 
 const texto='La transacción ha sido transmitida con éxito. Por favor, compruebe su saldo para confirmar que ha sido procesada con éxito.'
-const trxId= body.result.tx_id
+// Make sure 'body' and 'body.result' are defined before accessing 'tx_id'
+const trxId = body && body.result && body.result.tx_id ? body.result.tx_id : "01010101";
+
     
 
 const patron = /horse (\d+)/;
