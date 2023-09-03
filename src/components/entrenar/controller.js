@@ -69,7 +69,8 @@ let respuesta=null;
 
 const memo = body && body.data && body.data.memo ? body.data.memo : "no memo";
 console.log("memo", memo);
-const numero = Number(body.data.amount) * 10;
+const numero = (Number(body.data.amount) * 10).toFixed(3);
+console.log("numero", numero);
 const menssage=body && body.message ? body.message : "sin mensaje"; 
 const texto='La transacción ha sido transmitida con éxito. Por favor, compruebe su saldo para confirmar que ha sido procesada con éxito.'
 // Make sure 'body' and 'body.result' are defined before accessing 'tx_id'
@@ -83,8 +84,8 @@ const coincidencias = memo.match(patron);
 if (coincidencias) {
      equino = parseInt(coincidencias[1]);
      equino =String(equino)
-    //console.log("equino", equino);
-    //console.log("Número encontrado:", numero);
+    console.log("equino", equino);
+    console.log("Número encontrado:", numero);
 } else {
     console.log("Número no encontrado en el texto.");
 }
@@ -94,7 +95,8 @@ if (coincidencias) {
 
 let equinex=await get_equino({equineId : equino})
 //console.log("equinexXXXXXXXXXXXXXXXXXXXXXXX", equinex);
-if(equinex[0].entrenamiento_gratis==Gratis && equinex[0].opcion_entrenamiento==numero){
+if(equinex[0].entrenamiento_gratis==Gratis && (equinex[0].opcion_entrenamiento).toFixed(3)==numero){
+  console.log("equinex[0].opcion_entrenamiento", equinex[0].opcion_entrenamiento);
   //console.log("equinex[0].entrenamiento_grati", equinex[0].entrenamiento_gratis);
  // entrenamiento_gratis: 1,
  //    opcion_entrenamiento: 0.01,
@@ -103,8 +105,8 @@ if(equinex[0].entrenamiento_gratis==Gratis && equinex[0].opcion_entrenamiento==n
 
 
 
-let aleatorio=numero_aleatorio(numero)
-aleatorio=aleatorio.toFixed(5)
+let aleatorio=numero_aleatorio(equinex[0].opcion_entrenamiento)
+aleatorio=Number(aleatorio).toFixed(5)
 
 let habilidad=numero_aleatorio_A_B()
 respuesta=[{pts:aleatorio,ability:habilidad}]
