@@ -53,38 +53,6 @@ return respuesta
 }
 
 
-// {console.log("walletSERVER", wallt);
-// }
-
-//     )
-  
-
-//  let cofres_claim=parseInt(cofres)
-//   //const userChests = await getCofresForUser(user_claim);
-
-//   // if (userChests.status_m === "pending") {
-//   //   throw new Error("Espera a que lleguen tus cofres reclamados");
-//   // }
-
-//   const llavesDisponibles = userChests.llaves_m_compradas - userChests.llaves_m_gastadas;
-//   if (llavesDisponibles < cofres_claim) {
-//     throw new Error("No tienes suficientes llaves para comprar los cofres solicitados");
-//   }
-
-//   const cofresDisponibles = userChests.cofres_m_compradas - userChests.cofres_m_gastadas;
-//   if (cofresDisponibles < cofres_claim) {
-//     throw new Error("No tienes suficientes cofres para procesar la solicitud");
-//   }
-  
-//   let objeto= generarObjeto(cofres_claim);
-//   console.log("objetoTOTOTOTOTOTOTOTOTO", objeto);
-
-//   userChests.cofres_m_procesando += cofres;
-//   userChests.status_m = "pending";
-//   userChests.cofres_m_obtenidos= objeto;
-// //  const updatedUserChests = await userChests.save();
-  
-//   return updatedUserChests;
 
 
 
@@ -222,37 +190,3 @@ module.exports = {
 
 
 
-
-
-// ahora debo formar un objeto, segun el numero recibido en una variable,
-// si el numero recibido es 1, ese numero se tomara como clave y solo debe consultar una vez a la funcion  randomBasico
-// la cual le regresa el numero que va como valor 
-
-
-
-// si el numero recibido es 3,  el objeto final debe tener 3 valores 
-// que se formaran de la siguiente forma, debe generar un numero ramdo 
-// con 50% de posibilidades entre consultar a la funcion randomBasico o randomRaro
-// si  la consuta es hecha a randomBasico entonces la clave sera 1 y el valor de esa clave
-// sera el obtenido de consultar randomBasico, si la consulta es a randomRaro entonces la clave 
-// sera 3 y el valor de esa clave sera el obtenido de consultar  randomRaro
-// esto debe hacerlo 3 veces ya que el numero recibido desde un principio
-// entonces el objeto final debe ser algo similar a : 
-
-// [{1:7, 3:2 , 1:5}]    
-
-
-// si el numero recibido es 5,  el objeto final debe tener 5 valores 
-// que se formaran de la siguiente forma, debe generar un numero ramdo 
-// con 33,3% de posibilidades entre consultar a la funcion randomBasico,randomRaro,randomBasicoEpico
-// si  la consuta es hecha a randomBasico entonces la clave sera 1 y el valor de esa clave
-// sera el obtenido de consultar randomBasico, si la consulta es a randomRaro entonces la clave 
-// sera 3 y el valor de esa clave sera el obtenido de consultar  randomRaro
-// esto debe hacerlo 3 veces ya que el numero recibido desde un principio
-// si la consulta es a randomEpico entonces la clave 
-// sera 5 y el valor de esa clave sera el obtenido de consultar  randomEpice
-// esto debe hacerlo 5 veces ya que es el numero recibido desde un principio
-
-// entonces el objeto final debe ser algo similar a : 
-
-// [{1:7, 3:2 , 1:5, 5:3 ,5:1}]
