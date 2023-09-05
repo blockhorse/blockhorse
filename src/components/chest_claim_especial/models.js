@@ -5,17 +5,13 @@ const Schema = mongoose.Schema;
 
 
 
-const especial_chest = new Schema({
+const chest_especial = new Schema({
   usuario: {
     type: String,
     default:"no"
   },
-   Dia: {
-    type: Date,
-    index: true,
-    unique: true 
-  },
-   trx_entregado:{
+
+ trx_entregado:{
     type: Array,
               
   },
@@ -26,11 +22,11 @@ const especial_chest = new Schema({
   
   objeto_formado: {
     type: Object,
-    default: 0
+    
   },  
   status: {
     type: String,
-    default:"freec"
+    default:"free"
   }
 }, {
   autoIndex: false,
@@ -39,6 +35,6 @@ const especial_chest = new Schema({
 
 
 
-const especial_chestModel = mongoose.model("especial_chest",especial_chest)
+const chest_especialModel = mongoose.model("chest_especial",chest_especial)
 
-module.exports = especial_chestModel;
+module.exports = chest_especialModel;

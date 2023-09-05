@@ -1,4 +1,4 @@
-const { getCofresForUser, get_wallet, set_wallet } = require("./store");
+const { getCofresForUser, get_wallet, set_wallet,updateCofres } = require("./store");
 
 
 
@@ -31,7 +31,9 @@ if(wallet[0].balance_cofre_e>=1){
 
 
   
-  await set_wallet(filtro,actualizacion);
+ await set_wallet(filtro,actualizacion);
+ await updateCofres(user_claim,1,objeto)
+ 
 
 
 return objeto
@@ -41,14 +43,11 @@ return objeto
 
 
 }else{console.log("cofres en espera");
-//throw new Error("Espera a que lleguen tus cofres reclamados");
+throw new Error("Espera a que lleguen tus cofres reclamados");
 
- const filtro = { usuario:user_claim };
- const actualizacion = { $set: { status_cofres: 'free' } };
- await set_wallet(filtro,actualizacion);
 
 respuesta={respuesta:"debes esperar"}
- return respuesta
+return respuesta
 }
 
 }

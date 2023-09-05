@@ -95,7 +95,7 @@ if (coincidencias) {
 
 let equinex=await get_equino({equineId : equino})
 //console.log("equinexXXXXXXXXXXXXXXXXXXXXXXX", equinex);
-if(equinex[0].entrenamiento_gratis==Gratis && (equinex[0].opcion_entrenamiento).toFixed(3)==numero){
+if(equinex[0].entrenamiento_gratis==Gratis && (equinex[0].opcion_entrenamiento).toFixed(3)<=numero){
   console.log("equinex[0].opcion_entrenamiento", equinex[0].opcion_entrenamiento);
   //console.log("equinex[0].entrenamiento_grati", equinex[0].entrenamiento_gratis);
  // entrenamiento_gratis: 1,
@@ -142,8 +142,8 @@ return respuesta
 
 
 function numero_aleatorio(numero) {
-  const min = numero;
-  const max = numero + numero / 10;
+  const min = numero / 10;
+  const max = numero ;
   return Math.random() * (max - min) + min;
 }
 

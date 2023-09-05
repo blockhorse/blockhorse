@@ -52,6 +52,33 @@ walletsModel.findOneAndUpdate(filtro, actualizacion, (error, documentoActualizad
 
 
 
+async function updateCofres(user, cofres,objeto) {
+  try {
+    // Obtener los datos de los cofres para el usuario
+    const cofresData = await Model.findOne({ usuario: user }).exec();
+
+    // Verificar que los cofres no estén en estado "pending"
+    if(cofresData){
+    if (cofresData.status === 'pending') {
+      throw { message: 'Espera a que lleguen tus cofres reclamados', statusCode: 400 };
+    }}
+
+    // Actualizar los datos de los cofres
+ await Model.updateOne(
+  { usuario: user },
+  {
+    $inc: { amount: cofres },
+    $set: { status: 'pending', objeto_formado: objeto },
+  },
+  { upsert: true }
+).exec();
+
+    return { message: `Se han procesado ${cofres} cofres para el usuario ${user}`, statusCode: 200 };
+  } catch (error) {
+    throw error;
+  }
+}
+
 
 
 
@@ -60,7 +87,8 @@ walletsModel.findOneAndUpdate(filtro, actualizacion, (error, documentoActualizad
 
 module.exports = {
 get_wallet,
-set_wallet
+set_wallet,
+updateCofres
 }
 
 
