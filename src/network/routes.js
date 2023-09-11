@@ -26,6 +26,7 @@ const wallet= require('./../components/wallet/network.js')
 const claim_drop= require('./../components/claim_drop/network.js')
 const poblacion= require('./../components/poblacion-equina/networks.js')
 const entrenar= require('./../components/entrenar/network.js')
+const temporada= require('./../components/temporada/network.js')
 
 
 const routes = function (server){
@@ -51,6 +52,7 @@ const routes = function (server){
      server.use('/claim_drop',claim_drop);
      server.use('/poblacion',poblacion);
      server.use('/entrenar',entrenar);
+     server.use('/temporada',temporada);
     
 	
 	
