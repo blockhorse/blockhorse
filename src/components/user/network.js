@@ -18,8 +18,12 @@ router.get('/', function (req, res)  {
 
 
 router.post('/', function (req, res)  {
+  console.log(req.body)
   //  res.status(200).send("mensaje");
-    response.success(req, res,"todo bien",201);
+ controller.find_user(req.body).then((resultado)=>{
+        console.log("resultado controller", resultado);
+        response.success(req, res,resultado, 201);
+    })
 
 })
 
