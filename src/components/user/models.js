@@ -9,6 +9,7 @@ const usuarios={
     type: Date,}, 
     referidos: {
   type: Array
+  
  }
 }
 
@@ -17,3 +18,6 @@ const usuarios={
 const usuariosModel = mongoose.model("usuarios",usuarios)
 
 module.exports = usuariosModel;
+
+
+
