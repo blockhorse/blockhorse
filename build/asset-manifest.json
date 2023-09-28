@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "./static/css/main.9ee30536.css",
-    "main.js": "./static/js/main.ef196488.js",
+    "main.css": "./static/css/main.9b2b1195.css",
+    "main.js": "./static/js/main.e8cdeb6b.js",
     "static/media/coinBHRT2.png": "./static/media/coinBHRT2.b4b0d6a7736551abf4ed.png",
     "static/media/celebrate.gif": "./static/media/celebrate.febe59e009480460a8b7.gif",
+    "static/media/wallet.gif": "./static/media/wallet.67b761401ff8d1489b5d.gif",
     "static/media/logoBlock.png": "./static/media/logoBlock.3afc0ca7cf207b997f1b.png",
     "static/media/hk-logo.png": "./static/media/hk-logo.8a092d2611f102aedb47.png",
     "static/media/infernal-logo.png": "./static/media/infernal-logo.818500a666f3a5d2fcb9.png",
@@ -13,6 +14,9 @@
     "static/media/banner1.png": "./static/media/banner1.cda8beaea7510996a7a5.png",
     "static/media/bigbone-logo.png": "./static/media/bigbone-logo.7f6a149cfbd1a1ca57ff.png",
     "static/media/banner1i.png": "./static/media/banner1i.72bdcc86db32b684a64a.png",
+    "static/media/manzana.gif": "./static/media/manzana.e49cb1da27609098457c.gif",
+    "static/media/caballo.gif": "./static/media/caballo.9812a715c1645251b3f8.gif",
+    "static/media/trailer.gif": "./static/media/trailer.198aafd3cbd0d8aa1505.gif",
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
     "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
@@ -36,11 +40,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
-    "main.9ee30536.css.map": "./static/css/main.9ee30536.css.map",
-    "main.ef196488.js.map": "./static/js/main.ef196488.js.map"
+    "main.9b2b1195.css.map": "./static/css/main.9b2b1195.css.map",
+    "main.e8cdeb6b.js.map": "./static/js/main.e8cdeb6b.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ee30536.css",
-    "static/js/main.ef196488.js"
+    "static/css/main.9b2b1195.css",
+    "static/js/main.e8cdeb6b.js"
   ]
 }
