@@ -24,9 +24,11 @@ const creardatosadiccionales= require('./../components/creardatosadiccionales/ne
 const aplicar_nft= require('./../components/aplicar_nft/network.js')
 const wallet= require('./../components/wallet/network.js')
 const claim_drop= require('./../components/claim_drop/network.js')
+const claim_balance= require('./../components/claim_balance/network.js')
 const poblacion= require('./../components/poblacion-equina/networks.js')
 const entrenar= require('./../components/entrenar/network.js')
 const temporada= require('./../components/temporada/network.js')
+const bets= require('./../components/bets/network.js')
 
 
 const routes = function (server){
@@ -50,9 +52,11 @@ const routes = function (server){
      server.use('/aplicar_nfts', aplicar_nft);
      server.use('/wallet',wallet);
      server.use('/claim_drop',claim_drop);
+     server.use('/claim_balance',claim_balance);
      server.use('/poblacion',poblacion);
      server.use('/entrenar',entrenar);
      server.use('/temporada',temporada);
+     server.use('/bets',bets);
     
 	
 	

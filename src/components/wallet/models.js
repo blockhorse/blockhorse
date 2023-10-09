@@ -8,6 +8,7 @@ const wallets={
   balance_drops:{type:Number, default:0},
   balance_cofre_e:{type:Number, default:0},
   status_drop:{type:String, default:"free"},
+  status_retiro: {type:String, default:"free"},
   status_cofres:{type:String, default:"free"},
   dia_drop:{type:Date},
   retiros:{type:Number, default:0},
