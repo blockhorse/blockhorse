@@ -1,5 +1,7 @@
-// const store = require('./store.js');
+const store = require('./store.js');
 const storeW= require('./../wallet/store.js')
+const ModelW= require('./../wallet/models.js')
+const Model= require('./../wallet/models.js')
 
 
 async function get_claims(body) {
@@ -13,11 +15,27 @@ console.log("wallet", wallet);
 
 if(wallet){
   if(wallet[0].balance>=cantidadTickets){
-
  const balance=wallet[0].balance;
  console.log("balance", balance);
  const bet=cantidadTickets/10;
  console.log("bet", bet);
+
+
+//descontar_balace sumar a apuesta en carrera
+   await ModelW.findOneAndUpdate(
+  { usuario: usuario },
+  { $inc: { balance: -bet } } // Use -bet to decrement the balance
+);
+
+//sumar a apuestas en carreras tabla apuesta
+await agregarApuesta(cantidadTickets, nombreEquino, race, usuario);
+
+//descontar de balance general mienrtras la apuesta aun esta abierta.. 
+
+
+
+
+
   }else{
     return("Fondos Insuficiente")
   }
@@ -62,6 +80,43 @@ if(wallet){
   return usuario
 }
 
+
+
+
+
+// Función para agregar una apuesta a la tabla de apuestas en carreras
+async function agregarApuesta(cantidadTickets, nombreEquino, race, usuario) {
+  try {
+    // Buscar la carrera en la que se realiza la apuesta
+    const carrera = await Model.findOne({ race });
+
+    if (carrera) {
+      // La carrera existe, ahora agregamos la apuesta
+      const apuesta = {
+        nombreEquino,
+        cantidadTickets,
+        usuario,
+      };
+
+      // Agregar la apuesta a la lista de apuestas en la carrera
+      carrera.apuestas.push(apuesta);
+
+      // Calcular el nuevo Total_Pote
+      carrera.Total_Pote += cantidadTickets;
+
+      // Guardar los cambios en la carrera
+      await carrera.save();
+
+      console.log('Apuesta agregada con éxito.');
+    } else {
+      console.log('La carrera no existe.');
+    }
+  } catch (error) {
+    console.error('Error al agregar la apuesta:', error);
+  }
+}
+
+// Llama a la función para agregar la apuesta
 
 
 
