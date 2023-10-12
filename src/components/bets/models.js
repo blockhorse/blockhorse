@@ -1,10 +1,15 @@
-const apuestas_ganador= new Schema({
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema;
+
+
+const apuesta_ganador= new Schema({
  race:  {
         type: Number,
     index:true,
     unique:true 
     },
-  apuestas:Object,
+  apuestas:Array,
   pagando:Object,
   ganador:Number,
   ganador_name:String,
@@ -26,3 +31,11 @@ const apuestas_ganador= new Schema({
     autoIndex:false,
     autoCreate: false,
 });
+
+
+
+
+
+const apuestas_ganadorModel = mongoose.model("apuesta_ganador",apuesta_ganador)
+
+module.exports = apuestas_ganadorModel;

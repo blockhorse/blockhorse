@@ -4,10 +4,10 @@ const ModelW= require('./../wallet/models.js')
 const Model= require('./../wallet/models.js')
 
 
-async function get_claims(body) {
+async function agregar_apuesta(body) {
   console.log("BODY DEJUSTP", body);
 
-const{ cantidadTickets,nombreEquino,race,usuario}=body;
+const{equinoId, cantidadTickets,nombreEquino,race,usuario}=body;
 console.log("De back : cantidadTickets,nombreEquino,race,owner", cantidadTickets,nombreEquino,race,usuario);
 
 const wallet= await storeW.get_wallet({usuario:usuario})
@@ -28,7 +28,7 @@ if(wallet){
 );
 
 //sumar a apuestas en carreras tabla apuesta
-await agregarApuesta(cantidadTickets, nombreEquino, race, usuario);
+const agregando_puesta= await store.agregarApuesta(equinoId,cantidadTickets, nombreEquino, race, usuario);
 
 //descontar de balance general mienrtras la apuesta aun esta abierta.. 
 
@@ -82,39 +82,52 @@ await agregarApuesta(cantidadTickets, nombreEquino, race, usuario);
 
 
 
+async function buscar_apuestas(body){
+console.log("BODY DEJUSTP", body)
+return new Promise((resolve,reject) =>{
+resolve(store.buscar_apuestas(body))
+
+ })
+
+}
+
+
+
+
+
 
 
 // Función para agregar una apuesta a la tabla de apuestas en carreras
-async function agregarApuesta(cantidadTickets, nombreEquino, race, usuario) {
-  try {
-    // Buscar la carrera en la que se realiza la apuesta
-    const carrera = await Model.findOne({ race });
+// async function agregarApuesta(cantidadTickets, nombreEquino, race, usuario) {
+//   try {
+//     // Buscar la carrera en la que se realiza la apuesta
+//     const carrera = await Model.findOne({ race });
 
-    if (carrera) {
-      // La carrera existe, ahora agregamos la apuesta
-      const apuesta = {
-        nombreEquino,
-        cantidadTickets,
-        usuario,
-      };
+//     if (carrera) {
+//       // La carrera existe, ahora agregamos la apuesta
+//       const apuesta = {
+//         nombreEquino,
+//         cantidadTickets,
+//         usuario,
+//       };
 
-      // Agregar la apuesta a la lista de apuestas en la carrera
-      carrera.apuestas.push(apuesta);
+//       // Agregar la apuesta a la lista de apuestas en la carrera
+//       carrera.apuestas.push(apuesta);
 
-      // Calcular el nuevo Total_Pote
-      carrera.Total_Pote += cantidadTickets;
+//       // Calcular el nuevo Total_Pote
+//       carrera.Total_Pote += cantidadTickets;
 
-      // Guardar los cambios en la carrera
-      await carrera.save();
+//       // Guardar los cambios en la carrera
+//       await carrera.save();
 
-      console.log('Apuesta agregada con éxito.');
-    } else {
-      console.log('La carrera no existe.');
-    }
-  } catch (error) {
-    console.error('Error al agregar la apuesta:', error);
-  }
-}
+//       console.log('Apuesta agregada con éxito.');
+//     } else {
+//       console.log('La carrera no existe.');
+//     }
+//   } catch (error) {
+//     console.error('Error al agregar la apuesta:', error);
+//   }
+// }
 
 // Llama a la función para agregar la apuesta
 
@@ -122,5 +135,6 @@ async function agregarApuesta(cantidadTickets, nombreEquino, race, usuario) {
 
 
 module.exports = {
- get_claims,
+ agregar_apuesta,
+ buscar_apuestas
 }

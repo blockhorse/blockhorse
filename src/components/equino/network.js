@@ -10,7 +10,7 @@ const router= express.Router()
 router.get('/', function (req, res)  {
         
 controller.get_equino(req.query).then((resultado)=>{
-        console.log("resultado controller", resultado);
+        // console.log("resultado controller", resultado);
         // res.headers.set('Content-Type', 'application/json')
 //          response.setHeader({
 //   'Content-Type': 'application/json',
@@ -35,9 +35,9 @@ res.header('Access-Control-Allow-Origin', '*');
 router.post('/', function (req, res)  {
      res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-         console.log("BODY",req.body)
+         //console.log("BODY",req.body)
     controller.get_race(req.body).then((resultado)=>{
-        console.log("resultado controller", resultado);
+        //console.log("resultado controller", resultado);
         response.success(req, res,resultado, 201);
     })
    
