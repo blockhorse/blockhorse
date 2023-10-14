@@ -17,7 +17,7 @@ if(wallet){
   if(wallet[0].balance>=cantidadTickets){
  const balance=wallet[0].balance;
  console.log("balance", balance);
- const bet=cantidadTickets/10;
+ const bet=cantidadTickets/100;
  console.log("bet", bet);
 
 
@@ -28,7 +28,7 @@ if(wallet){
 );
 
 //sumar a apuestas en carreras tabla apuesta
-const agregando_puesta= await store.agregarApuesta(equinoId,cantidadTickets, nombreEquino, race, usuario);
+const agregando_puesta= await store.agregarApuesta(equinoId,bet, nombreEquino, race, usuario);
 
 //descontar de balance general mienrtras la apuesta aun esta abierta.. 
 
