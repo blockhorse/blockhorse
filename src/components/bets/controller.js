@@ -2,7 +2,7 @@ const store = require('./store.js');
 const storeW= require('./../wallet/store.js')
 const ModelW= require('./../wallet/models.js')
 const Model= require('./../wallet/models.js')
-
+const storeRace= require('./../race/store.js')
 
 async function agregar_apuesta(body) {
   console.log("BODY DEJUSTP", body);
@@ -10,15 +10,22 @@ async function agregar_apuesta(body) {
 const{equinoId, cantidadTickets,nombreEquino,race,usuario}=body;
 console.log("De back : cantidadTickets,nombreEquino,race,owner", cantidadTickets,nombreEquino,race,usuario);
 
+
+const raceactive= await storeRace.get_race({raceid:race})
+console.log("raceactive", raceactive);
 const wallet= await storeW.get_wallet({usuario:usuario})
 console.log("wallet", wallet);
 
+console.log("raceactive[0].status_superior", raceactive[0].status_superior);
+if(raceactive[0].status_superior==="abierta"){
+  
 if(wallet){
-  if(wallet[0].balance>=cantidadTickets){
- const balance=wallet[0].balance;
+const balance=wallet[0].balance;
  console.log("balance", balance);
  const bet=cantidadTickets/100;
  console.log("bet", bet);
+  if(balance>=bet){
+
 
 
 //descontar_balace sumar a apuesta en carrera
@@ -37,11 +44,17 @@ const agregando_puesta= await store.agregarApuesta(equinoId,bet, nombreEquino, r
 
 
   }else{
-    return("Fondos Insuficiente")
+    return("Insufficient funds")
   }
 
 
-}else{return("Wallet no encontrada")}
+}else{return("Wallet not found")}
+
+
+}else{
+
+  return("race closed, in progress")
+}
 
   // return new Promise(async (resolve, reject) => {
   //   try {
