@@ -1,39 +1,36 @@
-const store = require('./store.js');
-
-
+ const store = require('./store.js');
 
 async function get_claims(body) {
-  console.log("BODY DEJUSTP", body);
+  console.log("BODY DEJUSTOPOP", body);
 
-const usuario=body.usuario
-
+  const usuario=body.usuario
 
   return new Promise(async (resolve, reject) => {
     try {
-      const claims = await store.get_claim({usuario: usuario});
+      const claims = await store.get_claim({usuario});
       console.log("claims", claims);
-       balance_en_wallet=claims[0].balance - claims[0].retiros
-       status_retiro=claims[0].status_retiro
+       balance_en_wallet=claims[0].ganancia_apuestas;
+       status_retiro=claims[0].status_claim_ganancia
        console.log("balance_en_wallet", balance_en_wallet);
-       console.log("body.balance", body.balance);
+       console.log("body.ganancia_apuestas", body.ganancia_apuestas);
       // Verificar si la respuesta del store es un array vacío
-      if (balance_en_wallet.toFixed(2) == body.balance ){
+      if (balance_en_wallet.toFixed(2) == body.ganancia_apuestas ){
         
         console.log("CLAIM ES CERO");
         // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
         // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción
         // Si la acción se realiza con éxito, puedes resolver la promesa con un mensaje de éxito
         if(status_retiro!=="pending"){
-        
-          await store.register_claim([{usuario:body.usuario},{status_retiro:'pending'}]);
-        let respues=`You have successfully submitted a withdrawal request for  ${body.balance_drops} tokens`
+       
+          await store.register_claim([{usuario:body.usuario},{status_claim_ganancia:'pending'}]);
+        let respues=`You have successfully submitted a withdrawal request for  ${body.ganancia_apuesta} tokens`
         resolve(respues);          
         }
    
           let respuesta = "You must wait for the withdrawal to be processed";
         resolve(respuesta);
       } else {
-      let respues=`${body.balance} Error Balance`
+      let respues=`${body.ganancia_apuesta} Error Balance`
         resolve(respues);  
 
       }

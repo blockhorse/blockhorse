@@ -2,7 +2,7 @@ const store = require('./store.js');
 const storeW= require('./../wallet/store.js')
 const ModelW= require('./../wallet/models.js')
 const Model= require('./../wallet/models.js')
-const storeRace= require('./../race/store.js')
+
 
 async function agregar_apuesta(body) {
   console.log("BODY DEJUSTP", body);
@@ -11,23 +11,31 @@ const{equinoId, cantidadTickets,nombreEquino,race,usuario}=body;
 console.log("De back : cantidadTickets,nombreEquino,race,owner", cantidadTickets,nombreEquino,race,usuario);
 
 
-const raceactive= await storeRace.get_race({raceid:race})
-console.log("raceactive", raceactive);
-const wallet= await storeW.get_wallet({usuario:usuario})
-console.log("wallet", wallet);
 
-console.log("raceactive[0].status_superior", raceactive[0].status_superior);
-if(raceactive[0].status_superior==="abierta"){
+const wallet= await storeW.get_wallet({usuario:usuario})
+console.log("wallet TTTTTTTT", wallet);
+
+
+
+
+const raceactives=await buscar_apuestas({race : race})
+const statusSuperior = raceactives[0]._doc.status_superior;
+console.log("statusSuperior", statusSuperior);
+
+
+
+
+
+if(statusSuperior==="create"){
   
 if(wallet){
 const balance=wallet[0].balance;
  console.log("balance", balance);
  const bet=cantidadTickets/100;
  console.log("bet", bet);
+
+ saldo=balance - bet;
   if(balance>=bet){
-
-
-
 //descontar_balace sumar a apuesta en carrera
    await ModelW.findOneAndUpdate(
   { usuario: usuario },
@@ -36,11 +44,6 @@ const balance=wallet[0].balance;
 
 //sumar a apuestas en carreras tabla apuesta
 const agregando_puesta= await store.agregarApuesta(equinoId,bet, nombreEquino, race, usuario);
-
-//descontar de balance general mienrtras la apuesta aun esta abierta.. 
-
-
-
 
 
   }else{
@@ -56,41 +59,9 @@ const agregando_puesta= await store.agregarApuesta(equinoId,bet, nombreEquino, r
   return("race closed, in progress")
 }
 
-  // return new Promise(async (resolve, reject) => {
-  //   try {
-  //     const claims = await store.get_claim(body);
-  //     console.log("claims", claims);
-  //      balance_en_wallet=claims[0].balance - claims[0].retiros
-  //      status_retiro=claims[0].status_retiro
-  //      console.log("balance_en_wallet", balance_en_wallet);
-  //      console.log("body.balance", body.balance);
-  //     // Verificar si la respuesta del store es un array vacío
-  //     if (balance_en_wallet == body.balance ){
-        
-  //       console.log("CLAIM ES CERO");
-  //       // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
-  //       // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción
-  //       // Si la acción se realiza con éxito, puedes resolver la promesa con un mensaje de éxito
-  //       if(status_retiro!=="pending"){
-       
-  //         await store.register_claim([{usuario:body.usuario},{status_retiro:'pending'}]);
-  //       let respues=`You have successfully submitted a withdrawal request for  ${body.balance_drops} tokens`
-  //       resolve(respues);          
-  //       }
-   
-  //         let respuesta = "You must wait for the withdrawal to be processed";
-  //       resolve(respuesta);
-  //     } else {
-  //     let respues=`${body.balance} Error Balance`
-  //       resolve(respues);  
 
-  //     }
-  //   } catch (error) {
-  //     reject(error); // Manejar cualquier error que ocurra durante el registro o la obtención de datos
-  //   }
-  // });
 
-  return usuario
+  return(`trx Success, balance: ${saldo.toFixed(3)}`)
 }
 
 
@@ -144,7 +115,39 @@ resolve(store.buscar_apuestas(body))
 
 // Llama a la función para agregar la apuesta
 
+  // return new Promise(async (resolve, reject) => {
+  //   try {
+  //     const claims = await store.get_claim(body);
+  //     console.log("claims", claims);
+  //      balance_en_wallet=claims[0].balance - claims[0].retiros
+  //      status_retiro=claims[0].status_retiro
+  //      console.log("balance_en_wallet", balance_en_wallet);
+  //      console.log("body.balance", body.balance);
+  //     // Verificar si la respuesta del store es un array vacío
+  //     if (balance_en_wallet == body.balance ){
+        
+  //       console.log("CLAIM ES CERO");
+  //       // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
+  //       // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción
+  //       // Si la acción se realiza con éxito, puedes resolver la promesa con un mensaje de éxito
+  //       if(status_retiro!=="pending"){
+       
+  //         await store.register_claim([{usuario:body.usuario},{status_retiro:'pending'}]);
+  //       let respues=`You have successfully submitted a withdrawal request for  ${body.balance_drops} tokens`
+  //       resolve(respues);          
+  //       }
+   
+  //         let respuesta = "You must wait for the withdrawal to be processed";
+  //       resolve(respuesta);
+  //     } else {
+  //     let respues=`${body.balance} Error Balance`
+  //       resolve(respues);  
 
+  //     }
+  //   } catch (error) {
+  //     reject(error); // Manejar cualquier error que ocurra durante el registro o la obtención de datos
+  //   }
+  // });
 
 
 module.exports = {

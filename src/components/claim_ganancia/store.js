@@ -16,7 +16,7 @@ console.log("conexion_db");
 
 
 async function get_claim(usuario) {
-console.log("ME ejecuto desde store get wallet Claim Balance", usuario);
+console.log("ME ejecuto desde store get wallet", usuario);
 const claim = await walletsModel.find(usuario).catch(e => {
 console.log("error");
 console.log(e);
