@@ -10,7 +10,7 @@ const entrenamiento = new Schema({
  equineId:Number,
  endurance:Array,
  speed:Array,
- trx_nft:String,
+ trx_nft:Array,
  status:String,
  validar:Boolean,
 })
