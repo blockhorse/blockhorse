@@ -40,7 +40,7 @@ const cors = require('cors'); // Agrega la importación de cors
 const router = express.Router();
 
 
-const allowedOrigins = ['https://ballos.herokuapp.com/', 'http://localhost:4000']; // Agrega todos los dominios permitidos aquí
+const allowedOrigins = ['https://ballos.herokuapp.com/', 'http://localhost:4000', 'http://localhost:3000']; // Agrega todos los dominios permitidos aquí
 
 // Configurar middleware CORS para el enrutador
 const corsOptions = {

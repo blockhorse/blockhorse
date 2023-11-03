@@ -23,7 +23,7 @@ const usuario=body.usuario
         // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
         // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción
         // Si la acción se realiza con éxito, puedes resolver la promesa con un mensaje de éxito
-        if(status_retiro!=="pending"){
+        if(status_retiro!=="pending" || status_retiro!=="whitdrawing"){
         
           await store.register_claim([{usuario:body.usuario},{status_retiro:'pending'}]);
         let respues=`You have successfully submitted a withdrawal request for  ${body.balance_drops} tokens`
