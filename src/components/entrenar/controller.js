@@ -1,7 +1,7 @@
 const { entrenarGratis_speed, entrenarGratis_endurance, Registrar_speed, Registrar_endurance, get_equino } = require("./store");
 
 async function entrenar(reqbody) {
-//  console.log("reqbodyYYYYYYY", reqbody);
+console.log("reqbodyYYYYYYY", reqbody);
 let Gratis=Number(reqbody.g);
 let numero=Number(reqbody.entrenamientoDisponible);
 let equino=Number(reqbody.equineId)

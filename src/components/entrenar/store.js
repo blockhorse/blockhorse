@@ -34,7 +34,7 @@ async function entrenarGratis(notification) {
 
 
 async function entrenarGratis_speed(data) {
-  const { equineId, speed,trx } = data;
+  const { equineId, speed,trx_nft } = data;
   
   try {
     // Busca el documento correspondiente usando equineId
@@ -44,11 +44,14 @@ async function entrenarGratis_speed(data) {
       // Si no existe, crea un nuevo documento con equineId y el primer valor de velocidad
       existingEntrenamiento = new Model({
         equineId,
-        speed: [speed], // Agrega el primer valor de velocidad al array
+        speed: [speed],
+        trx_nft:[trx_nft],
+         // Agrega el primer valor de velocidad al array
       });
     } else {
       // Si existe, agrega el nuevo valor al array speed
       existingEntrenamiento.speed.push(speed);
+      existingEntrenamiento.trx_nft.push(trx_nft);
       existingEntrenamiento.entrenamiento_gratis = 2;
     }
 
@@ -64,7 +67,7 @@ async function entrenarGratis_speed(data) {
 
 
 async function Registrar_speed(data) {
-  const { equineId, speed } = data;
+  const { equineId, speed ,trx_nft} = data;
   
   try {
     // Busca el documento correspondiente usando equineId
@@ -80,7 +83,8 @@ async function Registrar_speed(data) {
 
   
       existingEntrenamiento.velocidad_add = updatedValue;
-       existingEntrenamiento.entrenamiento_gratis = 2;
+      existingEntrenamiento.trx_nft = trx_nft;
+      existingEntrenamiento.entrenamiento_gratis = 2;
     }
 
 
@@ -98,7 +102,7 @@ async function Registrar_speed(data) {
 
 
 async function entrenarGratis_endurance(data) {
-  const { equineId, endurance } = data;
+  const { equineId, endurance , trx_nft } = data;
   
   try {
     // Busca el documento correspondiente usando equineId
@@ -109,11 +113,13 @@ async function entrenarGratis_endurance(data) {
       existingEntrenamiento = new Model({
         equineId,
         endurance: [endurance], // Agrega el primer valor de velocidad al array
+        trx_nft:[trx_nft]
       });
     } else {
       // Si existe, agrega el nuevo valor al array speed
-      existingEntrenamiento.endurance.push(endurance);
-         existingEntrenamiento.entrenamiento_gratis = 2;
+       existingEntrenamiento.endurance.push(endurance);
+       existingEntrenamiento.trx_nft.push(trx_nft);
+       existingEntrenamiento.entrenamiento_gratis = 2;
     }
 
     // Guarda el documento
@@ -127,7 +133,7 @@ async function entrenarGratis_endurance(data) {
 
 
 async function Registrar_endurance(data) {
-  const { equineId, endurance } = data;
+  const { equineId, endurance, trx_nft } = data;
   
   try {
     // Busca el documento correspondiente usando equineId
@@ -143,7 +149,8 @@ async function Registrar_endurance(data) {
       const updatedValue = (currentResistenciaAdd + Number(endurance)).toFixed(5).toString();
 
       existingEntrenamiento.resistencia_add = updatedValue;
-         existingEntrenamiento.entrenamiento_gratis = 2;
+      existingEntrenamiento.entrenamiento_gratis = 2;
+       existingEntrenamiento.trx_nft = trx_nft;
     }
 
 

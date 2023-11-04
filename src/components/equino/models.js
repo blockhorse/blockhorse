@@ -126,6 +126,10 @@ const equino = new Schema({
     type: Number,
     default: 0
   },
+   trx_nft: {
+    type: Array,
+    default: []
+  },
    opcion_entrenamiento: {
     type: Number,
     default: 0
