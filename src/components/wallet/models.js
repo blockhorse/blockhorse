@@ -17,7 +17,7 @@ const wallets={
   retiros_drops:{type:Number, default:0},
   entradas:{type:Number, default:0},
   retiros_trx:{type:Object},
-  entradas_trx:{type:Number, default:0},
+  entradas_trx:{type:Array, default:[]},
   retirados_cofres_especiales:{type:Number, default:0}
 
 
