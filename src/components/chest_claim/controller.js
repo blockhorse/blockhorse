@@ -31,6 +31,7 @@ async function processCofre(reqbody) {
   const updatedUserChests = await userChests.save();
   
   return updatedUserChests;
+  
 }
 
 
@@ -39,8 +40,16 @@ async function processCofre(reqbody) {
 function randomBasico() {
   const rand = Math.random(); // Genera un número aleatorio entre 0 y 1
 
-  if (rand < 0.5) {
+  if (rand < 0.4) {
     return 1; // 50% de probabilidad
+  } else if (rand < 0.425) {
+    return 18; // 15% de probabilidad
+  } else if (rand < 0.45) {
+    return 19; // 15% de probabilidad
+  } else if (rand < 0.475) {
+    return 20; // 15% de probabilidad
+  } else if (rand < 0.50) {
+    return 21; // 15% de probabilidad
   } else if (rand < 0.65) {
     return 2; // 15% de probabilidad
   } else if (rand < 0.75) {
@@ -60,11 +69,19 @@ function randomBasico() {
 function randomRaro() {
   const rand = Math.random(); // Genera un número aleatorio entre 0 y 1
 
-  if (rand < 0.4) {
+  if (rand < 0.3) {
     return 1; // 40% de probabilidad
-  } else if (rand < 0.55) {
+  } else if (rand < 0.325) {
+    return 18; // 2.5% de probabilidad
+  }else if (rand < 0.35) {
+    return 19; // 15% de probabilidad
+  }else if (rand < 0.375) {
+    return 20; // 15% de probabilidad
+  }else if (rand < 0.4) {
+    return 21; // 15% de probabilidad
+  }else if (rand < 0.55) {
     return 2; // 15% de probabilidad
-  } else if (rand < 0.65) {
+  }else if (rand < 0.65) {
     return 3; // 10% de probabilidad
   } else if (rand < 0.75) {
     return 4; // 10% de probabilidad
@@ -75,7 +92,7 @@ function randomRaro() {
   } else if (rand < 0.95) {
     return 8; // 5% de probabilidad
   } else {
-   const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 25
+   const newRand = Math.floor(Math.random() * 8) + 10; // Genera un número aleatorio entre 10 y 17
     return newRand; // 5% de probabilidad
   }
 }
@@ -85,9 +102,19 @@ function randomRaro() {
 function randomEpico() {
   const rand = Math.random(); // Genera un número aleatorio entre 0 y 1
 
-  if (rand < 0.4) {
+  if (rand < 0.3) {
     return 1; // 40% de probabilidad
+  } else if (rand < 0.325) {
+    return 18; // 10% de probabilidad
+  } else if (rand < 0.35) {
+    return 19; // 10% de probabilidad
+  } else if (rand < 0.375) {
+    return 20; // 10% de probabilidad
+  } else if (rand < 0.40) {
+    return 21; // 10% de probabilidad
   } else if (rand < 0.5) {
+    return 2; // 10% de probabilidad
+  }else if (rand < 0.5) {
     return 2; // 10% de probabilidad
   } else if (rand < 0.6) {
     return 3; // 10% de probabilidad
