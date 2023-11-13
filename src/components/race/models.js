@@ -47,6 +47,9 @@ const raceSchema= new Schema(
     registrados: {
         type: Array,
     },
+    registrados_owners: {
+        type: Array,
+    },
 
      PorcentajePool: {
         type: Number,
