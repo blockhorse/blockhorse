@@ -6,10 +6,12 @@ const response = require('../../network/response');
 
 
 router.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', ); // Replace with your frontend domain
-  res.header('Access-Control-Allow-Methods', 'GET'); // Adjust the allowed HTTP methods as needed
+  res.header('Access-Control-Allow-Origin','http://localhost:3000' ); // Replace with your frontend domain
+  res.header('Access-Control-Allow-Methods', 'POST'); // Adjust the allowed HTTP methods as needed
   next();
 });
+
+
 
 router.post('/', async (req, res) => {
 //  console.log("req, res", req.body);
