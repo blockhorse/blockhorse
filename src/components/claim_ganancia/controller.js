@@ -71,11 +71,11 @@ console.log("aqui viene el consuelo de apuesta")
         if(status_retiro_bhrt!=="pending"){
        
           await store.register_claim([{usuario:body.usuario},{status_claim_ganancia_consolacion:'pending'}]);
-        let respues=`You have successfully submitted a withdrawal request for  ${balance_en_consuelo} tokens`
-        resolve(respues);          
+          let respues=`You have successfully submitted a withdrawal request for  ${balance_en_consuelo} tokens`
+            resolve(respues);          
         }
    
-          let respuesta = "You must wait for the withdrawal to be processed";
+        let respuesta = "You must wait for the withdrawal to be processed";
         resolve(respuesta);
       } else {
       let respues=`${body.ganancia_apuesta} Error Balance`
