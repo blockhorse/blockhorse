@@ -57,15 +57,28 @@ async function agregarApuesta(equinoId,cantidadTickets, nombreEquino, race, usua
 
 
 
-async function buscar_apuestas(race) {
-console.log("ME ejecuto desde store Buscar Apuestas", race);
-const apuestas = await Model.find(race).catch(e => {
-    console.log("error");
-    console.log(e);
-  });
-  console.log("Wallet", apuestas);
-  return apuestas;
+async function buscar_apuestas(raceData) {
+  try {
+    const { race } = raceData;
+
+    // Verificar si la cadena de identificadores de carrera existe
+    if (race) {
+      const raceIdsArray = race.split(',').map(id => parseInt(id.trim(), 10));
+      
+      // Realizar la búsqueda basada en los identificadores de carrera obtenidos
+      const apuestas = await Model.find({ race: { $in: raceIdsArray } });
+
+      console.log("Apuestas encontradas:", apuestas);
+      return apuestas;
+    } else {
+      throw new Error('No se proporcionaron identificadores de carrera');
+    }
+  } catch (error) {
+    console.error("Error al buscar apuestas:", error);
+    return []; // o manejar el error según sea necesario
+  }
 }
+
 
 
 

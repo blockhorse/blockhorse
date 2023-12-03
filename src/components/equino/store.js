@@ -64,7 +64,7 @@ async function set_equino_status(equino) {
 	    	console.log("errror")
 	    	console.log(e)
 	    });
-	console.log("EQU",Equino)
+	//console.log("EQU",Equino)
 
 }
 

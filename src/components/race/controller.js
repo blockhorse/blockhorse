@@ -54,6 +54,7 @@ async function get_races(body) {
 
 
 async function get_race(body){
+  console.log("body En Equino Controler", body);
 return new Promise((resolve,reject) =>{
 resolve(store.get_races(body))
 //console.log("menssage body desde get hive pay", body);

@@ -36,7 +36,7 @@ async function get_races(race) {
       console.log(e);
     });
   
-  console.log("Race", Race);
+ // console.log("Race", Race);
 }
 
 
