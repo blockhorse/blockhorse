@@ -3,6 +3,8 @@ const express = require('express');
 const home= require('./../components/home/network.js')
 const dashboard= require('./../components/dashboard/network.js')
 const racemenu= require('./../components/racemenu/network.js')
+const marketmenu= require('./../components/marketmenu/network.js')
+
 
 const auctions= require('./../components/auctions/network.js')
 
@@ -38,6 +40,7 @@ const routes = function (server){
 	//server.use('/', home);
     server.use('/dashboard', dashboard );
     server.use('/races', racemenu );
+    server.use('/market', marketmenu );
      server.use('/auction', auctions );
 	  server.use('/user', user);
 	  server.use('/payhive', payhive);

@@ -58,10 +58,21 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static('build'));
 
   // Manejar todas las demás rutas y enviar al archivo index.html
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'), (err) => {
+    if (err) {
+      res.status(500).send(err);
+    }
   });
+});
+
+
+
+
 }
+
+
+
 
 app.listen(port, (err) => {
   if (err) {
