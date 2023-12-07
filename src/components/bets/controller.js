@@ -29,7 +29,7 @@ console.log("statusSuperior", statusSuperior);
 if(statusSuperior==="create"){
   
 if(wallet){
-const balance=wallet[0].balance;
+const balance=wallet[0].balance - wallet[0].retiros;
  console.log("balance", balance);
  const bet=cantidadTickets/100;
  console.log("bet", bet);

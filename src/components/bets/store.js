@@ -57,27 +57,79 @@ async function agregarApuesta(equinoId,cantidadTickets, nombreEquino, race, usua
 
 
 
+
+
+
 async function buscar_apuestas(raceData) {
   try {
     const { race } = raceData;
 
-    // Verificar si la cadena de identificadores de carrera existe
-    if (race) {
-      const raceIdsArray = race.split(',').map(id => parseInt(id.trim(), 10));
-      
+    // Verificar si race es una cadena
+    if (typeof race === 'string') {
+      let raceIdsArray = [];
+
+      if (race.includes(',')) {
+        // Si contiene comas, dividir en una matriz y analizar cada ID
+        raceIdsArray = race.split(',').map(id => parseInt(id.trim(), 10));
+      } else {
+        // Si es un solo valor, convertirlo a un entero y ponerlo en un array
+        raceIdsArray.push(parseInt(race.trim(), 10));
+      }
+
       // Realizar la búsqueda basada en los identificadores de carrera obtenidos
       const apuestas = await Model.find({ race: { $in: raceIdsArray } });
 
       console.log("Apuestas encontradas:", apuestas);
       return apuestas;
+    } else if (typeof race === 'number') {
+      // Si es un solo número, crear un array con ese número
+      const apuestas = await Model.find({ race });
+
+      console.log("Apuestas encontradas:", apuestas);
+      return apuestas;
     } else {
-      throw new Error('No se proporcionaron identificadores de carrera');
+      throw new Error('El identificador de carrera no es válido');
     }
   } catch (error) {
     console.error("Error al buscar apuestas:", error);
     return []; // o manejar el error según sea necesario
   }
 }
+
+
+// async function buscar_apuestas(raceData) {
+//   console.log("raceData", raceData);
+
+//   try {
+//     const { race } = raceData;
+//     console.log("raceBApues", race);
+
+//     // Verificar si la cadena de identificadores de carrera existe
+//     if (race) {
+//       let raceIdsArray = [];
+
+//       if (race.includes(',')) {
+//         // Si contiene comas, dividir en una matriz y analizar cada ID
+//         raceIdsArray = race.split(',').map(id => parseInt(id.trim(), 10));
+//       } else {
+//         // Si es un solo valor, convertirlo a un entero y ponerlo en un array
+//         raceIdsArray.push(parseInt(race.trim(), 10));
+//       }
+
+//       // Realizar la búsqueda basada en los identificadores de carrera obtenidos
+//       const apuestas = await Model.find({ race: { $in: raceIdsArray } });
+
+//       console.log("Apuestas encontradas:", apuestas);
+//       return apuestas;
+//     } else {
+//       throw new Error('No se proporcionaron identificadores de carrera');
+//     }
+//   } catch (error) {
+//     console.error("Error al buscar apuestas:", error);
+//     return []; // o manejar el error según sea necesario
+//   }
+// }
+
 
 
 
