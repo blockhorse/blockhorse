@@ -1,4 +1,4 @@
-const { saveAplicarnft, set_equino_status_implementos } = require('./store');
+const { saveAplicarnft, set_equino_status_implementos, GetAplicadosnft } = require('./store');
 
 async function GuardarEnBase(data) {
   // Extraer los datos necesarios de la transacción
@@ -88,4 +88,27 @@ console.log("estado", estado);
   }
 }
 
-module.exports = { GuardarEnBase };
+
+
+
+
+
+
+async function ObtenerNftAplicados(query){
+  console.log("query", query);
+
+
+return new Promise((resolve,reject) =>{
+resolve(GetAplicadosnft(query))
+
+ })
+
+
+
+}
+
+
+
+
+
+module.exports = { GuardarEnBase,ObtenerNftAplicados };

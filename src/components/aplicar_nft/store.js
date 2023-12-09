@@ -20,6 +20,15 @@ async function saveAplicarnft(aplicarnftData) {
 
 
 
+async function GetAplicadosnft(account) {
+  console.log("account", account);
+
+return await AplicarnftModel.find(account)
+  .select('Nft_id')
+  .sort({ _id: -1 }) // Orden descendente por el ID o el campo de fecha
+  .limit(15);
+}
+
 
 async function getAuction(itemId) {
   return await AplicarnftModel.find();
@@ -51,6 +60,7 @@ async function set_equino_status_implementos(equino) {
 
 module.exports = {
   getAuction,
+  GetAplicadosnft,
   getOne,
   saveAplicarnft,
   set_equino_status_implementos
