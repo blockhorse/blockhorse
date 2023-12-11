@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.b729d2c2.css",
-    "main.js": "./static/js/main.c1ce1ce7.js",
+    "main.css": "./static/css/main.9a1bec2f.css",
+    "main.js": "./static/js/main.853aa806.js",
     "static/media/coinBHRT2.png": "./static/media/coinBHRT2.b4b0d6a7736551abf4ed.png",
     "static/media/celebrate.gif": "./static/media/celebrate.febe59e009480460a8b7.gif",
     "static/media/wallet.gif": "./static/media/wallet.67b761401ff8d1489b5d.gif",
@@ -40,11 +40,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
-    "main.b729d2c2.css.map": "./static/css/main.b729d2c2.css.map",
-    "main.c1ce1ce7.js.map": "./static/js/main.c1ce1ce7.js.map"
+    "main.9a1bec2f.css.map": "./static/css/main.9a1bec2f.css.map",
+    "main.853aa806.js.map": "./static/js/main.853aa806.js.map"
   },
   "entrypoints": [
-    "static/css/main.b729d2c2.css",
-    "static/js/main.c1ce1ce7.js"
+    "static/css/main.9a1bec2f.css",
+    "static/js/main.853aa806.js"
   ]
 }

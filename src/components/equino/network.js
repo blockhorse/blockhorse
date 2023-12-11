@@ -49,24 +49,58 @@ res.header('Access-Control-Allow-Origin', '*');
 
 
 // Ruta POST para manejar la solicitud
-router.post('/', async function (req, res) {
-      res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // Replace with your frontend domain
-      res.header('Access-Control-Allow-Methods', 'POST'); // Adjust the allowed HTTP methods as needed
+// router.post('/', async function (req, res) {
+//       res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // Replace with your frontend domain
+//       res.header('Access-Control-Allow-Methods', 'POST'); // Adjust the allowed HTTP methods as needed
  
-  try {
-    // Ejecutar la lógica en tu controlador para obtener la carrera (utilizando la función get_race)
-    const resultado = await controller.post_equino(req.body);
+//   try {
+//     // Ejecutar la lógica en tu controlador para obtener la carrera (utilizando la función get_race)
+//     const resultado = await controller.post_equino(req.body);
     
-    // Enviar la respuesta exitosa con el resultado
-    res.status(201).json(resultado);
-  } catch (error) {
-    // Manejar errores si ocurrieron
-    console.error('Error:', error);
-    res.status(500).json({ error: 'Hubo un error al procesar la solicitud.' });
-  }
-});
+//     // Enviar la respuesta exitosa con el resultado
+//     res.status(201).json(resultado);
+//   } catch (error) {
+//     // Manejar errores si ocurrieron
+//     console.error('Error:', error);
+//     res.status(500).json({ error: 'Hubo un error al procesar la solicitud.' });
+//   }
+// });
 
 
+
+
+
+
+
+
+
+router.post('/', function (req, res)  {
+res.header('Content-Type', 'application/json');
+res.header('Cache-Control', 'no-cache');
+res.header('Access-Control-Allow-Origin', '*');
+         console.log("BODY Kerychain Res",req.body)
+
+const Newname = req.body.newname || null;
+console.log("Newname", Newname);
+if (Newname != null)  {
+  console.log("The string starts with the specified phrase.");
+
+
+
+ controller.registrar_cambio_de_nombre(req.body,Newname).then((resultado)=>{
+        console.log("resultado controller", resultado);
+        response.success(req, res,resultado, 201);
+    })
+   
+
+}else{console.log("NO proceso post keychaintrx")}
+
+
+
+
+
+
+})
 
 
 

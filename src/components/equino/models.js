@@ -30,6 +30,11 @@ const equino = new Schema({
         type: String,
         default:"noname", 
     },
+namesBhr:{
+        type: Object,
+        default:"noname", 
+    },
+
   sexo: {
     type: String,
     default: ''
