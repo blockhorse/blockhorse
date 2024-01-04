@@ -14,6 +14,18 @@ const usuarios={
 }
 
 
+const sistemas_activos={
+  usuario: { type: String, unique: true, index: true },
+  apuestas:{ type: String, default:"active" },
+  ingresar_hive:{ type: String, default:"active" },
+  retirar_hive:{ type: String, default:"active" },
+  alimentar_caballo:{ type: String, default:"active" },
+  inscribir_en_carrera:{ type: String, default:"active" },
+  apuestas:{type: String, default:"active"}
+}
+
+
+
 
 const usuariosModel = mongoose.model("usuarios",usuarios)
 
