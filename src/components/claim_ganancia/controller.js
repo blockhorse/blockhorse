@@ -12,23 +12,25 @@ if(body.ganancia_apuestas){
       const claims = await store.get_claim({usuario});
       console.log("claims", claims);
        balance_en_wallet=claims[0].ganancia_apuestas;
-       status_retiro=claims[0].status_claim_ganancia
+       status_retiro_bhrt=claims[0].status_claim_ganancia
        console.log("balance_en_wallet", balance_en_wallet);
        console.log("body.ganancia_apuestas", body.ganancia_apuestas);
       // Verificar si la respuesta del store es un array vacío
       if (balance_en_wallet.toFixed(2) == body.ganancia_apuestas ){
         
         console.log("CLAIM ES CERO");
+         console.log("NOENTRE")
         // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
         // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción
         // Si la acción se realiza con éxito, puedes resolver la promesa con un mensaje de éxito
         if((status_retiro_bhrt!="pending" ) && (status_retiro_bhrt!="pendiente" )){
-       
+          console.log("ENTRE")
           await store.register_claim([{usuario:body.usuario},{status_claim_ganancia:'pending'}]);
-        let respues=`You have successfully submitted a withdrawal request for  ${body.ganancia_apuesta} tokens`
+        let respues=`You have successfully submitted a withdrawal request for  ${balance_en_wallet.toFixed(2)} tokens`
         resolve(respues);          
         }
-   
+            console.log("BaLANCES");
+           
           let respuesta = "You must wait for the withdrawal to be processed";
         resolve(respuesta);
       } else {
