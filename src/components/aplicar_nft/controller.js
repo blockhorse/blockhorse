@@ -59,7 +59,7 @@ if (memo) {
     };
 let aplicarnftStatus = {};
 
-if (Nft_type == "tack") {
+if (Nft_type == "tack" || Nft_type=="recover") {
   aplicarnftStatus = {
     equineId: Caballo_mint,
     implementos_status: 'pending'
