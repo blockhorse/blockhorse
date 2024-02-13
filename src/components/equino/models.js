@@ -120,8 +120,8 @@ namesBhr:{
     },
 
   implementos: {
-    type: Object,
-    default: {}
+    type: Array,
+    default: []
   },
   implementos_ptos: {
     type: Number,
