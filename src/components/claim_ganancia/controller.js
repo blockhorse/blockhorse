@@ -212,22 +212,13 @@ if (body.canje_apuestas_consuelo_bhr) {
       console.log("claims", claims);
       const balance_en_consuelo_bhr =claims[0].ganancias_apuestas_cuartoLugar
       const status_retiro_bhrt = claims[0].status_claim_ganancia_consolacion;
-
-     console.log(claims[0]); // Imprime toda la información del primer elemento en el array claims
-console.log("ESETE ganancias_apuestas_cuartoLugar",claims[0].ganancias_apuestas_cuartoLugar); // Imprime solo el valor de ganancias_apuestas_cuartoLugar
-console.log("ESETE",claims[0].ganancias_apuestas_tercerLugar); // Imprime solo el valor de ganancias_apuestas_cuartoLugar
-console.log("ESETE",claims[0].ganancias_apuestas_segundoLugar); // Imprime solo el valor de ganancias_apuestas_cuartoLugar
-
-
       console.log("status_retiro_bhrt", status_retiro_bhrt, usuario);
       console.log("body.balance)", body.balance);
       console.log("balance_en_wallet_consuelo", balance_en_consuelo_bhr);
-
       if (status_retiro_bhrt === "free" ) {
+        console.log("status: free")
 
-       if (balance_en_consuelo_bhr === body.balance){
-        
-        if (balance_en_consuelo_bhr >= body.canje_apuestas_consuelo_bhr) {
+      if (balance_en_consuelo_bhr >= body.canje_apuestas_consuelo_bhr) {
           console.log("todo en orden");
 
           try {
@@ -264,7 +255,7 @@ console.log("ESETE",claims[0].ganancias_apuestas_segundoLugar); // Imprime solo 
           resolve(response); // Rechaza con el objeto de respuesta de error
         }
 
-      }else{"Balance no coincide"}
+
       } else {
         console.log("status_retiro_bhrt ya es pendiente");
         const response = {
@@ -283,8 +274,9 @@ console.log("ESETE",claims[0].ganancias_apuestas_segundoLugar); // Imprime solo 
         success: false,
           data: {
                 body: "Error", // Mensaje o información de éxito
-                result: "No se obtvo datos" // Aquí puedes incluir los datos adicionales que desees enviar
+                result: "No se obtuvo datos" // Aquí puedes incluir los datos adicionales que desees enviar
               }// Mensaje de error
+      
       };
       resolve(response); // Rechaza con el objeto de respuesta de error
     }

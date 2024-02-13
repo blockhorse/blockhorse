@@ -8,6 +8,7 @@ const wallets={
   ganancia_apuestas:{type:Number, default:0},
   ganancias_apuestas_segundoLugar:{type:Number, default:0},
   ganancias_apuestas_tercerLugar:{type:Number, default:0},
+  ganancias_apuestas_cuartoLugar:{type:Number, default:0},
   balance_drops:{type:Number, default:0},
   balance_cofre_e:{type:Number, default:0},
   status_drop:{type:String, default:"free"},
