@@ -304,12 +304,12 @@ console.log("aqui viene el consuelo de apuesta")
        balance_en_consuelo=claims[0].ganancias_apuestas_cuartoLugar;
        status_retiro_bhrt=claims[0].status_claim_ganancia_consolacion
 
-
+          console.log("body.usuario", body.usuario);
        
-       console.log("balance_en_wallet_consuelo", balance_en_consuelo);
-       console.log("body.ganancia_apuestas", body.ganancia_apuestas_consuelo);
+       console.log("balance wallet BHR", balance_en_consuelo);
+       console.log("confirmacion desde la cuenta hive", body.ganancia_apuestas_consuelo_bhr);
       // Verificar si la respuesta del store es un array vacío
-      if (balance_en_consuelo.toFixed(2) == body.ganancia_apuestas_consuelo ){
+      if (balance_en_consuelo.toFixed(2) == body.ganancia_apuestas_consuelo_bhr.toFixed(2) ){
         
         console.log("CLAIM ES CERO");
         // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
@@ -318,6 +318,7 @@ console.log("aqui viene el consuelo de apuesta")
         if((status_retiro_bhrt!=="pending" ) && (status_retiro_bhrt!=="pendiente") && (status_retiro_bhrt!=="pendingBHR" )){
        
           await store.register_claim([{usuario:body.usuario},{status_claim_ganancia_consolacion:'pendingBHR'}]);
+          
           let respues=`You have successfully submitted a withdrawal request for  ${balance_en_consuelo} BHR tokens`
             resolve(respues);          
         }

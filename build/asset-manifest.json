@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.5750e4ec.css",
-    "main.js": "./static/js/main.c6eb48d1.js",
+    "main.js": "./static/js/main.dc139f35.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
@@ -24,6 +24,7 @@
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
     "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
+    "static/media/raven1.gif": "./static/media/raven1.7693addb6675786cff1b.gif",
     "static/media/ballo13.png": "./static/media/ballo13.1a7d441a6ab69850e4c2.png",
     "static/media/ballo14.png": "./static/media/ballo14.4a6f2903ad97becb6139.png",
     "static/media/ballo16.png": "./static/media/ballo16.c04388361e033af2b390.png",
@@ -45,10 +46,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.5750e4ec.css.map": "./static/css/main.5750e4ec.css.map",
-    "main.c6eb48d1.js.map": "./static/js/main.c6eb48d1.js.map"
+    "main.dc139f35.js.map": "./static/js/main.dc139f35.js.map"
   },
   "entrypoints": [
     "static/css/main.5750e4ec.css",
-    "static/js/main.c6eb48d1.js"
+    "static/js/main.dc139f35.js"
   ]
 }
