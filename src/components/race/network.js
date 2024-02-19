@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
   if (req.query.latest || req.query.page) {
     // Llamada a la función get_races para obtener las últimas carreras o paginar
     controller.get_races(req.query).then((resultado) => {
-      console.log("resultado controller", resultado);
+      // console.log("resultado controller", resultado);
 
       res.header('Content-Type', 'application/json');
       res.header('Cache-Control', 'no-cache');
@@ -39,7 +39,7 @@ router.post('/', function (req, res)  {
       res.header('Cache-Control', 'no-cache');
      res.header("Access-Control-Allow-Origin", "*");
   //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-         console.log("BODY",req.body)
+         // console.log("BODY",req.body)
     controller.get_race(req.body).then((resultado)=>{
         // console.log("resultado controller", resultado);
         response.success(req, res,resultado, 201);

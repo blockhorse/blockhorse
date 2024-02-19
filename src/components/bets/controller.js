@@ -67,12 +67,21 @@ const agregando_puesta= await store.agregarApuesta(equinoId,bet, nombreEquino, r
 
 
 async function buscar_apuestas(body){
-console.log("BODY DEJUSTP", body)
+console.log("BODY APUESTAS", body)
+if(body.race || body.raceid){
 return new Promise((resolve,reject) =>{
 resolve(store.buscar_apuestas(body))
 
  })
+}
 
+if(body.usuario){
+  console.log("BODY USER")
+return new Promise((resolve,reject) =>{
+resolve(store.buscar_apuestas_usuario(body))
+
+ })
+}
 }
 
 
