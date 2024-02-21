@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.7445fa4a.css",
-    "main.js": "./static/js/main.c3c78232.js",
+    "main.js": "./static/js/main.52d0a7ef.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
@@ -16,6 +16,7 @@
     "static/media/banner2i.png": "./static/media/banner2i.2a5691e5b2e40f037ab7.png",
     "static/media/banner2.png": "./static/media/banner2.58c851c468c79380fa61.png",
     "static/media/banner-NS.jpg": "./static/media/banner-NS.0e8a20304390371e8bb4.jpg",
+    "static/media/raven1.gif": "./static/media/raven1.e482eb2c53b97f555b06.gif",
     "static/media/banner1i.png": "./static/media/banner1i.72cadc8fe6dccf76cb5e.png",
     "static/media/manzana.gif": "./static/media/manzana.e49cb1da27609098457c.gif",
     "static/media/caballo.gif": "./static/media/caballo.9812a715c1645251b3f8.gif",
@@ -24,7 +25,6 @@
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
     "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
-    "static/media/raven1.gif": "./static/media/raven1.7693addb6675786cff1b.gif",
     "static/media/ballo13.png": "./static/media/ballo13.1a7d441a6ab69850e4c2.png",
     "static/media/ballo14.png": "./static/media/ballo14.4a6f2903ad97becb6139.png",
     "static/media/ballo16.png": "./static/media/ballo16.c04388361e033af2b390.png",
@@ -33,6 +33,7 @@
     "static/media/ballo.png": "./static/media/ballo.4110fd872149fbfe37ff.png",
     "static/media/ballo11.png": "./static/media/ballo11.4110fd872149fbfe37ff.png",
     "static/media/ballo12.png": "./static/media/ballo12.a9f93b196cf3e56851ae.png",
+    "static/media/nftgamela.gif": "./static/media/nftgamela.2ac1c2ed1e5c7eb60a4d.gif",
     "static/media/keyb.png": "./static/media/keyb.f2a19d016d0cf96ec276.png",
     "static/media/home-broker-dealer-icon.svg": "./static/media/home-broker-dealer-icon.5a537647e56ce90f9c8c6d4505b74f60.svg",
     "static/media/horse-riding-icon.svg": "./static/media/horse-riding-icon.a913998ddca664e3840ce1c66ecb2ba6.svg",
@@ -46,10 +47,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.7445fa4a.css.map": "./static/css/main.7445fa4a.css.map",
-    "main.c3c78232.js.map": "./static/js/main.c3c78232.js.map"
+    "main.52d0a7ef.js.map": "./static/js/main.52d0a7ef.js.map"
   },
   "entrypoints": [
     "static/css/main.7445fa4a.css",
-    "static/js/main.c3c78232.js"
+    "static/js/main.52d0a7ef.js"
   ]
 }
