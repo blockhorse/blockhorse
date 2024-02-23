@@ -62,7 +62,7 @@ return respuesta
 
 
 async function entrenar_pago(body) {
-//  console.log("reqbodyYYYYYYY", reqbody);
+  console.log("reqbodyYYYYYYY", body);
 let equino=null;
 let Gratis=0;
 let respuesta=null;
@@ -72,6 +72,7 @@ console.log("memo", memo);
 const numero = (Number(body.data.amount) * 10).toFixed(3);
 console.log("numero", numero);
 const menssage=body && body.message ? body.message : "sin mensaje"; 
+console.log("menssage", menssage);
 const texto='La transacción ha sido transmitida con éxito. Por favor, compruebe su saldo para confirmar que ha sido procesada con éxito.'
 // Make sure 'body' and 'body.result' are defined before accessing 'tx_id'
 const trxId = body && body.result && body.result.tx_id ? body.result.tx_id : "01010101";
@@ -111,6 +112,8 @@ aleatorio=Number(aleatorio).toFixed(5)
 let habilidad=numero_aleatorio_A_B()
 respuesta=[{pts:aleatorio,ability:habilidad}]
 
+if(menssage===texto){
+
 if(habilidad=="speed"){
 let data={
      equineId:equino,
@@ -131,6 +134,8 @@ await Registrar_endurance(data)
 
 
 
+
+}
 
 }
 
