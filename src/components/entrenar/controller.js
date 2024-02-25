@@ -1,7 +1,7 @@
 const { entrenarGratis_speed, entrenarGratis_endurance, Registrar_speed, Registrar_endurance, get_equino } = require("./store");
 
 async function entrenar(reqbody) {
-console.log("reqbodyYYYYYYY", reqbody);
+console.log(" ENTRENANDO GRATIS reqbodyYYYYYYY", reqbody);
 let Gratis=Number(reqbody.g);
 let numero=Number(reqbody.entrenamientoDisponible);
 let equino=Number(reqbody.equineId)
@@ -62,7 +62,7 @@ return respuesta
 
 
 async function entrenar_pago(body) {
-  console.log("reqbodyYYYYYYY", body);
+  console.log(" ENTRENANDO PAGO bodyYYYYYYY", body);
 let equino=null;
 let Gratis=0;
 let respuesta=null;
@@ -96,7 +96,7 @@ if (coincidencias) {
 
 let equinex=await get_equino({equineId : equino})
 //console.log("equinexXXXXXXXXXXXXXXXXXXXXXXX", equinex);
-if(equinex[0].entrenamiento_gratis==Gratis && (equinex[0].opcion_entrenamiento).toFixed(3)<=numero){
+if((equinex[0].opcion_entrenamiento).toFixed(3)<=numero){
   console.log("equinex[0].opcion_entrenamiento", equinex[0].opcion_entrenamiento);
   //console.log("equinex[0].entrenamiento_grati", equinex[0].entrenamiento_gratis);
  // entrenamiento_gratis: 1,

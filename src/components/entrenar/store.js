@@ -185,7 +185,7 @@ async function get_equino(equino) {
     console.log("error");
     console.log(e);
   });
-  console.log("EQU", equinos);
+  // console.log("EQU", equinos);
   return equinos;
 }
 
