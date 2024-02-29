@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.7445fa4a.css",
-    "main.js": "./static/js/main.0d001805.js",
+    "main.js": "./static/js/main.b7513cb2.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
@@ -47,10 +47,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.7445fa4a.css.map": "./static/css/main.7445fa4a.css.map",
-    "main.0d001805.js.map": "./static/js/main.0d001805.js.map"
+    "main.b7513cb2.js.map": "./static/js/main.b7513cb2.js.map"
   },
   "entrypoints": [
     "static/css/main.7445fa4a.css",
-    "static/js/main.0d001805.js"
+    "static/js/main.b7513cb2.js"
   ]
 }
