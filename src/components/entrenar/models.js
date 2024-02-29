@@ -12,6 +12,7 @@ const entrenamiento = new Schema({
  speed:Array,
  trx_nft:Array,
  status:String,
+ ambos:Array,
  validar:Boolean,
 })
 

@@ -111,7 +111,9 @@ aleatorio=Number(aleatorio).toFixed(5)
 
 let habilidad=numero_aleatorio_A_B()
 respuesta=[{pts:aleatorio,ability:habilidad}]
+let currentDate = new Date();
 
+let ambos=[{habilidad:habilidad},{aleatorio:aleatorio},{trx:trxId},{dia:currentDate}]
 if(menssage===texto){
 
 if(habilidad=="speed"){
@@ -119,6 +121,7 @@ let data={
      equineId:equino,
      speed: aleatorio,  
      trx_nft: trxId,
+     ambos:ambos,
          }
 await entrenarGratis_speed(data)
 await Registrar_speed(data)
@@ -127,7 +130,8 @@ await Registrar_speed(data)
  let data={
      equineId:equino,
      endurance: aleatorio,
-     trx_nft: trxId,  
+     trx_nft: trxId,
+     ambos: ambos,  
          } 
 await entrenarGratis_endurance(data)
 await Registrar_endurance(data)
