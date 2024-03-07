@@ -135,13 +135,21 @@ namesBhr:{
     type: Number,
     default: 0
   },
-   trx_nft: {
+   trx_entrenmientos: {
+    type: Array,
+    default: []
+  },
+    lastTrain: {
     type: Array,
     default: []
   },
    opcion_entrenamiento: {
     type: Number,
     default: 0
+  },
+  last_training: {
+    type: Array,
+    default: []
   },
   implementos_fecha: {
     type: Date,

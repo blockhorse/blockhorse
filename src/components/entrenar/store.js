@@ -80,8 +80,9 @@ async function Registrar_speed(data) {
       const currentVelocidadAdd = Number(existingEntrenamiento.velocidad_add) || 0;
       
       const updatedValue = (currentVelocidadAdd + Number(speed)).toFixed(5).toString();
-
-  
+      let ultimoEntrenamiento = { habilidad: "speed", puntosAnteriores: currentVelocidadAdd, nuevosPuntos: updatedValue, trx_id:"gratis" };
+     
+      existingEntrenamiento.lastTrain=ultimoEntrenamiento;
       existingEntrenamiento.velocidad_add = updatedValue;
       existingEntrenamiento.trx_nft = trx_nft;
       existingEntrenamiento.entrenamiento_gratis = 2;
@@ -191,12 +192,82 @@ async function get_equino(equino) {
 
 
 
+
+
+
+// async function Activar_Entrenamiento(data) {
+//   const { equineId,trx_nft} = data;
+  
+//   try {
+//     // Busca el documento correspondiente usando equineId
+//     let existingEntrenamiento = await ModelEquino.findOne({ equineId });
+
+//     if (!existingEntrenamiento) {
+//      console.log("No Existe ese equino")
+//      return
+//     } else {
+
+//       if(existingEntrenamiento.entrenamiento_gratis===0){
+//       existingEntrenamiento.trx_nft = trx_nft;
+//       existingEntrenamiento.entrenamiento_gratis = 5;
+   
+
+//       }
+
+//     }
+
+
+
+ 
+
+//     // Guarda el documento
+//     await existingEntrenamiento.save();
+    
+//     console.log("Entrenamiento actualizado:", existingEntrenamiento);
+//   } catch (error) {
+//     console.error("Error al entrenar gratis:", error);
+//   }
+// }
+
+
+async function Activar_Entrenamiento(data) {
+  const { equineId, trx } = data;
+  
+  try {
+    // Busca el documento correspondiente usando equineId
+    let existingEntrenamiento = await ModelEquino.findOne({ equineId });
+
+    if (!existingEntrenamiento) {
+      console.log("No existe el equino.");
+      return;
+    }
+
+    // Inicializa trx_nft como un array si es nulo o indefinido
+    if (!existingEntrenamiento.trx_entrenmientos) {
+      existingEntrenamiento.trx_entrenmientos = [];
+    }
+
+    // Agrega la nueva transacción al array trx_nft
+    existingEntrenamiento.trx_entrenmientos.push({ trx, fecha: new Date() });
+
+      existingEntrenamiento.entrenamiento_gratis=5;
+
+    // Guarda el documento actualizado
+    await existingEntrenamiento.save();
+    
+    console.log("Entrenamiento actualizado:", existingEntrenamiento);
+  } catch (error) {
+    console.error("Error al entrenar:", error);
+  }
+}
+
 module.exports = {
 entrenarGratis_speed, 
 entrenarGratis_endurance,
 Registrar_speed,
 Registrar_endurance,
-get_equino
+get_equino,
+Activar_Entrenamiento
 }
 
 
