@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.7445fa4a.css",
-    "main.js": "./static/js/main.06f7d2ae.js",
+    "main.js": "./static/js/main.5c2aa2a2.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
@@ -22,17 +22,17 @@
     "static/media/caballo.gif": "./static/media/caballo.9812a715c1645251b3f8.gif",
     "static/media/trailer.gif": "./static/media/trailer.198aafd3cbd0d8aa1505.gif",
     "static/media/mante.gif": "./static/media/mante.719c5108bf0b84a50b0b.gif",
+    "static/media/ballo14.png": "./static/media/ballo14.454806bde00561019a57.png",
+    "static/media/ballo12.png": "./static/media/ballo12.175875019b20b898ff3d.png",
+    "static/media/ballo17.png": "./static/media/ballo17.97817afe7dcf5cb37693.png",
+    "static/media/ballo15.png": "./static/media/ballo15.488edb376d9a86e9464f.png",
+    "static/media/ballo11.png": "./static/media/ballo11.44b1353ae6d4e3aad3df.png",
+    "static/media/ballo16.png": "./static/media/ballo16.6fe59fa844ed659315a6.png",
+    "static/media/ballo13.png": "./static/media/ballo13.9d2e2f575286e30a3b98.png",
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
     "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
-    "static/media/ballo13.png": "./static/media/ballo13.1a7d441a6ab69850e4c2.png",
-    "static/media/ballo14.png": "./static/media/ballo14.4a6f2903ad97becb6139.png",
-    "static/media/ballo16.png": "./static/media/ballo16.c04388361e033af2b390.png",
-    "static/media/ballo15.png": "./static/media/ballo15.a918d968ba182b12744e.png",
-    "static/media/ballo17.png": "./static/media/ballo17.b1a4947bc6443887a344.png",
     "static/media/ballo.png": "./static/media/ballo.4110fd872149fbfe37ff.png",
-    "static/media/ballo11.png": "./static/media/ballo11.4110fd872149fbfe37ff.png",
-    "static/media/ballo12.png": "./static/media/ballo12.a9f93b196cf3e56851ae.png",
     "static/media/nftgamela.gif": "./static/media/nftgamela.2ac1c2ed1e5c7eb60a4d.gif",
     "static/media/keyb.png": "./static/media/keyb.f2a19d016d0cf96ec276.png",
     "static/media/home-broker-dealer-icon.svg": "./static/media/home-broker-dealer-icon.5a537647e56ce90f9c8c6d4505b74f60.svg",
@@ -47,10 +47,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.7445fa4a.css.map": "./static/css/main.7445fa4a.css.map",
-    "main.06f7d2ae.js.map": "./static/js/main.06f7d2ae.js.map"
+    "main.5c2aa2a2.js.map": "./static/js/main.5c2aa2a2.js.map"
   },
   "entrypoints": [
     "static/css/main.7445fa4a.css",
-    "static/js/main.06f7d2ae.js"
+    "static/js/main.5c2aa2a2.js"
   ]
 }
