@@ -58,7 +58,9 @@ if (body.canje_apuestas_consuelo) {
       // console.log("claims", claims);
       const balance_en_consuelo =
         claims[0].ganancias_apuestas_segundoLugar +
-        claims[0].ganancias_apuestas_tercerLugar;
+        claims[0].ganancias_apuestas_tercerLugar +
+        claims[0].ganancias_apuestas_quintoLugar +
+        claims[0].ganancias_apuestas_sextoLugar;
       const status_retiro_bhrt = claims[0].status_claim_ganancia_consolacion;
 
 
@@ -153,7 +155,7 @@ console.log("aqui viene el consuelo de apuesta")
     try {
       const claims = await store.get_claim({usuario});
       console.log("claims", claims);
-       balance_en_consuelo=claims[0].ganancias_apuestas_segundoLugar + claims[0].ganancias_apuestas_tercerLugar;
+       balance_en_consuelo=claims[0].ganancias_apuestas_segundoLugar + claims[0].ganancias_apuestas_tercerLugar+ claims[0].ganancias_apuestas_quintoLugar+ claims[0].ganancias_apuestas_sextoLugar;
        status_retiro_bhrt=claims[0].status_claim_ganancia_consolacion
 
 
@@ -311,7 +313,7 @@ console.log("aqui viene el consuelo de apuesta")
       // Verificar si la respuesta del store es un array vacío
       if (balance_en_consuelo.toFixed(2) == body.ganancia_apuestas_consuelo_bhr.toFixed(2) ){
         
-        console.log("CLAIM ES CERO");
+        console.log("Los Balances se corresponden");
         // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
         // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción
         // Si la acción se realiza con éxito, puedes resolver la promesa con un mensaje de éxito
