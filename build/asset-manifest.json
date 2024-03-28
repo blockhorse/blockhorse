@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.1c01bcb8.css",
-    "main.js": "./static/js/main.c6d0b8dd.js",
+    "main.js": "./static/js/main.288c964a.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
@@ -20,10 +20,7 @@
     "static/media/banner-NS.jpg": "./static/media/banner-NS.0e8a20304390371e8bb4.jpg",
     "static/media/raven1.gif": "./static/media/raven1.e482eb2c53b97f555b06.gif",
     "static/media/banner1i.png": "./static/media/banner1i.72cadc8fe6dccf76cb5e.png",
-    "static/media/manzana.gif": "./static/media/manzana.e49cb1da27609098457c.gif",
-    "static/media/caballo.gif": "./static/media/caballo.9812a715c1645251b3f8.gif",
     "static/media/comienzorace.mp4": "./static/media/comienzorace.cdf54df09b546ac634a2.mp4",
-    "static/media/trailer.gif": "./static/media/trailer.198aafd3cbd0d8aa1505.gif",
     "static/media/mante.gif": "./static/media/mante.719c5108bf0b84a50b0b.gif",
     "static/media/ballo14.png": "./static/media/ballo14.454806bde00561019a57.png",
     "static/media/ballo12.png": "./static/media/ballo12.175875019b20b898ff3d.png",
@@ -36,8 +33,11 @@
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
     "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
     "static/media/ballo.png": "./static/media/ballo.4110fd872149fbfe37ff.png",
+    "static/media/trailer.jpg": "./static/media/trailer.ad6c339319cdd660baf4.jpg",
     "static/media/nftgamela.gif": "./static/media/nftgamela.2ac1c2ed1e5c7eb60a4d.gif",
+    "static/media/caballo.jpg": "./static/media/caballo.d2b30e579e336f1ecbee.jpg",
     "static/media/keyb.png": "./static/media/keyb.f2a19d016d0cf96ec276.png",
+    "static/media/manzana.jpg": "./static/media/manzana.7acc828f0362a41b2d05.jpg",
     "static/media/home-broker-dealer-icon.svg": "./static/media/home-broker-dealer-icon.5a537647e56ce90f9c8c6d4505b74f60.svg",
     "static/media/horse-riding-icon.svg": "./static/media/horse-riding-icon.a913998ddca664e3840ce1c66ecb2ba6.svg",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -50,10 +50,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.1c01bcb8.css.map": "./static/css/main.1c01bcb8.css.map",
-    "main.c6d0b8dd.js.map": "./static/js/main.c6d0b8dd.js.map"
+    "main.288c964a.js.map": "./static/js/main.288c964a.js.map"
   },
   "entrypoints": [
     "static/css/main.1c01bcb8.css",
-    "static/js/main.c6d0b8dd.js"
+    "static/js/main.288c964a.js"
   ]
 }
