@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.1c01bcb8.css",
-    "main.js": "./static/js/main.288c964a.js",
+    "main.js": "./static/js/main.ade05543.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
@@ -33,9 +33,9 @@
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
     "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
     "static/media/ballo.png": "./static/media/ballo.4110fd872149fbfe37ff.png",
-    "static/media/trailer.jpg": "./static/media/trailer.ad6c339319cdd660baf4.jpg",
     "static/media/nftgamela.gif": "./static/media/nftgamela.2ac1c2ed1e5c7eb60a4d.gif",
     "static/media/caballo.jpg": "./static/media/caballo.d2b30e579e336f1ecbee.jpg",
+    "static/media/trailer.jpg": "./static/media/trailer.aa95e445176bfa6e96a2.jpg",
     "static/media/keyb.png": "./static/media/keyb.f2a19d016d0cf96ec276.png",
     "static/media/manzana.jpg": "./static/media/manzana.7acc828f0362a41b2d05.jpg",
     "static/media/home-broker-dealer-icon.svg": "./static/media/home-broker-dealer-icon.5a537647e56ce90f9c8c6d4505b74f60.svg",
@@ -50,10 +50,10 @@
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
     "main.1c01bcb8.css.map": "./static/css/main.1c01bcb8.css.map",
-    "main.288c964a.js.map": "./static/js/main.288c964a.js.map"
+    "main.ade05543.js.map": "./static/js/main.ade05543.js.map"
   },
   "entrypoints": [
     "static/css/main.1c01bcb8.css",
-    "static/js/main.288c964a.js"
+    "static/js/main.ade05543.js"
   ]
 }
