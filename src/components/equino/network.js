@@ -1,70 +1,33 @@
-const express= require('express');
-const response = require('../../network/response')
-const controller =require("./controller")
-const router= express.Router()
+// const express= require('express');
+// const response = require('../../network/response')
+// const controller =require("./controller")
+// const router= express.Router()
 
  
 
 
 
-router.get('/', function (req, res)  {
+// router.get('/', function (req, res)  {
         
-controller.get_equino(req.query).then((resultado)=>{
- // console.log("resultado controller", resultado);  
-// res.headers.set('Content-Type', 'application/json')
-//          response.setHeader({
-//   'Content-Type': 'application/json',
-//   'Cache-Control': 'no-cache',
-//   'Access-Control-Allow-Origin': '*',
-// });
-         res.header('Content-Type', 'application/json');
-res.header('Cache-Control', 'no-cache');
-res.header('Access-Control-Allow-Origin', '*');
-        response.success(req, res,resultado, 201);
-    })
-   
-// response.setHeader('Content-Type', 'application/json');
- 
-// Content-Type: application/json
-
-
-})
-
-
-
-// router.post('/', function (req, res)  {
-//      res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
-//          //console.log("BODY",req.body)
-//     controller.get_race(req.body).then((resultado)=>{
-//         //console.log("resultado controller", resultado);
+// controller.get_equino(req.query).then((resultado)=>{
+//  // console.log("resultado controller", resultado);  
+// // res.headers.set('Content-Type', 'application/json')
+// //          response.setHeader({
+// //   'Content-Type': 'application/json',
+// //   'Cache-Control': 'no-cache',
+// //   'Access-Control-Allow-Origin': '*',
+// // });
+//          res.header('Content-Type', 'application/json');
+// res.header('Cache-Control', 'no-cache');
+// res.header('Access-Control-Allow-Origin', '*');
 //         response.success(req, res,resultado, 201);
 //     })
    
 
- 
 
 // })
 
 
-// Ruta POST para manejar la solicitud
-// router.post('/', async function (req, res) {
-//       res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // Replace with your frontend domain
-//       res.header('Access-Control-Allow-Methods', 'POST'); // Adjust the allowed HTTP methods as needed
- 
-//   try {
-//     // Ejecutar la lógica en tu controlador para obtener la carrera (utilizando la función get_race)
-//     const resultado = await controller.post_equino(req.body);
-    
-//     // Enviar la respuesta exitosa con el resultado
-//     res.status(201).json(resultado);
-//   } catch (error) {
-//     // Manejar errores si ocurrieron
-//     console.error('Error:', error);
-//     res.status(500).json({ error: 'Hubo un error al procesar la solicitud.' });
-//   }
-// });
 
 
 
@@ -74,35 +37,106 @@ res.header('Access-Control-Allow-Origin', '*');
 
 
 
-router.post('/', function (req, res)  {
-res.header('Content-Type', 'application/json');
-res.header('Cache-Control', 'no-cache');
-res.header('Access-Control-Allow-Origin', '*');
-         console.log("BODY Kerychain Res",req.body)
-
-const Newname = req.body.newname || null;
-console.log("Newname", Newname);
-if (Newname != null)  {
-  console.log("The string starts with the specified phrase.");
 
 
+// router.post('/', function (req, res)  {
+// res.header('Content-Type', 'application/json');
+// res.header('Cache-Control', 'no-cache');
+// res.header('Access-Control-Allow-Origin', '*');
+//          console.log("BODY Kerychain Res",req.body)
 
- controller.registrar_cambio_de_nombre(req.body,Newname).then((resultado)=>{
-        console.log("resultado controller", resultado);
-        response.success(req, res,resultado, 201);
-    })
+// const Newname = req.body.newname || null;
+// console.log("Newname", Newname);
+// if (Newname != null)  {
+//   console.log("The string starts with the specified phrase.");
+
+
+
+//  controller.registrar_cambio_de_nombre(req.body,Newname).then((resultado)=>{
+//         console.log("resultado controller", resultado);
+//         response.success(req, res,resultado, 201);
+//     })
    
 
-}else{console.log("NO proceso post keychaintrx")}
+// }else{console.log("NO proceso post keychaintrx")}
 
 
 
 
 
 
-})
+// })
 
 
 
+
+// module.exports = router;
+
+
+
+const express = require('express');
+const response = require('../../network/response');
+const controller = require('./controller');
+const router = express.Router();
+
+// Middleware to enable CORS
+router.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
+router.get('/', (req, res) => {
+  controller.get_equino(req.query)
+    .then((resultado) => {
+      res.header('Content-Type', 'application/json');
+      res.header('Cache-Control', 'no-cache');
+      response.success(req, res, resultado, 201);
+    })
+    .catch((error) => {
+      // Handle error
+      console.error('Error:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+});
+
+router.post('/', (req, res) => {
+  res.header('Content-Type', 'application/json');
+  res.header('Cache-Control', 'no-cache');
+  console.log("BODY Kerychain Res", req.body);
+
+  const Newname = req.body.newname || null;
+    const Cuenta = req.body.account || null;
+  console.log("Newname", Newname);
+
+  if (Newname != null) {
+    console.log("The string starts with the specified phrase.");
+    controller.registrar_cambio_de_nombre(req.body, Newname)
+      .then((resultado) => {
+        console.log("resultado controller", resultado);
+        response.success(req, res, resultado, 201);
+      })
+      .catch((error) => {
+        // Handle error
+        console.error('Error:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+      });
+  } else {
+    console.log("NO proceso post keychaintrx");
+    if(Cuenta!= null){
+        controller.get_equino_account(req.body).then((resultado) => {
+      res.header('Content-Type', 'application/json');
+      res.header('Cache-Control', 'no-cache');
+      response.success(req, res, resultado, 201);
+    })
+    .catch((error) => {
+      // Handle error
+      console.error('Error:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+    }
+  }
+});
 
 module.exports = router;

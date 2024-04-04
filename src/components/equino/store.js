@@ -56,6 +56,17 @@ async function get_equino(equino) {
 
 
 
+async function get_equino_account(account) {
+  const equinos = await Model.find(account).catch(e => {
+    console.log("error");
+    console.log(e);
+  });
+  console.log("EQU", equinos.length);
+  return equinos;
+}
+
+
+
 
 
 async function set_equino_status(equino) {
@@ -77,7 +88,7 @@ async function set_equino_status(equino) {
 
 
 module.exports = {
-
+get_equino_account,
 get_equino, 
 set_equino_status,
 
