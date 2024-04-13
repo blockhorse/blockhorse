@@ -13,7 +13,9 @@ console.log("conexion_db");
 
 async function get_sistemas_activos(x) {
   console.log("Dsd store get sistemas_activos",x)
-   return result = await Model.find(x).catch((e)=>{
+   return result = await Model.find(
+{usuario:
+"blockhorseracing"}).catch((e)=>{
         console.log("errror")
         console.log(e)
       });
