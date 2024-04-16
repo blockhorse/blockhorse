@@ -73,10 +73,12 @@ if (body.canje_apuestas_consuelo) {
        if (balance_en_consuelo === body.balance){
         if (balance_en_consuelo >= body.canje_apuestas_consuelo) {
           console.log("todo en orden");
+         body.balance_api=balance_en_consuelo;
 
-          try {
+          
+      try {
             const registroGuardado = await store.register_claim_consuelo(body);
-            await store.register_claim([{usuario:body.usuario},{status_claim_ganancia_consolacion:'pendiente'}]);
+            await store.register_claim([{usuario:body.usuario},{ balance_api:balance_en_consuelo, status_claim_ganancia_consolacion:'pendiente'}]);
             const response = {
               success: true,
               data: {
@@ -164,7 +166,6 @@ console.log("aqui viene el consuelo de apuesta")
        console.log("body.ganancia_apuestas", body.ganancia_apuestas_consuelo);
       // Verificar si la respuesta del store es un array vacío
       if (balance_en_consuelo.toFixed(2) == body.ganancia_apuestas_consuelo ){
-        
         console.log("CLAIM ES CERO");
         // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
         // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción
@@ -222,7 +223,7 @@ if (body.canje_apuestas_consuelo_bhr) {
 
       if (balance_en_consuelo_bhr >= body.canje_apuestas_consuelo_bhr) {
           console.log("todo en orden");
-
+       body.balance_api=balance_en_consuelo_bhr;
           try {
             const registroGuardado = await store.register_claim_consuelo(body);
             await store.register_claim([{usuario:body.usuario},{status_claim_ganancia_consolacion:'pendiente'}]);
@@ -312,7 +313,6 @@ console.log("aqui viene el consuelo de apuesta")
        console.log("confirmacion desde la cuenta hive", body.ganancia_apuestas_consuelo_bhr);
       // Verificar si la respuesta del store es un array vacío
       if (balance_en_consuelo.toFixed(2) == body.ganancia_apuestas_consuelo_bhr.toFixed(2) ){
-        
         console.log("Los Balances se corresponden");
         // Aquí puedes agregar la lógica para registrar los datos enviados en lugar de devolver el array vacío
         // Por ejemplo, puedes guardar los datos en una base de datos o hacer otra acción

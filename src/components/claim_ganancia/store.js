@@ -22,7 +22,7 @@ const claim = await walletsModel.find(usuario).catch(e => {
 console.log("error");
 console.log(e);
   });
-  console.log("Claimed?", claim);
+  // console.log("Claimed?", claim);
   return claim;
 }
 
@@ -63,12 +63,13 @@ async function register_claim(usuario) {
 async function register_claim_consuelo(data) {
   try {
     // Aquí se asume que "data" contiene un objeto con la información del reclamo
-    const { usuario, balance, canje_apuestas_consuelo,canje_apuestas_consuelo_bhr, articulo } = data;
+    const { usuario, balance, canje_apuestas_consuelo,canje_apuestas_consuelo_bhr, articulo, balance_api } = data;
 
     // Crear una instancia del modelo o esquema "claim_consuelo"
     const nuevoRegistro = new model({
       usuario: usuario,
       balance: balance,
+      balance_api: balance_api,
       reclamo: articulo,
       valor: canje_apuestas_consuelo || canje_apuestas_consuelo_bhr,
       entregado: false, // Puedes ajustar este valor según corresponda
