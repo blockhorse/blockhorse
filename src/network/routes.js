@@ -74,3 +74,10 @@ const routes = function (server){
 module.exports = routes;
 
 
+
+
+
+
+// Auri 0412 6785951
+
+// { trx_id: '28e2f672afc2336e4edd7098842d5a19a7b49ecb'}
