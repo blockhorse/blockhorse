@@ -46,10 +46,10 @@ async function newAuction(auction) {
 }
 
 
-async function set_equino_status_implementos(equino) {
-  console.log("SETEANDO ", equino);
+async function set_equino_status_implementos(equino,aplicarnft) {
+  console.log("SETEANDO ", equino, "Objeto", aplicarnft);
   try {
-    const Equino = await AplicarnftEquinoModel.findOneAndUpdate({ equineId: equino.equineId }, equino, { upsert: true, new: true });
+    const Equino = await AplicarnftEquinoModel.findOneAndUpdate({ equineId: equino }, aplicarnft, { upsert: true, new: true });
     console.log("EQU", Equino);
     return Equino;
   } catch (error) {

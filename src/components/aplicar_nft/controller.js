@@ -28,6 +28,7 @@ if (memo) {
 
  // Extraer el mint
   const mintPart = memoParts[memoParts.length - 4].trim();
+  console.log("mintPart", mintPart);
   const Caballo_mint = Number(mintPart);
 
   // Extraer el Nft_name
@@ -45,6 +46,7 @@ if (memo) {
 
     // Crear un nuevo objeto AplicarnftData
     const aplicarnftData = {
+      
       trx_id: tx_id,
       account: account,
       Nft_id: Nft_utility,
@@ -57,22 +59,34 @@ if (memo) {
       Razon_Devolucion: '',
       Status_wallet: 'check'
     };
+
+
+console.log("aplicarnftData", aplicarnftData);
+
 let aplicarnftStatus = {};
+
+
 
 if (Nft_type == "tack" || Nft_type=="recover") {
   aplicarnftStatus = {
-    equineId: Caballo_mint,
-    implementos_status: 'pending'
+    implementos_status: 'pending',
   };
+
+console.log("aplicarnftStatus", aplicarnftStatus);
 } else if (Nft_type == "food") {
+  console.log("yes")
   aplicarnftStatus = {
-    equineId: Caballo_mint,
-    alimentos_status: 'pending'
+     alimentos_status: 'pending',
+     alimentos_trx_id: { Nft_id: Nft_utility, trx_id:tx_id  },
+
   };
+  console.log("aplicarnftStatus", aplicarnftStatus);
 }
 
 // Guardar el documento en la base de datos
-const estado = await set_equino_status_implementos(aplicarnftStatus);
+console.log("Antes  Caballo_mint,aplicarnftStatus", Caballo_mint,aplicarnftStatus);
+const estado = await set_equino_status_implementos(Caballo_mint,aplicarnftStatus);
+
 console.log("estado", estado);
 
 

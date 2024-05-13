@@ -118,6 +118,7 @@ namesBhr:{
   alimentos_fecha: {
     type: Date,
     },
+   alimentos_trx_id: { type: Object },
 
   implementos: {
     type: Array,
