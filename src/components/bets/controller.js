@@ -30,9 +30,28 @@ if(statusSuperior==="create"){
   
 if(wallet){
 const balance=wallet[0].balance - wallet[0].retiros;
+const tickets=wallet[0].tickets 
+
  console.log("balance", balance);
  const bet=cantidadTickets/100;
  console.log("bet", bet);
+
+if(tickets>=bet){
+
+let quedan=tickets -bet
+
+if(quedan>=0){
+   await ModelW.findOneAndUpdate(
+  { usuario: usuario },
+  { $inc: { tickets: -bet } } // Use -bet to decrement the balance  
+);
+  const agregando_puesta= await store.agregarApuesta(equinoId,bet, nombreEquino, race, usuario);
+  
+return(`trx Success, balance tickets: ${quedan.toFixed(3)}`);
+}
+
+}
+
 
  saldo=balance - bet;
   if(balance>=bet){

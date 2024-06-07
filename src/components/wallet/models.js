@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const wallets={
   usuario: { type: String, unique: true, index: true },
   balance:{type:Number, default:0},
+  tickets:{type:Number, default:0},
   ganancia_por_propiedad:{type:Object},
   ganancia_apuestas:{type:Number, default:0},
   ganancias_apuestas_segundoLugar:{type:Number, default:0},
