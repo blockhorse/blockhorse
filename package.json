@@ -2,9 +2,10 @@
   "name": "hashking-res-req-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "nodemon  ./src/server.js"
+    "start": "nodemon  ./src/server.js",
+   "heroku-postbuild": "echo 'Build complete'"
   },
   "keywords": [],
   "author": "",
