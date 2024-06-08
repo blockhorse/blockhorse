@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.0fce19be.css",
-    "main.js": "./static/js/main.5015b182.js",
+    "main.css": "./static/css/main.9ecc1a3e.css",
+    "main.js": "./static/js/main.2aa9fad2.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
@@ -28,7 +28,6 @@
     "static/media/ballo13.png": "./static/media/ballo13.9d2e2f575286e30a3b98.png",
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
-    "static/media/ballo2.png": "./static/media/ballo2.0924e68a84b2c1629f21.png",
     "static/media/ballo.png": "./static/media/ballo.4110fd872149fbfe37ff.png",
     "static/media/nftgamela.gif": "./static/media/nftgamela.2ac1c2ed1e5c7eb60a4d.gif",
     "static/media/caballo.jpg": "./static/media/caballo.d2b30e579e336f1ecbee.jpg",
@@ -42,11 +41,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
-    "main.0fce19be.css.map": "./static/css/main.0fce19be.css.map",
-    "main.5015b182.js.map": "./static/js/main.5015b182.js.map"
+    "main.9ecc1a3e.css.map": "./static/css/main.9ecc1a3e.css.map",
+    "main.2aa9fad2.js.map": "./static/js/main.2aa9fad2.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fce19be.css",
-    "static/js/main.5015b182.js"
+    "static/css/main.9ecc1a3e.css",
+    "static/js/main.2aa9fad2.js"
   ]
 }
