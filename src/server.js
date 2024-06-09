@@ -55,7 +55,7 @@ router(app);
 
 // Ruta para servir archivos estáticos en modo de producción
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static('build'));
+  app.use(express.static('./build'));
 
   // Manejar todas las demás rutas y enviar al archivo index.html
 app.get('*', (req, res) => {

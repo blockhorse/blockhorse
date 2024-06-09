@@ -3,9 +3,9 @@
   "version": "1.0.0",
    "homepage": "./src/server.js",
   "description": "",
-  "main": "src/server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "start": "node  ./src/server.js",
+    "start": "nodemon  ./src/server.js",
    "heroku-postbuild": "echo 'Build complete'"
   },
   "keywords": [],
