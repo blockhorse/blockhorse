@@ -122,8 +122,6 @@
 
 
 
-
-
 require("dotenv").config();
 const express = require('express');
 const path = require('path');
@@ -136,13 +134,11 @@ const port = process.env.PORT || 4000;
 app.use(bodyParser.json());
 router(app);
 
-// Ruta para servir archivos estáticos en modo de producción
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, '../build')));
+  app.use(express.static(path.resolve(__dirname, '../build')));
 
-  // Manejar todas las demás rutas y enviar al archivo index.html
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build', 'index.html'), (err) => {
+    res.sendFile(path.resolve(__dirname, '../build', 'index.html'), (err) => {
       if (err) {
         res.status(500).send(err);
       }
