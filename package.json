@@ -1,6 +1,7 @@
 {
   "name": "blockhorseracing",
   "version": "1.0.0",
+   "homepage": ".",
   "description": "",
   "main": "src/server.js",
   "scripts": {
