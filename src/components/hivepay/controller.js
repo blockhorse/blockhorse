@@ -52,12 +52,14 @@ async function get_cofres_user(user) {
         llaves_disponibles: 0,
         cofres_disponibles: 0,
         cofres_a_reclamar: 0,
-        status: 0
+        status: 0,
+        cofres_p_disponibles:0,
       };
     }
     
     const llaves_disponibles = (chest.llaves_compradas ?? 0) - (chest.llaves_gastadas ?? 0);
     const cofres_disponibles = (chest.cofres_compradas ?? 0) - (chest.cofres_gastadas ?? 0);
+    const cofres_p_disponibles = (chest.cofres_patro_comprados ?? 0) - (chest.cofres_patro_gastados ?? 0);
     const cofres_a_reclamar = Math.min(llaves_disponibles, cofres_disponibles);
     const status = chest.status ?? 0;
     const cofres_procesando = chest.cofres_procesando ?? null;
@@ -66,6 +68,7 @@ async function get_cofres_user(user) {
     return {
       llaves_disponibles,
       cofres_disponibles,
+      cofres_p_disponibles,
       cofres_a_reclamar,
       cofres_procesando,
       cofres_obtenidos,

@@ -14,12 +14,12 @@ async function processCofre(reqbody) {
 
   const llavesDisponibles = userChests.llaves_compradas - userChests.llaves_gastadas;
   if (llavesDisponibles < cofres_claim) {
-    throw new Error("No tienes suficientes llaves para comprar los cofres solicitados");
+    throw new Error("You don't have enough keys to claim the requested chest");
   }
 
   const cofresDisponibles = userChests.cofres_compradas - userChests.cofres_gastadas;
   if (cofresDisponibles < cofres_claim) {
-    throw new Error("No tienes suficientes cofres para procesar la solicitud");
+    throw new Error("You don't have enough chests to process the request");
   }
   
   let objeto= generarObjeto(cofres_claim);

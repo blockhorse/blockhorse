@@ -15,6 +15,9 @@ const router= express.Router()
 
 
 router.get('/', async function (req, res) {
+   res.header('Content-Type', 'application/json');
+res.header('Cache-Control', 'no-cache');
+res.header('Access-Control-Allow-Origin', '*');
   
   controller.get_hivepay_notification(req).then((respuesta) => {
     console.log("respuesta", respuesta);

@@ -132,6 +132,7 @@ const payhiveSchema= new Schema(
 const payhiveModel = mongoose.model("hivepay",payhiveSchema)
 
 
+
 const chest_buy = new Schema({
   usuario: {
     type: String,
@@ -149,12 +150,41 @@ const chest_buy = new Schema({
   cofres_procesando: {
     type: Number,
     default: 0
-  },  
+  }, 
+  cofres_m_procesando: {
+    type: Number,
+    default: 0
+  },
+  cofres_patro_procesando: {
+    type: Number,
+    default: 0
+  }, 
   cofres_obtenidos: {
     type: Object,
     default: {}
-  },                  
-  llaves_gastadas: {
+  },
+  cofres_m_obtenidos: {
+    type: Object,
+    default: {}
+  },
+  cofres_patro_obtenido: {
+    type: Object,
+    default: {}
+  },
+   
+  cofres_patro_cobrados: {
+    type: Object,
+    default: {}
+  }, 
+   cofres_patro_comprados: {
+    type: Number,
+    default: 0
+  },   
+  cofres_patro_gastados: {
+    type: Number,
+    default: 0
+  },                 
+ llaves_gastadas: {
     type: Number,
     default: 0
   },
@@ -162,8 +192,7 @@ const chest_buy = new Schema({
     type: Number,
     default: 0
   },
-     
- llaves_m_compradas: {
+  llaves_m_compradas: {
     type: Number,
     default: 0
   },
@@ -171,14 +200,8 @@ const chest_buy = new Schema({
     type: Number,
     default: 0
   },
-  cofres_m_procesando: {
-    type: Number,
-    default: 0
-  },  
-  cofres_m_obtenidos: {
-    type: Object,
-    default: {}
-  },                  
+    
+                    
   llaves_m_gastadas: {
     type: Number,
     default: 0
@@ -188,7 +211,6 @@ const chest_buy = new Schema({
     default: 0
   },
 
-
    status: {
     type: String,
     default:"create"
@@ -197,14 +219,15 @@ const chest_buy = new Schema({
     type: String,
     default:"create"
   },
-    fecha: {
-    type: Date,
-    default: Date.now  // Puedes establecer un valor predeterminado para la fecha
+   status_patro: {
+    type: String,
+    default:"create"
   }
 }, {
   autoIndex: false,
   autoCreate: false
 });
+
 
 
 
