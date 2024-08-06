@@ -35,6 +35,7 @@ const temporada= require('./../components/temporada/network.js')
 const deposit_wallet= require('./../components/deposit_wallet/network.js')
 const bets= require('./../components/bets/network.js')
 const sistemas_activos= require('./../components/sistemas_activos/network.js')
+const ventas_especiales= require('./../components/ventas_especiales/network.js')
 
 
 const routes = function (server){
@@ -69,6 +70,7 @@ const routes = function (server){
      server.use('/bets',bets);
      server.use('/deposit_wallet',deposit_wallet);
      server.use('/sistemas_activos',sistemas_activos);
+     server.use('/ventas_especiales',ventas_especiales);
     
 	
 	

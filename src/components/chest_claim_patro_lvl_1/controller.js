@@ -70,11 +70,11 @@ function randomBasico() {
   }else if (rand < 0.39) {
     return 16; // 3% de probabilidad  50 tickets
   }else if (rand < 0.41) {
-    return 17; // 0.2% de probabilidad 100 tickets
+    return 17; // 2% de probabilidad 100 tickets
   }else if (rand < 0.42) {
-    return 18; // 0.1% de probabilidad  200 tickets
+    return 18; // 1% de probabilidad  200 tickets
   }else if (rand < 0.44) {
-    return 19; // 0.2% de probabilidad 1 pila
+    return 19; // 2% de probabilidad 1 pila
   }else if (rand < 0.45) {
     return 20; // 1% de probabilidad    2 pias 
   }else if (rand < 0.47) { 
