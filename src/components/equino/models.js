@@ -83,6 +83,18 @@ namesBhr:{
     type: String,
     default: ''
   },
+  for_shedule_Oficiales:String,
+  habilitado:{
+        type: String,
+        default:"no", 
+    },
+    habilitador:{
+        type: String,
+        default:"no", 
+    },
+
+
+
   Nacimiento: {
     type: Date,
     default: null
@@ -154,8 +166,17 @@ namesBhr:{
   },
   implementos_fecha: {
     type: Date,
-    }
-  }, 
+    },
+  carreras_Oficiales:Array,
+  carreras_win_Oficiales:Array,
+  carreras_second_Oficiales:Array,
+  carreras_third_Oficiales:Array,
+  for_shedule_Oficiales:String,
+   status_oficial:  {
+        type:String,
+        default:"F",
+    },
+}, 
   {
   timestamps: true,
   versionKey: false,

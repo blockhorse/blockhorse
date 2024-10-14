@@ -26,7 +26,7 @@ if ((memo.startsWith("Magic-Chest") && (result !=null))) {
 
 
  controller.set_buy(req.body).then((resultado)=>{
-        console.log("resultado controller", resultado);
+        // console.log("resultado controller", resultado);
         response.success(req, res,resultado, 201);
     })
    

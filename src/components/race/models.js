@@ -35,6 +35,10 @@ const raceSchema= new Schema(
         type: String,
         
 
+    },tipo_carrera:{
+        type: String,
+        
+
     },
 
      grado: {

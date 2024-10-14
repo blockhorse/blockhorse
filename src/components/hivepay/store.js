@@ -55,12 +55,12 @@ console.log("CONFIRMANDO  PAGO ",param);
 
 
 async function agragado_entregado_chest_pasadoaTrue(param) {
-console.log("CONFIRMANDO  PAGO ",param);
+// console.log("CONFIRMANDO  PAGO ",param);
 	 const  Verificacion = await payhiveModel.findOne({txid: param.txid}).catch((e)=>{
 	   	console.log(e)
 	    });
 
-    console.log("Verificacion",Verificacion)
+    // console.log("Verificacion",Verificacion)
 	 Verificacion.entregado=param.entregado;
 	 Verificacion.save();
 	

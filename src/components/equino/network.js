@@ -101,6 +101,22 @@ router.get('/', (req, res) => {
     });
 });
 
+
+// Nueva ruta para obtener 'otros_equinos'
+router.get('/habilitar_equino', (req, res) => {
+  console.log("req.query", req.query);
+  controller.get_habilitar_equinos(req.query)
+    .then((resultado) => {
+      res.header('Content-Type', 'application/json');
+      res.header('Cache-Control', 'no-cache');
+      response.success(req, res, resultado, 201);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+});
+
 router.post('/', (req, res) => {
   res.header('Content-Type', 'application/json');
   res.header('Cache-Control', 'no-cache');

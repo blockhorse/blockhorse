@@ -12,6 +12,17 @@ resolve(store.get_equino(body))
 
 }
 
+
+
+async function get_habilitar_equinos(body){
+console.log("BODY get_equino", body)
+return new Promise((resolve,reject) =>{
+resolve(store.get_habilitar_equino(body))
+
+ })
+
+}
+
 async function get_equino_account(body){
 console.log("BODY get_equino", body)
 return new Promise((resolve,reject) =>{
@@ -124,7 +135,9 @@ module.exports = {
   get_equino_account,
  get_equino,
  post_equino,
- registrar_cambio_de_nombre
+ registrar_cambio_de_nombre,
+  get_habilitar_equinos
+
 }
 
 

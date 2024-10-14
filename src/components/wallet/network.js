@@ -8,10 +8,10 @@ const router= express.Router()
 
 
 router.get('/', function (req, res)  {
-        console.log("req, res", req, res);
+        // console.log("req, res", req, res);
         
 controller.get_wallets(req.query).then((resultado)=>{
-        console.log("resultado controller", resultado);
+        // console.log("resultado controller", resultado);
         // res.headers.set('Content-Type', 'application/json')
 //          response.setHeader({
 //   'Content-Type': 'application/json',

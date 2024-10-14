@@ -27,22 +27,26 @@ resolve(store.add(data))
 
 async function get_races(body) {
   try {
-    const { latest, page } = body;
+    const { latest, page, type } = body;
     let races;
 
     if (latest) {
+      console.log("latest")
       // Obtener las últimas 20 carreras existentes
       races = await store.get_races({}, { limit: 20, sort: { _id: -1 } });
     } else if (page) {
+      console.log("page",page, type)
+
       // Paginar las carreras de 20 en 20
-      const pageSize = 20;
-      const skip = (page - 1) * pageSize;
-      races = await store.get_races({}, { limit: pageSize, skip, sort: { _id: -1 } });
+      const pageSize = 50;
+      races = await store.get_races({ limit: pageSize, tipo_carrera:type, sort: { _id: -1 } });
     } else {
+      console.log("else")
+
       // Obtener todas las carreras
       races = await store.get_races({});
     }
-
+      // console.log("RACES AQUI ESTAS", races)
     return races;
   } catch (error) {
     console.error('Error al obtener las carreras:', error);
@@ -56,7 +60,7 @@ async function get_races(body) {
 async function get_race(body){
   console.log("body En Equino Controler", body);
 return new Promise((resolve,reject) =>{
-resolve(store.get_races(body))
+resolve(store.get_race(body))
 //console.log("menssage body desde get hive pay", body);
  })
 

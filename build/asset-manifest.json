@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.02339197.css",
-    "main.js": "./static/js/main.64c30270.js",
+    "main.css": "./static/css/main.df985c3a.css",
+    "main.js": "./static/js/main.7238f699.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
+    "static/media/runing_horse_p.gif": "./static/media/runing_horse_p.3ec87fb2b3708a953902.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
     "static/media/depositarWalletEspa.gif": "./static/media/depositarWalletEspa.44dcd4a22ba2c8c6ddcc.gif",
     "static/media/depositarWalletIngles.gif": "./static/media/depositarWalletIngles.5e2781d38c6c54e3c41b.gif",
     "static/media/coinBHRT2.png": "./static/media/coinBHRT2.b4b0d6a7736551abf4ed.png",
     "static/media/galloping.mp3": "./static/media/galloping.82534e075b304b2659a2.mp3",
+    "static/media/runing_horse.gif": "./static/media/runing_horse.e78f7c48706328822822.gif",
     "static/media/celebrate.gif": "./static/media/celebrate.febe59e009480460a8b7.gif",
     "static/media/banner1iG.png": "./static/media/banner1iG.dd4eb5f99d8004c261f4.png",
     "static/media/wallet.gif": "./static/media/wallet.67b761401ff8d1489b5d.gif",
@@ -28,6 +30,7 @@
     "static/media/ballo13.png": "./static/media/ballo13.9d2e2f575286e30a3b98.png",
     "static/media/running-horse-horse-racing.gif": "./static/media/running-horse-horse-racing.10860fca5956c23aeea0.gif",
     "static/media/gif": "./static/media/3c4ff75af56e0e12e0f70eeb08d54b8d.a7e07569b6ccfb9c7891.gif",
+    "static/media/patrocinio.webp": "./static/media/patrocinio.381ec359f56264cc83f9.webp",
     "static/media/ballo.png": "./static/media/ballo.4110fd872149fbfe37ff.png",
     "static/media/nftgamela.gif": "./static/media/nftgamela.2ac1c2ed1e5c7eb60a4d.gif",
     "static/media/caballo.jpg": "./static/media/caballo.d2b30e579e336f1ecbee.jpg",
@@ -41,11 +44,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
-    "main.02339197.css.map": "./static/css/main.02339197.css.map",
-    "main.64c30270.js.map": "./static/js/main.64c30270.js.map"
+    "main.df985c3a.css.map": "./static/css/main.df985c3a.css.map",
+    "main.7238f699.js.map": "./static/js/main.7238f699.js.map"
   },
   "entrypoints": [
-    "static/css/main.02339197.css",
-    "static/js/main.64c30270.js"
+    "static/css/main.df985c3a.css",
+    "static/js/main.7238f699.js"
   ]
 }

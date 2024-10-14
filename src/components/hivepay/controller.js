@@ -32,7 +32,7 @@ let data={
     }
 
 
-console.log("data", data);
+// console.log("data", data);
 
 //console.log("menssage body", body);
 
@@ -45,7 +45,7 @@ resolve(store.add(data))
 async function get_cofres_user(user) {
   try {
     const chest = await store.getChestsForUser(user);
-    console.log("chestEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRR", chest);
+    // console.log("chestEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRR", chest);
     
     if (!chest) {
       return {
@@ -85,7 +85,7 @@ async function get_cofres_user(user) {
 async function get_cofres_user_m(user) {
   try {
     const chest = await store.getChestsForUser(user);
-    console.log("chestEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRR", chest);
+    // console.log("chestEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRR", chest);
     
     if (!chest) {
       return {
@@ -122,14 +122,14 @@ async function get_cofres_user_m(user) {
 
 
 async function get_hivepay_notification(req) {
-    console.log("BOOOOOOD",req.body)
+    // console.log("BOOOOOOD",req.body)
   const user_cofres = req.query.user_cofres;
     const user_cofres_m = req.query.user_cofres_m;
   if (user_cofres) {
-    console.log("COOOOOOOOOOOOFRESILLO")
+    // console.log("COOOOOOOOOOOOFRESILLO")
     return get_cofres_user(user_cofres);
   }else if(user_cofres_m){
-     console.log("COOOOOOOOOOOOFRESILLO2",user_cofres_m)
+     // console.log("COOOOOOOOOOOOFRESILLO2",user_cofres_m)
     return get_cofres_user_m(user_cofres_m);
 
 

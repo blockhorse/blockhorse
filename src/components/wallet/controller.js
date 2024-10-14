@@ -4,13 +4,13 @@ const store = require('./store.js');
 
 
 async function get_wallets(body) {
-    console.log("body usuario", body.usuario);
-    console.log("BODY DEJUSTP", body);
+    console.log("body del get en Get_wallet", body.usuario);
+    // console.log("BODY DEJUSTP", body);
 
     try {
         // Obtener el registro de la base de datos
         const wallet = await store.get_wallet(body);
-        console.log("wallet", wallet);
+        // console.log("wallet", wallet);
 
      if (!wallet || wallet.length === 0) {
     // Si no se encuentra el registro, crear uno con todos los campos numéricos en 0

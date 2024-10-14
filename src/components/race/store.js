@@ -15,41 +15,49 @@ const numConnections = db.connections.length;
 
 console.log(`Número de conexiones abiertas: ${numConnections}`);
 
-// async function add_Notification(notification) {
-//    const Notificaton = new Model(notification)
-//    console.log("Notificaton", Notificaton);
-//        await Notificaton.save().catch((e)=>{
-// 	    	//console.log(e)
-// 	    	console.log("KEY DUPLICADADA")
-// 	    });
 
-// }
+async function get_races(races) {
+  const { limit = 50, tipo_carrera = 'Oficial', sort = { _id: -1 } } = races; // Desestructuramos con valores predeterminados
 
-async function get_races(race) {
-  // console.log("ME ejecuto desde store race get race", race);
-  
-  return Race = await Model.find(race)
-    .sort({ _id: -1 })  // Ordena los registros por el campo "_id" en orden descendente
-    .limit(80)        // Limita el resultado a los últimos 100 registros
-    .catch((e) => {
-      console.log("error");
-      console.log(e);
-    });
-  
- // console.log("Race", Race);
+  console.log("Ejecutando get_races con los siguientes parámetros:", { limit, tipo_carrera, sort });
+
+  try {
+    // Realiza la consulta a la base de datos utilizando los parámetros desestructurados
+    const result = await Model.find({ tipo_carrera })
+      .sort(sort)  // Ordena los registros según el parámetro 'sort'
+      .limit(limit);  // Limita el resultado al número especificado en 'limit'
+
+    return result;
+  } catch (e) {
+    console.log("Error al obtener las carreras:");
+    console.log(e);
+    throw e; // Lanza el error para manejo externo si es necesario
+  }
 }
 
 
 
 
 
+async function get_race(races) {
 
+  try {
+    // Realiza la consulta a la base de datos utilizando los parámetros desestructurados
+    const result = await Model.find(races)
+
+    return result;
+  } catch (e) {
+    console.log("Error al obtener las carreras:");
+    console.log(e);
+    throw e; // Lanza el error para manejo externo si es necesario
+  }
+}
 
 
 module.exports = {
 
 get_races, 
-
+get_race
 
 
 }

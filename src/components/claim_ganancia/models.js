@@ -10,6 +10,8 @@ const canjes={
   balance_restante:{type:Number, default:0},
   reclamo:{type:String, default:"nada"},
   valor:{type:Number, default:0},
+  symbol:{type:String},
+
   entregado:{type: Boolean, default:false},
   status_claim:{type:String, default:"create"},
   error:{type:String, default:"Sin errores"},

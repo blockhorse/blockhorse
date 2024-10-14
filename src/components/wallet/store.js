@@ -19,7 +19,7 @@ const wallet = await Model.find(usuario).catch(e => {
     console.log("error");
     console.log(e);
   });
-  console.log("Wallet", wallet);
+  // console.log("Wallet", wallet);
   return wallet;
 }
 
