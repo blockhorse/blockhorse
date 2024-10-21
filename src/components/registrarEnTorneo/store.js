@@ -199,7 +199,6 @@ async function descontar_register_wallet(body) {
     // Condicional para el símbolo
     if (symbol === 'BHRT') {
       update = {
-        balance: balance_restante,
         ganancias_apuestas_segundoLugar: balance_restante,
         ganancias_apuestas_tercerLugar: 0,
         ganancias_apuestas_quintoLugar: 0,
