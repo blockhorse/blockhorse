@@ -15,7 +15,7 @@ async function registrarEnTorneo(body) {
   return new Promise(async (resolve, reject) => {
     try {
       const wallet = await store.get_wallet({ usuario: usuario });
-      const torneo = await store.get_torneo({ status_inscripciones: "abierto" }); 
+      const torneo = await store.get_torneo({ status_inscriciones: "abierto" }); 
       const equine = await store.get_equino({equineId:body.identidad})
 
       console.log("wallet", wallet);
@@ -232,7 +232,7 @@ async function get_torneo(body){
 //////////////////
 
 async function procesar_inscripcion(data, balanceEnW, torneo,equine) {
-  console.log("data Inscripcion,", data, "balanceEnW BHRT", balanceEnW,"equine",equine);
+  console.log("data Inscripcion,", data, "balanceEnW BHRT", balanceEnW,"equine",equine,"torneo",torneo);
 
   if (equine[0].status_oficial === "M") {
     if (data.account === data.habilitador) {
