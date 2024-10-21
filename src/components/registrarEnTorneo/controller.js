@@ -54,7 +54,7 @@ async function registrarEnTorneo(body) {
 
         if (token === "BHR") {
           if (bhrBalance >= costo_inscripcion) {
-            const result = await procesar_inscripcion(body, bhrBalance, torneo);
+            const result = await procesar_inscripcion(body, bhrBalance, torneo,equine);
             if (result === true) {
               resolve({
                 statusCode: 200,
@@ -76,7 +76,7 @@ async function registrarEnTorneo(body) {
 
         if (token === "SWAP.HIVE") {
           if (hiveBalance >= costo_inscripcion) {
-            const result = await procesar_inscripcion(body, hiveBalance, torneo);
+            const result = await procesar_inscripcion(body, hiveBalance, torneo,equine);
             if (result === true) {
               resolve({
                 statusCode: 200,
