@@ -232,9 +232,9 @@ async function get_torneo(body){
 //////////////////
 
 async function procesar_inscripcion(data, balanceEnW, torneo,equine) {
-  console.log("data Inscripcion,", data, "balanceEnW BHRT", balanceEnW);
+  console.log("data Inscripcion,", data, "balanceEnW BHRT", balanceEnW,"equine",equine);
 
-  if (equine.status_oficial === "M") {
+  if (equine[0].status_oficial === "M") {
     if (data.account === data.habilitador) {
       console.log("Habilitacion por el owner..");
 
