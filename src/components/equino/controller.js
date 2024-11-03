@@ -6,7 +6,7 @@ const store = require('./store.js');
 async function get_equino(body){
 console.log("BODY get_equino", body)
 return new Promise((resolve,reject) =>{
-resolve(store.get_equino(body))
+resolve(store.get_equino(body,50,"fetch"))
 
  })
 
