@@ -39,6 +39,8 @@ const ventas_especiales= require('./../components/ventas_especiales/network.js')
 const boletos= require('./../components/boletos/network.js')
 const RegistrarEnTorneo= require('./../components/registrarEnTorneo/network.js')
 const Jornada_5y6=require('./../components/jornadas_5y6/network.js')
+const cofre_E_Delivery=require('./../components/cofre_E_Delivery/network.js')
+
 
 
 const routes = function (server){
@@ -58,6 +60,8 @@ const routes = function (server){
      server.use('/chest_claim', chest_claim);
      server.use('/chest_claimagic', chest_claimagic);
      server.use('/chest_claim_especial', chest_claim_especial);
+     server.use('/cofre_e_delivery', cofre_E_Delivery);
+
      server.use('/chest_claim_patro', chest_claim_patro);
      server.use('/equino', equino);
      server.use('/actuaciones', actuaciones);
