@@ -39,6 +39,8 @@ const ventas_especiales= require('./../components/ventas_especiales/network.js')
 const boletos= require('./../components/boletos/network.js')
 const RegistrarEnTorneo= require('./../components/registrarEnTorneo/network.js')
 const Jornada_5y6=require('./../components/jornadas_5y6/network.js')
+const torneos=require('./../components/torneos/network')
+
 const cofre_E_Delivery=require('./../components/cofre_E_Delivery/network.js')
 
 
@@ -81,6 +83,7 @@ const routes = function (server){
      server.use('/boletos',boletos);
      server.use('/registro_torneo',RegistrarEnTorneo);
      server.use('/jornada_5y6',Jornada_5y6);
+     server.use('/torneos_i',torneos);
 
 
     
