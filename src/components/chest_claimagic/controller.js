@@ -9,17 +9,17 @@ async function processCofre(reqbody) {
   const userChests = await getCofresForUser(user_claim);
 
   if (userChests.status_m === "pending") {
-    throw new Error("Espera a que lleguen tus cofres reclamados");
+    throw new Error("Wait for your claimed chests to arrive");
   }
 
   const llavesDisponibles = userChests.llaves_m_compradas - userChests.llaves_m_gastadas;
   if (llavesDisponibles < cofres_claim) {
-    throw new Error("No tienes suficientes llaves para comprar los cofres solicitados");
+    throw new Error("You do not have enough keys to purchase the requested chests");
   }
 
   const cofresDisponibles = userChests.cofres_m_compradas - userChests.cofres_m_gastadas;
   if (cofresDisponibles < cofres_claim) {
-    throw new Error("No tienes suficientes cofres para procesar la solicitud");
+    throw new Error("You do not have enough chests to process the reques");
   }
   
   let objeto= generarObjeto(cofres_claim);
