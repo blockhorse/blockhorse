@@ -38,8 +38,16 @@ async function get_races(body) {
       console.log("page",page, type)
 
       // Paginar las carreras de 20 en 20
-      const pageSize = 50;
-      races = await store.get_races({ limit: pageSize, tipo_carrera:type, sort: { _id: -1 } });
+      const pageSize = 25;
+
+
+      // races = await store.get_races({ limit: pageSize, tipo_carrera:type, status:!close sort: { _id: -1 } });
+races = await store.get_races({
+  limit: pageSize,
+  query: { tipo_carrera: type, status: { $ne: "close" } },
+  sort: { _id: -1 }
+});
+
     } else {
       console.log("else")
 
