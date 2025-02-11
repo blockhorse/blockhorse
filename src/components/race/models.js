@@ -126,6 +126,11 @@ const raceSchema= new Schema(
    	  default:"create"
         
     },
+       status_superior:  {
+      type: String,
+      default:"create"
+        
+    },
 
 
 

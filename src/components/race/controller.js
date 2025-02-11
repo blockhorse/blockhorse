@@ -26,8 +26,10 @@ resolve(store.add(data))
 
 
 async function get_races(body) {
+  console.log("(bod", body);
   try {
     const { latest, page, type } = body;
+    
     let races;
 
     if (latest) {
@@ -35,24 +37,16 @@ async function get_races(body) {
       // Obtener las últimas 20 carreras existentes
       races = await store.get_races({}, { limit: 20, sort: { _id: -1 } });
     } else if (page) {
-      console.log("page",page, type)
+      console.log("page")
 
       // Paginar las carreras de 20 en 20
-      const pageSize = 25;
-
-
-      // races = await store.get_races({ limit: pageSize, tipo_carrera:type, status:!close sort: { _id: -1 } });
-races = await store.get_races({
-  limit: pageSize,
-  query: { tipo_carrera: type, status: { $ne: "close" } },
-  sort: { _id: -1 }
-});
-
+      const pageSize = 30;
+      races = await store.get_races({ limit: pageSize, tipo_carrera:type, sort: { _id: -1 } });
     } else {
       console.log("else")
 
       // Obtener todas las carreras
-      races = await store.get_races({});
+      races = await store.get_race({body});
     }
       // console.log("RACES AQUI ESTAS", races)
     return races;

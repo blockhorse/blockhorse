@@ -17,7 +17,7 @@ console.log(`Número de conexiones abiertas: ${numConnections}`);
 
 
 async function get_races(races) {
-  const { limit = 50, tipo_carrera = 'Oficial', sort = { _id: -1 } } = races; // Desestructuramos con valores predeterminados
+  const { limit = 30, tipo_carrera = 'Oficial', sort = { _id: -1 } } = races; // Desestructuramos con valores predeterminados
 
   console.log("Ejecutando get_races con los siguientes parámetros:", { limit, tipo_carrera, sort });
 
@@ -40,10 +40,16 @@ async function get_races(races) {
 
 
 async function get_race(races) {
+  console.log("races Buscando carreras con body", races);
 
+let sort={_id:-1}
+let limit = 30
   try {
     // Realiza la consulta a la base de datos utilizando los parámetros desestructurados
     const result = await Model.find(races)
+    .sort(sort)  // Ordena los registros según el parámetro 'sort'
+      .limit(limit);  // Limita el resultado al número especificado en 'limit'
+    console.log("result", result);
 
     return result;
   } catch (e) {
