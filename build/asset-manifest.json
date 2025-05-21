@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.7d215f14.css",
-    "main.js": "./static/js/main.be40337c.js",
+    "main.css": "./static/css/main.f4b8fb3d.css",
+    "main.js": "./static/js/main.487a42de.js",
     "static/media/Game_Hive_Mundo.gif": "./static/media/Game_Hive_Mundo.6fffdf5fa9ab170d0b05.gif",
     "static/media/runing_horse_p.gif": "./static/media/runing_horse_p.3ec87fb2b3708a953902.gif",
     "static/media/wellcome.gif": "./static/media/wellcome.0b778f4ae012a2287f42.gif",
@@ -18,6 +18,7 @@
     "static/media/banner1.png": "./static/media/banner1.2a5691e5b2e40f037ab7.png",
     "static/media/buttonN.png": "./static/media/buttonN.e8fdab1e9a695e65f2f5.png",
     "static/media/final.mp3": "./static/media/final.3573cc114350254fc84e.mp3",
+    "static/media/track1.webp": "./static/media/track1.bb10229e92ba389d207d.webp",
     "static/media/banner-NS.jpg": "./static/media/banner-NS.0e8a20304390371e8bb4.jpg",
     "static/media/raven1.gif": "./static/media/raven1.e482eb2c53b97f555b06.gif",
     "static/media/comienzorace.mp4": "./static/media/comienzorace.cdf54df09b546ac634a2.mp4",
@@ -45,11 +46,11 @@
     "static/media/heart-svgrepo-com.svg": "./static/media/heart-svgrepo-com.c782d4556f75c8a2fde4c50dea9a8814.svg",
     "index.html": "./index.html",
     "static/media/horse-head-icon.svg": "./static/media/horse-head-icon.d535535aecbb238cc06c372e087b93a6.svg",
-    "main.7d215f14.css.map": "./static/css/main.7d215f14.css.map",
-    "main.be40337c.js.map": "./static/js/main.be40337c.js.map"
+    "main.f4b8fb3d.css.map": "./static/css/main.f4b8fb3d.css.map",
+    "main.487a42de.js.map": "./static/js/main.487a42de.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d215f14.css",
-    "static/js/main.be40337c.js"
+    "static/css/main.f4b8fb3d.css",
+    "static/js/main.487a42de.js"
   ]
 }
