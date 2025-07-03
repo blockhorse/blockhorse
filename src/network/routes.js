@@ -43,6 +43,7 @@ const torneos=require('./../components/torneos/network')
 
 const cofre_E_Delivery=require('./../components/cofre_E_Delivery/network.js')
 
+const burnVoteRoutes = require('./../components/burnToVote/network.js');
 
 
 const routes = function (server){
@@ -84,6 +85,8 @@ const routes = function (server){
      server.use('/registro_torneo',RegistrarEnTorneo);
      server.use('/jornada_5y6',Jornada_5y6);
      server.use('/torneos_i',torneos);
+     server.use('/burnvote', burnVoteRoutes);
+
 
 
     
