@@ -15,6 +15,7 @@ const subasta= require('./../components/subastas/network.js')
 const race= require('./../components/race/network.js')
 const timer= require('./../components/time/network.js')
 const equino= require('./../components/equino/network.js')
+const participantes= require('./../components/participantes/network.js')
 const keychaintrx= require('./../components/keychaintrx/network.js')
 const keychaintrx_chest= require('./../components/keychaintrx_chest/network.js')
 const keychain_chest_magico_bhrt= require('./../components/keychain_chest_magico_bhrt/network.js')
@@ -67,6 +68,8 @@ const routes = function (server){
 
      server.use('/chest_claim_patro', chest_claim_patro);
      server.use('/equino', equino);
+     server.use('/participantes', participantes);
+
      server.use('/actuaciones', actuaciones);
      server.use('/aplicar_nfts', aplicar_nft);
      server.use('/wallet',wallet);

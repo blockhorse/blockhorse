@@ -155,4 +155,26 @@ router.post('/', (req, res) => {
   }
 });
 
+
+// Ruta para obtener caballos filtrados para auspicio según rareza
+router.get('/filtrados_auspicio', (req, res) => {
+  const rareza = req.query.rareza; // Espera rareza como parámetro query
+
+  if (!rareza) {
+    return res.status(400).json({ error: 'Falta parámetro rareza' });
+  }
+
+  controller.obtenerCaballosFiltradosParaAuspicio(rareza)
+    .then((resultado) => {
+      res.header('Content-Type', 'application/json');
+      res.header('Cache-Control', 'no-cache');
+      response.success(req, res, resultado, 200);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+});
+
+
 module.exports = router;

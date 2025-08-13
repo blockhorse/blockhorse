@@ -131,12 +131,21 @@ resolve(store.set_equino_status(datos));
 }
 
 
+
+async function obtenerCaballosFiltradosParaAuspicio(rareza) {
+  const caballos = await store.get_equinos_filtrados_auspicio({rareza});
+  console.log("Caballos con status free y animo < 50:", caballos);
+  return caballos;
+}
+
+
 module.exports = {
   get_equino_account,
- get_equino,
- post_equino,
- registrar_cambio_de_nombre,
-  get_habilitar_equinos
+  get_equino,
+  post_equino,
+  registrar_cambio_de_nombre,
+  get_habilitar_equinos,
+  obtenerCaballosFiltradosParaAuspicio
 
 }
 
