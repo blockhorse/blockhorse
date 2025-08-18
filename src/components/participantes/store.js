@@ -49,6 +49,25 @@ async function get_participantes({ equineId, race }) {
   }
 }
 
+
+
+async function get_ultimas_participaciones({ usuario }) {
+  if (!usuario) {
+    throw new Error('El parámetro usuario es requerido');
+  }
+  // Filtro para usuario, o el campo que corresponda en tu esquema
+  const filtro = { usuario: usuario }; // si sponsor es parte del filtro
+
+  // Consulta con límite y orden por campo fecha (asumo "fecha" o "createdAt", ajusta si es otro)
+  const resultados = await Model.find(filtro)
+    .sort({ _id: -1 })  // orden descendente por fecha
+    .limit(50);           // máximo 50 registros
+
+  return resultados;
+}
+
+
 module.exports = {
   get_participantes,
+ get_ultimas_participaciones
 };
