@@ -104,8 +104,8 @@ const getFullInfo = async (account, pesoVoto = 100) => {
     ]);
 
     // Logs para debugging
-    console.log("✔️ Datos obtenidos:");
-    console.log({ hivePrice, bhrtHivePrice, balances, accountInfo, globals });
+    // console.log("✔️ Datos obtenidos:");
+    // console.log({ hivePrice, bhrtHivePrice, balances, accountInfo, globals });
 
     // Validaciones
     if (!accountInfo?.vesting_shares || !globals?.total_vesting_fund_hive || !globals?.total_vesting_shares) {
@@ -119,7 +119,7 @@ const getFullInfo = async (account, pesoVoto = 100) => {
     const hpEffective = (vestingShares - delegated + received) *
       (globals.total_vesting_fund_hive / globals.total_vesting_shares);
 
-    console.log("HP efectivo calculado:", hpEffective);
+    // console.log("HP efectivo calculado:", hpEffective);
 
     const voteDollarEstimate = estimateVoteUSD({
       hpEffective,

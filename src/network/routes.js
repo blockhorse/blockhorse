@@ -45,6 +45,11 @@ const torneos=require('./../components/torneos/network')
 const cofre_E_Delivery=require('./../components/cofre_E_Delivery/network.js')
 
 const burnVoteRoutes = require('./../components/burnToVote/network.js');
+const burnVoteinfoBaseRoutes = require('./../components/burnToVote/consultaAbase/network.js');
+const syncBurnVoteHistory = require('./../components/burnToVote/sincronizarBurn/network.js');
+
+const burnFromFront = require('./../components/burnToVote/burnFromFront/network.js');
+
 const rewardRace = require('./../components/rewardsRaces/network.js');
 
 
@@ -92,6 +97,10 @@ const routes = function (server){
      server.use('/jornada_5y6',Jornada_5y6);
      server.use('/torneos_i',torneos);
      server.use('/burnvote', burnVoteRoutes);
+     server.use('/burnvoteinfo', burnVoteinfoBaseRoutes);
+     server.use('/burntovote', burnFromFront);
+     server.use('/syncBurnVoteHistory', syncBurnVoteHistory);
+
 
 
 
