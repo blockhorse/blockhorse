@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     response.success(req, res, result, 200);
   } catch (error) {
     console.error(error);
-    response.error(req, res, 'Error al sincronizar el historial', 500);
+    response.error(req, res, 'Error synchronizing the history', 500);
   }
 });
 

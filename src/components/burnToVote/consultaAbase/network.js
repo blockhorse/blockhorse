@@ -9,14 +9,14 @@ router.get('/infobase', async (req, res) => {
     const { postId } = req.query;
     console.log("postId recibido:", postId);
     if (!postId) {
-      return response.error(req, res, 'Falta el parámetro postId', 400);
+      return response.error(req, res, 'Missing the postId parameter', 400);
     }
     const voted = await controller.checkPostVoted(postId);
     console.log("voted", voted);
     response.success(req, res, { voted }, 200);
   } catch (error) {
     console.error(error);
-    response.error(req, res, 'Error interno al verificar post', 500);
+    response.error(req, res, 'Internal error verifying post', 500);
   }
 });
 
@@ -25,13 +25,13 @@ router.get('/history', async (req, res) => {
   try {
     const { userId } = req.query;
     if (!userId) {
-      return response.error(req, res, 'Falta el parámetro userId', 400);
+      return response.error(req, res, 'Missing the user paramete', 400);
     }
     const votes = await controller.getVotesHistory(userId);
     response.success(req, res, votes, 200);
   } catch (error) {
     console.error(error);
-    response.error(req, res, 'Error al obtener el historial', 500);
+    response.error(req, res, 'Error obtaining history', 500);
   }
 });
 
