@@ -26,9 +26,7 @@ const getVotesByUser = async (userId) => {
 }
 
 
-const getVotesByUse= async (userId) => {
- 
-}
+
 module.exports = {
   getFullInfo,
   checkPostVoted,
