@@ -38,6 +38,8 @@ const torneos = new Schema({
   status_inscriciones: { type: String, default: 'abierto' },
   status_desarrollo: { type: String, default: 'abierto' },
   status_general: { type: String, default: 'abierto' },
+  registro_max:{ type: Number, default:0},
+  rareza_max:{ type: String, default: '' },
 });
 
 

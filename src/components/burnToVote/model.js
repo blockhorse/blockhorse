@@ -18,6 +18,11 @@ const getHivePrice = async () => {
 
 
 
+
+
+
+
+
 const getBhrtToHivePrice = async () => {
   const res = await axios.post('https://dswap-api.dswap.trade/api/SwapRequest/CalculateSwapOutput', {
     TokenInput: 'BHRT',
@@ -27,6 +32,9 @@ const getBhrtToHivePrice = async () => {
   });
   return parseFloat(res.data.BaseTokenAmount); // BHRT → HIVE
 };
+
+
+
 
 const getVotingPower = async (account) => {
   const res = await axios.post('https://api.hive.blog', {
