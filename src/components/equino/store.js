@@ -15,6 +15,7 @@ console.log("conexion_db");
 
 
 async function get_equino(equino) {
+  console.log(" desde get equino en equino back", equino);
   let equineIds;
 
   if (equino.equineId.includes(',')) {
@@ -26,7 +27,7 @@ async function get_equino(equino) {
   console.log("ME ejecuto desde store get equino", equineIds);
   const equinos = await Model.find({ equineId: { $in: equineIds } }).catch(e => {
     console.log("error");
-    console.log(e);
+    console.log(equinos);
   });
   console.log("EQU", equinos.length);
   return equinos;
